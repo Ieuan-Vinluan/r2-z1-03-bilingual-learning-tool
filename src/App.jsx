@@ -51,9 +51,33 @@ function App() {
         </Navbar>
       </header>
       <main>
-
+        <h1>
+          Fundamental Physics
+        </h1>
+        <div className="content-container">
+          <ClickableDropdown headerText="Physical Quantities" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus ipsa, beatae ipsam odio exercitationem necessitatibus. Soluta, quia! Veniam, magni, incidunt, odit hic minima minus voluptatum assumenda quasi quae laboriosam fugit!">
+            { /* clickable dropdown item here */ }
+            <a href="#">Meowww</a>
+          </ClickableDropdown>
+        </div>
       </main>
     </>
+  );
+}
+
+function ClickableDropdown(props) {
+  return (
+    <div className="clickable-dropdown">
+      <h2 className="clickable-dropdown-header">{props.headerText}</h2>
+      <div className="clickable-dropdown-body">
+        <p className="clickable-dropdown-description">
+          {props.description}
+        </p>
+        <div className="clickable-dropdown-items">
+          {props.children}
+        </div>
+      </div>
+    </div>
   );
 }
 
