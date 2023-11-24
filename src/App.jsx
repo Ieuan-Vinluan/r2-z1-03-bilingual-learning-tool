@@ -6,6 +6,9 @@ function App() {
     <>
       <header>
         <Navbar>
+          <NavItem text="Home">
+
+          </NavItem>
           <NavItem text="Physical Quantities">
             <DropdownMenu>
               <DropdownItem>
@@ -76,7 +79,7 @@ function ClickableDropdown(props) {
       <div className="clickable-dropdown-header-container">
         <h2 className="clickable-dropdown-header">{props.headerText}</h2>
         { /* TODO replace --&gt; with actual arrow image */}
-        <a href="#">--&gt;</a>
+        <a href="#">&gt;</a>
       </div>
       <div className="clickable-dropdown-body">
         <p className="clickable-dropdown-description">
