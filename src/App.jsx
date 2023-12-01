@@ -13,13 +13,13 @@ function App() {
             <DropdownMenu>
               <DropdownItem>
                 <p>
-                  <a href="#">Definitions</a>
+                  Definitions
                 </p>
                 <p>
-                  <a href="#">Units</a>
+                  Units
                 </p>
                 <p>
-                  <a href="#">Sample Problems</a>
+                  Sample Problems
                 </p>
               </DropdownItem>
             </DropdownMenu>
@@ -28,10 +28,10 @@ function App() {
             <DropdownMenu>
               <DropdownItem>
                 <p>
-                  <a href="#">Equations</a>
+                  Equations
                 </p>
                 <p>
-                  <a href="">Sample Problems</a>
+                  Sample Problems
                 </p>
               </DropdownItem>
             </DropdownMenu>
@@ -40,13 +40,16 @@ function App() {
             <DropdownMenu>
               <DropdownItem>
                 <p>
-                  <a href="#">Definition</a>
+                  Definition
                 </p>
                 <p>
-                  <a href="#">Vector Addition</a>
+                  Vector Addition
                 </p>
                 <p>
-                  <a href="#">Sample Problems</a>
+                  Cross and Dot Product
+                </p>
+                <p>
+                  Sample Problems
                 </p>
               </DropdownItem>
             </DropdownMenu>
@@ -58,13 +61,13 @@ function App() {
           Fundamental Physics
         </h1>
         <div className="content-container">
-          <ClickableDropdown headerText="Physical Quantities" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus ipsa, beatae ipsam odio exercitationem necessitatibus. Soluta, quia! Veniam, magni, incidunt, odit hic minima minus voluptatum assumenda quasi quae laboriosam fugit!">
+          <ClickableDropdown headerText="Physical Quantities" description="Physical quantities refer to properties of an entity that can be represented by a quantitative measurement. This course will tackle the many different kinds of physical quantities, their units of measurement, and many more.">
             { /* clickable dropdown item here */ }
           </ClickableDropdown>
-          <ClickableDropdown headerText="Kinematics" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam sapiente similique, neque deserunt iste, quis voluptate sint cupiditate esse eos, nobis expedita ullam recusandae itaque ea aliquid modi. Rerum, necessitatibus?">
+          <ClickableDropdown headerText="Basic Kinematics" description="Kinematics is the study of motion. The many physical quantities associated with motion and the many formulas that relate these physical quantities with one another will be discussed.  ">
             { /* items here */ }
           </ClickableDropdown>
-          <ClickableDropdown headerText="Vectors" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus id mollitia odio est quod tempore assumenda tenetur veritatis recusandae dolorem. Ab quasi magni illo eum quibusdam excepturi facere, praesentium unde sint, porro inventore eveniet deserunt saepe laboriosam est doloremque fugiat aut perferendis suscipit! Aut dignissimos commodi aliquam libero rem veniam culpa necessitatibus quisquam nostrum non, asperiores inventore nam ea eum quaerat. Facilis earum rem rerum, pariatur iure adipisci modi recusandae.">
+          <ClickableDropdown headerText="Vectors" description="A vector is a physical quantity with magnitude and direction. Basic operations associated with vectors, such as adding vectors or taking the cross or dot product of vectors, will be tackled.">
             { /* items here */}
           </ClickableDropdown>
         </div>
@@ -107,7 +110,7 @@ function NavItem(props) {
   const [clicked, setClicked] = useState(false);
   return (
     <li className="nav-item">
-      <a href="#" className="nav-item-text" onClick={() => setClicked(!clicked)}>
+      <a className="nav-item-text" onClick={() => setClicked(!clicked)}>
         { props.text }
       </a>
       {clicked && props.children}
@@ -117,7 +120,7 @@ function NavItem(props) {
 
 function DropdownItem(props) {
   return (
-    <a href="#" className="dropdown-menu-item">
+    <a className="dropdown-menu-item">
       { props.children }
     </a>
   );
@@ -131,6 +134,63 @@ function DropdownMenu(props) {
   );
 }
 
-
+function LessonPage(props) {
+  const [isCurrentPage, setCurrentPage] = useState(false);
+  return (
+    {isCurrentPage} && <>
+      <header>
+        <Navbar>
+          <NavItem text="Home">
+          </NavItem>
+          <NavItem text="Physical Quantities">
+            <DropdownMenu>
+              <DropdownItem>
+                <p>
+                  Definitions
+                </p>
+                <p>
+                  Units
+                </p>
+                <p>
+                  Sample Problems
+                </p>
+              </DropdownItem>
+            </DropdownMenu>
+          </NavItem>
+          <NavItem text="Kinematics">
+            <DropdownMenu>
+              <DropdownItem>
+                <p>
+                  Equations
+                </p>
+                <p>
+                  Sample Problems
+                </p>
+              </DropdownItem>
+            </DropdownMenu>
+          </NavItem>
+          <NavItem text="Vectors">
+            <DropdownMenu>
+              <DropdownItem>
+                <p>
+                  Definition
+                </p>
+                <p>
+                  Vector Addition
+                </p>
+                <p>
+                  Sample Problems
+                </p>
+              </DropdownItem>
+            </DropdownMenu>
+          </NavItem>
+        </Navbar>
+      </header>
+      <main>
+        <p>Testing</p>
+      </main>
+    </>
+  );
+}
 
 export default App
