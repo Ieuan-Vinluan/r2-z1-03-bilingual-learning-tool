@@ -11,11 +11,26 @@ function App() {
     if (curScreen == 'home') {
       return (<HomeScreen setCurScreen={setCurScreen}/>);
     } else if (curScreen == 'lesson1') {
-      return (<LessonPage setCurScreen={setCurScreen}/>);
+      return (
+        <LessonPage setCurScreen={setCurScreen}>
+          <h1>Lesson 1</h1>
+          { /* lesson content here */ }
+        </LessonPage>
+      );
     } else if (curScreen == 'lesson2') {
-      return (<LessonPage setCurScreen={setCurScreen}/>);
+      return (
+        <LessonPage setCurScreen={setCurScreen}>
+          <h1>Lesson 2</h1>
+          { /* lesson content here */ }
+        </LessonPage>
+      );
     } else {
-      return (<LessonPage setCurScreen={setCurScreen}/>);
+      return (
+        <LessonPage setCurScreen={setCurScreen}>
+          <h1>Lesson 3</h1>
+          { /* lesson content here */ }
+        </LessonPage>
+      );
     }
   }
 
@@ -23,6 +38,7 @@ function App() {
     <>
       <StandardHeader setCurScreen={setCurScreen}/>
       {goTo()}
+      { /* footer here */ }
     </>
   );
 }

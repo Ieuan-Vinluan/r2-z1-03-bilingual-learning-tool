@@ -13,7 +13,7 @@ export default function StandardHeader({ setCurScreen }) {
             </NavItem>
             <NavItem text="Physical Quantities" setCurScreen={setCurScreen}>
               <DropdownMenu>
-                <DropdownItem>
+                <DropdownItem setCurScreen={setCurScreen} id="lesson1">
                   <p>
                     Definitions
                   </p>
@@ -28,7 +28,7 @@ export default function StandardHeader({ setCurScreen }) {
             </NavItem>
             <NavItem text="Kinematics" setCurScreen={setCurScreen}>
               <DropdownMenu>
-                <DropdownItem>
+                <DropdownItem setCurScreen={setCurScreen} id="lesson2">
                   <p>
                     Equations
                   </p>
@@ -40,7 +40,7 @@ export default function StandardHeader({ setCurScreen }) {
             </NavItem>
             <NavItem text="Vectors" setCurScreen={setCurScreen}>
               <DropdownMenu>
-                <DropdownItem>
+                <DropdownItem setCurScreen={setCurScreen} id="lesson3">
                   <p>
                     Definition
                   </p>
