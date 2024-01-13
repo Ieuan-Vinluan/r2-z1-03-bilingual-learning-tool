@@ -8,7 +8,9 @@ export default function NavItem(props) {
           props.setCurScreen('home');
         }
       }}>
-        <a className="nav-item-text" onClick={() => setClicked(!clicked)}>
+        <a className="nav-item-text" onClick={() => {
+          setClicked(!clicked);
+        }}>
           { props.text }
         </a>
         {clicked && props.children}

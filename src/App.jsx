@@ -10,8 +10,10 @@ function App() {
   const [curScreen, setCurScreen] = useState('home');
   function goTo() {
     if (curScreen == 'home') {
+      document.title = "Homepage";
       return (<HomeScreen setCurScreen={setCurScreen}/>);
     } else if (curScreen == 'lesson1') {
+      document.title = "Lesson 1";
       return (
         <LessonPage setCurScreen={setCurScreen}>
           <h1>Lesson 1</h1>
@@ -24,17 +26,27 @@ function App() {
         </LessonPage>
       );
     } else if (curScreen == 'lesson2') {
+      document.title = "Lesson 2";
       return (
         <LessonPage setCurScreen={setCurScreen}>
           <h1>Lesson 2</h1>
-          { /* lesson content here */ }
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum fugiat laborum perspiciatis consequatur. Facilis quaerat distinctio placeat! Velit tempore laboriosam maxime sed iure tempora voluptatibus molestiae corporis esse nam.</p>
+          <div className="lesson-two-equation-one">
+            <Latex>
+              {"$x = x_0 + v_0t + \\frac{1}{2} at^2$"}
+            </Latex>
+          </div>
         </LessonPage>
       );
     } else {
+      document.title = "Lesson 3";
       return (
         <LessonPage setCurScreen={setCurScreen}>
           <h1>Lesson 3</h1>
-          { /* lesson content here */ }
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aspernatur quas neque maiores eligendi soluta culpa. Consequatur incidunt quidem voluptatum.</p>
+          <Latex>
+            {"$A_x = Acos\\theta, A_y = Asin\\theta$"}
+          </Latex>
         </LessonPage>
       );
     }

@@ -1,5 +1,4 @@
 import React from 'react'
-import StandardHeader from './StandardHeader';
 import ClickableDropdown from './ClickableDropdown';
 
 export default function HomeScreen({ setCurScreen }) {
@@ -7,14 +6,14 @@ export default function HomeScreen({ setCurScreen }) {
         <>
           <main>
             <h1>
-              Fundamental Physics
+              Kinematics
             </h1>
             <div className="content-container">
-              <ClickableDropdown headerText="Physical Quantities" id='lesson1' setCurScreen={setCurScreen} description="Physical quantities refer to properties of an entity that can be represented by a quantitative measurement. This course will tackle the many different kinds of physical quantities, their units of measurement, and many more.">
+              <ClickableDropdown headerText="Uniformly Accelerated Motion" id='lesson1' setCurScreen={setCurScreen} description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo nesciunt eveniet tempore aspernatur quidem ea aliquam iste deserunt sed ut minima voluptates vero deleniti veritatis, quam dolore molestias sit quisquam.">
               </ClickableDropdown>
-              <ClickableDropdown headerText="Basic Kinematics" id='lesson2' setCurScreen={setCurScreen} description="Kinematics is the study of motion. The many physical quantities associated with motion and the many formulas that relate these physical quantities with one another will be discussed.  ">
+              <ClickableDropdown headerText="Free Fall" id='lesson2' setCurScreen={setCurScreen} description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro assumenda maiores mollitia, expedita dolorum, iure necessitatibus ipsam architecto nostrum nobis, neque commodi a ab eveniet repellendus rerum vel. Doloribus dolores molestias earum libero maiores alias laudantium repellendus atque placeat vitae?">
               </ClickableDropdown>
-              <ClickableDropdown headerText="Vectors" id='lesson3' setCurScreen={setCurScreen} description="A vector is a physical quantity with magnitude and direction. Basic operations associated with vectors, such as adding vectors or taking the cross or dot product of vectors, will be tackled.">
+              <ClickableDropdown headerText="Uniform Circular Motion" id='lesson3' setCurScreen={setCurScreen} description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eveniet fugit corrupti beatae odio ipsum natus aliquam illum unde laudantium.">
               </ClickableDropdown>
             </div>
           </main>

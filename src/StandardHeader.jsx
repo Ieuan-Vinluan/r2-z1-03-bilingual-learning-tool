@@ -5,30 +5,19 @@ import DropdownItem from './DropdownItem';
 import DropdownMenu from './DropdownMenu';
 
 export default function StandardHeader({ setCurScreen }) {
+    /* TODO only allow user to have one dropdown menu open */
     return (
       <header>
           <Navbar>
             <NavItem text="Home" setCurScreen={setCurScreen}>
               { /* TODO modify NavItem */}
             </NavItem>
-            <NavItem text="Physical Quantities" setCurScreen={setCurScreen}>
+            <NavItem text="Uniformly Accelerated Motion" setCurScreen={setCurScreen}>
               <DropdownMenu>
                 <DropdownItem setCurScreen={setCurScreen} id="lesson1">
                   <p>
                     Definitions
                   </p>
-                  <p>
-                    Units
-                  </p>
-                  <p>
-                    Sample Problems
-                  </p>
-                </DropdownItem>
-              </DropdownMenu>
-            </NavItem>
-            <NavItem text="Kinematics" setCurScreen={setCurScreen}>
-              <DropdownMenu>
-                <DropdownItem setCurScreen={setCurScreen} id="lesson2">
                   <p>
                     Equations
                   </p>
@@ -38,17 +27,29 @@ export default function StandardHeader({ setCurScreen }) {
                 </DropdownItem>
               </DropdownMenu>
             </NavItem>
-            <NavItem text="Vectors" setCurScreen={setCurScreen}>
+            <NavItem text="Free Fall" setCurScreen={setCurScreen}>
+              <DropdownMenu>
+                <DropdownItem setCurScreen={setCurScreen} id="lesson2">
+                  <p>
+                    Definitions
+                  </p>
+                  <p>
+                    Derivations and Equations
+                  </p>
+                  <p>
+                    Sample Problems
+                  </p>
+                </DropdownItem>
+              </DropdownMenu>
+            </NavItem>
+            <NavItem text="Uniform Circular Motion" setCurScreen={setCurScreen}>
               <DropdownMenu>
                 <DropdownItem setCurScreen={setCurScreen} id="lesson3">
                   <p>
-                    Definition
+                    Introduction
                   </p>
                   <p>
-                    Vector Addition
-                  </p>
-                  <p>
-                    Cross and Dot Product
+                    Equations
                   </p>
                   <p>
                     Sample Problems
