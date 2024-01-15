@@ -6,6 +6,7 @@ import DropdownMenu from './DropdownMenu';
 
 export default function StandardHeader({ setCurScreen }) {
     /* TODO only allow user to have one dropdown menu open */
+    /* TODO add icons to navbar */
     return (
       <header>
           <Navbar>
