@@ -3,6 +3,7 @@ import NavItem from './NavItem';
 import Navbar from './Navbar';
 import DropdownItem from './DropdownItem';
 import DropdownMenu from './DropdownMenu';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function StandardHeader({ setCurScreen }) {
     /* TODO only allow user to have one dropdown menu open */
@@ -28,7 +29,7 @@ export default function StandardHeader({ setCurScreen }) {
                 </DropdownItem>
               </DropdownMenu>
             </NavItem>
-            <NavItem text="Free Fall" setCurScreen={setCurScreen}>
+            <NavItem text="Uniform Circular Motion" setCurScreen={setCurScreen}>
               <DropdownMenu>
                 <DropdownItem setCurScreen={setCurScreen} id="lesson2">
                   <p>
@@ -43,7 +44,7 @@ export default function StandardHeader({ setCurScreen }) {
                 </DropdownItem>
               </DropdownMenu>
             </NavItem>
-            <NavItem text="Uniform Circular Motion" setCurScreen={setCurScreen}>
+            <NavItem text="Projectile Motion" setCurScreen={setCurScreen}>
               <DropdownMenu>
                 <DropdownItem setCurScreen={setCurScreen} id="lesson3">
                   <p>

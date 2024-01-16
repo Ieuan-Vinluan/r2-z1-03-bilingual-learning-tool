@@ -3,6 +3,7 @@ import './css/App.css';
 import HomeScreen from './HomeScreen';
 import LessonPage from './LessonPage';
 import StandardHeader from './StandardHeader';
+import StandardFooter from './StandardFooter';
 import Latex from "react-latex-next";
 import "katex/dist/katex.min.css";
 
@@ -56,7 +57,7 @@ function App() {
     <>
       <StandardHeader setCurScreen={setCurScreen}/>
       {goTo()}
-      { /* footer here */ }
+      {/* <StandardFooter /> */}
     </>
   );
 }

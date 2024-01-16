@@ -6,7 +6,7 @@ import StandardHeader from './StandardHeader';
 export default function LessonPage(props) {
     return (
       <>
-        <main>
+        <main className="main-lesson-page">
           { props.children }
         </main>
       </>
