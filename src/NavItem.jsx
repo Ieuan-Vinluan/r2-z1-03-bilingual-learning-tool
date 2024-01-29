@@ -1,19 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 export default function NavItem(props) {
-    const [clicked, setClicked] = useState(false);
-    return (
-      <li className="nav-item" onClick={() => {
-        if (props.text == "Home") {
-          props.setCurScreen('home');
+  const [clicked, setClicked] = useState(false);
+  const [renderText, setRenderText] = useState(false);
+
+  useEffect(() => {
+    setRenderText(window.innerWidth > 800);
+  });
+
+  return (
+    <li className={"nav-item" + (props.selected ? " is-selected" : "")} onClick={() => {
+      if (props.text == "Homepage") {
+        props.setCurScreen('home');
+      }
+    }}>
+      <a className="nav-item-text" onClick={() => {
+        setClicked(!clicked);
+        if (!renderText) {
+          console.log("switching!");
+          props.setCurScreen(props.id);
         }
       }}>
-        <a className="nav-item-text" onClick={() => {
-          setClicked(!clicked);
-        }}>
-          { props.text }
-        </a>
-        {clicked && props.children}
-      </li>
-    );
+        {props.icon}
+        {renderText && <p>{props.text}</p>}
+      </a>
+      {clicked && renderText && props.children}
+    </li>
+  );
 }

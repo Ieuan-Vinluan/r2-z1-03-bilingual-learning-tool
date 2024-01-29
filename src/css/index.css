@@ -36,6 +36,11 @@ a {
 	color: inherit;
 }
 
+html {
+	overflow-x: hidden;
+	margin-right: calc(100% - 100vw);
+}
+
 body,
 html,
 div#root {
@@ -48,8 +53,6 @@ body {
 	/* background: url("../media/homepage-background.jpg") no-repeat center center; */
 	/* background-attachment: fixed; */
 	/* SOURCE https://www.wallpaperflare.com/gradient-blue-pink-abstract-art-wallpaper-cvxen */
-	overflow-x: hidden;
-	overflow-y: auto;
 	color: var(--text-color);
 }
 
@@ -95,7 +98,7 @@ body {
 	width: 100%;
 	height: 100%;
 	display: flex;
-	gap: 5px;
+	/* gap: 5px; */
 	justify-content: flex-end;
 	align-items: center;
 	color: var(--text-color);
@@ -108,6 +111,11 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.is-selected {
+	font-weight: bold;
 }
 
 .nav-item:hover {
@@ -123,24 +131,26 @@ body {
 	height: 100%;
 	width: 100%;
 	padding: 1em 2em;
-	border-radius: 50rem;
+	/* border-radius: 50rem; */
 	display: flex;
+	flex-direction: column;
 	text-align: center;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 	font-family: "Open Sans", sans-serif;
 	text-transform: uppercase;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 
 .nav-item-text:hover {
-	background-color: #fff;
-	color: black;
+	/* background-color: #fff; */
+	color: #2b016d;
 	outline: var(--se-bg);
 }
 
 .dropdown {
-	z-index: 1; /* avoid getting covered by bg img */
+	z-index: 1;
+	/* avoid getting covered by bg img */
 	position: absolute;
 	top: calc(var(--nav-bar-size) - 2px);
 	color: white;
@@ -161,13 +171,16 @@ body {
 	/* border: 1px solid white; */
 }
 
-main.main-home-page {
+main {
 	padding: 1em 2em;
+	font-family: 'Open Sans', sans-serif;
+}
+
+main.main-home-page {
 	height: 35%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	font-family: "Verdana", sans-serif;
 }
 
 main .homepage-subtitle {
@@ -209,14 +222,14 @@ main .homepage-subtitle {
 	width: 0;
 	height: 0;
 	border-top: var(--triangle-size) solid transparent;
-	border-left: calc(2 * var(--triangle-size)) solid
-		color-mix(in srgb, var(--clickable-dropdown-header-bg) 90%, white);
+	border-left: calc(2 * var(--triangle-size)) solid color-mix(in srgb, var(--clickable-dropdown-header-bg) 90%, white);
 	border-bottom: var(--triangle-size) solid transparent;
 	transition: border-left 500ms linear;
 }
 
 .arrow-right:hover {
 	border-left: calc(2 * var(--triangle-size)) solid white;
+	cursor: pointer;
 	/* background: color-mix(in srgb, var(--clickable-dropdown-header-bg) 90%, white); */
 }
 
@@ -231,6 +244,16 @@ main .homepage-subtitle {
 
 .main-lesson-page {
 	color: black;
+}
+
+.main-lesson-page .iframe-container {
+	width: 100%;
+	height: 100%;
+	padding: 1em 2em;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .lesson-one-equation-one {
@@ -271,73 +294,149 @@ footer svg:hover {
 
 @media only screen and (max-width: 1100px) {
 	.page-header {
-		height: 20%;
+		height: 40%;
 	}
+
+	.page-header h1 {
+		font-size: 4rem;
+	}
+
 	.navbar-list {
-		gap: 10%;
+		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
+
+	.nav-item {
+		width: 100%;
+	}
+
 	.dropdown {
 		width: 15%;
 	}
+
 	.dropdown-menu-item p {
 		font-size: 80%;
+	}
+
+	main.main-home-page {
+		height: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+
+	main.main-home-page h1 {
+		font-size: 3.5rem;
+		font-family: 'Lato', sans-serif;
+	}
+
+	.content-container {
+		height: 50%;
+	}
+
+	.clickable-dropdown-header-container {
+		width: 100%;
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+		gap: 2rem;
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	.clickable-dropdown-header-container svg {
+		align-self: start;
+		justify-self: center;
+	}
+
+	.clickable-dropdown-header-container a {
+		align-self: center;
+		font-weight: normal;
+	}
+
+	.clickable-dropdown-header-container div {
+		display: none;
 	}
 }
 
 @media only screen and (max-width: 800px) {
+
 	/* body {
         background: lightblue;
     } */
+	.nav-item a p {
+		display: none;
+	}
+
 	.page-header {
-		height: 20%;
+		height: 40%;
 		width: 100%;
 	}
+
+	.page-header h1 {
+		font-size: 4rem;
+	}
+
 	.clickable-dropdown {
 		font-size: 0.9rem;
 	}
+
+	.content-container {
+		height: 50%;
+	}
+
+	.clickable-dropdown-header-container {
+		font-size: 150%;
+	}
+
 	.navbar-list {
-		gap: 10%;
 		align-items: center;
 		justify-content: center;
 	}
+
 	.dropdown {
 		width: 15%;
 	}
+
 	.dropdown-menu-item p {
-		font-size: 80%;
+		font-size: 1.3rem;
+	}
+
+	main.main-home-page {
+		height: 60%;
 	}
 }
 
 @media only screen and (max-width: 600px) {
+
 	/* body {
         background: lightgreen;
     } */
 	.navbar {
 		font-size: 0.8rem;
 	}
-	.navbar-list {
-		gap: 12.5%;
-	}
+
 	.nav-item-text:hover {
 		background: inherit !important;
 		color: inherit !important;
 	}
+
 	.dropdown-menu-item p {
 		font-size: 80%;
 	}
+
 	.dropdown {
 		width: 20%;
 	}
+
 	.clickable-dropdown {
 		width: 100%;
 		font-size: 0.75rem;
 	}
+
 	.arrow-right {
 		border-top: calc(0.6 * var(--triangle-size)) solid transparent !important;
-		border-left: calc(1.2 * var(--triangle-size)) solid
-			color-mix(in srgb, var(--clickable-dropdown-header-bg) 90%, white);
+		border-left: calc(1.2 * var(--triangle-size)) solid color-mix(in srgb, var(--clickable-dropdown-header-bg) 90%, white);
 		border-bottom: calc(0.6 * var(--triangle-size)) solid transparent !important;
 	}
 }
