@@ -28,8 +28,53 @@
 	--triangle-size: 15px;
 }
 
+/* style classes */
+
+.center-horizontal {
+	text-align: center;
+	width: 100%;
+	position: relative;
+	right: 50%;
+	transform: translateX(50%);
+}
+
+.hyperlink {
+	color: blue;
+}
+
+.box {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: .5em;
+}
+
+.box>*:first-child {
+	padding: 1em 1.5em;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.box p {
+	width: 80%;
+}
+
 ul {
 	list-style: none;
+}
+
+main ul.task-list>li {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	/* border: 1px solid black; */
+	padding: 1em 2em;
+}
+
+main ul.task-list>li input {
+	accent-color: var(--nav-bar-initial);
+	height: 1.5rem;
+	width: 1.5rem;
 }
 
 a {

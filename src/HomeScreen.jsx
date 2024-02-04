@@ -14,11 +14,11 @@ export default function HomeScreen({ setCurScreen }) {
           <main className="main-home-page">
             <h1 className="homepage-subtitle">Some lessons to get you started!</h1>
             <div className="content-container">
-              <ClickableDropdown headerText="Uniformly Accelerated Motion" id='lesson1' setCurScreen={setCurScreen} description="" icon={<FontAwesomeIcon icon={faGauge} size="2x" />}>
+              <ClickableDropdown headerText="Kinematic Equations" id='lesson1' setCurScreen={setCurScreen} description="" icon={<FontAwesomeIcon icon={faGauge} size="2x" />}>
               </ClickableDropdown>
-              <ClickableDropdown headerText="Uniform Circular Motion" id='lesson2' setCurScreen={setCurScreen} description="" icon={<FontAwesomeIcon icon={faArrowsSpin} size="2x" />}>
+              <ClickableDropdown headerText="Motion Graphs" id='lesson2' setCurScreen={setCurScreen} description="" icon={<FontAwesomeIcon icon={faArrowsSpin} size="2x" />}>
               </ClickableDropdown>
-              <ClickableDropdown headerText="Projectile Motion" id='lesson3' setCurScreen={setCurScreen} description="" icon={<FontAwesomeIcon icon={faBasketball} size="2x" />}>
+              <ClickableDropdown headerText="Free Fall" id='lesson3' setCurScreen={setCurScreen} description="" icon={<FontAwesomeIcon icon={faBasketball} size="2x" />}>
               </ClickableDropdown>
             </div>
           </main>
