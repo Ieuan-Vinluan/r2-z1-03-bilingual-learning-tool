@@ -41,7 +41,7 @@ export default function StandardHeader({ curScreen, setCurScreen }) {
 						</DropdownItem>
 					</DropdownMenu>
 				</NavItem>
-				<NavItem
+				{/* <NavItem
 					text="Motion Graphs"
 					selected={curScreen == "lesson2"}
 					id="lesson2"
@@ -54,7 +54,7 @@ export default function StandardHeader({ curScreen, setCurScreen }) {
 							<p>Sample Problems</p>
 						</DropdownItem>
 					</DropdownMenu>
-				</NavItem>
+				</NavItem> */}
 				<NavItem
 					text="Free Fall"
 					selected={curScreen == "lesson3"}

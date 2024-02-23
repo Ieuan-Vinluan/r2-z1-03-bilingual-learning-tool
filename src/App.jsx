@@ -7,6 +7,9 @@ import Checkbox from "./Checkbox";
 import Latex from "react-latex-next";
 import "katex/dist/katex.min.css";
 import LessonSection from "./LessonSection";
+import FallGif from "./media/fall.gif";
+import GravAccelDiagram from "./media/gravitational-acceleration-diagram.png";
+import FreeFallDiagram from "./media/freefall-diagram.png";
 
 function App() {
 	const [curScreen, setCurScreen] = useState("home");
@@ -141,7 +144,7 @@ function App() {
 								Pagkatapos ito gawin, sagutin ang mga sumusunod
 								na tanong:
 							</p>
-							<ol>
+							<ol className="indent">
 								<li>
 									Ilang meters ang kailangan lakarin ng tao
 									para pumunta sa kanang pader galing sa 0
@@ -339,9 +342,13 @@ function App() {
 								maging positive o negative, depende sa direction
 								nito.
 							</p>
-							<div>
-								<p>Accelerating</p>
-								<p>Decelerating</p>
+							<div className="lesson-one-table">
+								<p className="center-horizontal">
+									Accelerating
+								</p>
+								<p className="center-horizontal">
+									Decelerating
+								</p>
 								<ul>
 									<li>Ang bagay ay bumibilis</li>
 									<li>
@@ -387,37 +394,137 @@ function App() {
 					)}
 				</LessonPage>
 			);
-		} else if (curScreen == "lesson2") {
-			document.title = "Lesson 2";
-			return (
-				<LessonPage setCurScreen={setCurScreen}>
-					<h1>Lesson 2</h1>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Sint eum fugiat laborum perspiciatis consequatur.
-						Facilis quaerat distinctio placeat! Velit tempore
-						laboriosam maxime sed iure tempora voluptatibus
-						molestiae corporis esse nam.
-					</p>
-					<div className="lesson-two-equation-one">
-						<Latex>{"$x = x_0 + v_0t + \\frac{1}{2} at^2$"}</Latex>
-					</div>
-				</LessonPage>
-			);
 		} else {
 			document.title = "Lesson 3";
 			return (
 				<LessonPage setCurScreen={setCurScreen}>
-					<h1>Lesson 3</h1>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Debitis aspernatur quas neque maiores eligendi soluta
-						culpa. Consequatur incidunt quidem voluptatum.
-					</p>
-					<Latex>{"$A_x = Acos\\theta, A_y = Asin\\theta$"}</Latex>
+					<LessonSection>
+						<h1>Lesson 2: Free Fall</h1>
+						<br />
+						<p>
+							Ngayon na tinalakay na natin ang kinematics in one-dimension, tatalakayin naman natin ang isang special case nito which is free fall. Sa simula ng modyul, nakita natin na nalaglag ng dahan-dahan ang dahon at yun ay isang halimbawa ng free fall. Nakikita natin ang free fall palagi araw-araw tulad ng patak ng ulan o pag nabitawan natin ang ating hawak na bagay.
+						</p>
+						<br />
+						<img src={FallGif} alt="" className="center-horizontal-image" />
+						<br />
+						<p>
+							Ngayon, bakit nga ba nag undergo ng free fall ang mga ito? Ito ay dahil sa isang force lamang na tinatawag natin na gravity. Ang gravity ay ang nag-iisang tanging force that acts upon the object in the free fall. Ito ang rason bakit bumabagsak lahat ng bagay at ika nga ni Newton na “what goes up must come down”. Natalakay natin sa kinematics ang motion ng mga bagay within the x-axis. Pero para sa pagtalakay natin ng free-fall, gagamitin naman natin ang y-axis at hindi natin iintindihin ang air resistance.
+						</p>
+						<br />
+					</LessonSection>
+					<LessonSection>
+						<h2>Gravitational Acceleration</h2>
+						<br />
+						<p>
+							Ang acceleration ng isang bagay dahil sa force ng gravity ay tinatawag natin na gravitational acceleration. Ang magnitude nito ay tinatawag natin na g at ito ay may value na: <Latex>{"$$g=9.8 \\dfrac{m}{s^2}$$"}</Latex> Ang magnitude na ito ay constant at hindi nakadepende sa bigat ng isang bagay na nasa free fall. Para sa direction ng gravitational acceleration, palagi itong pababa kaya’t ang sign nito ay negative.
+						</p>
+						<br />
+						<img src={GravAccelDiagram} alt="" className="lesson-two-grav-accel center-horizontal-image" />
+					</LessonSection>
+					<LessonSection>
+						<h2>Velocity</h2>
+						<br />
+						<p>
+							Imagine natin na may hawak kayong bola at nabitawan niyo ito midair. Sa initial position ng bola, hindi ito gumagalaw kaya’t ang velocity nito ay zero. Nung nabitawan natin ang bola, ito ay nahuhulog hangga’t mapunta sa lapag dahil sa gravitational acceleration mula sa gravity. Dahil ang velocity at acceleration ng bola ay parehas pababa, ang velocity ng bola ay pataas ng pataas in a negative direction. Specifically, ang magnitude ng velocity ng bola ay tumataas ng <Latex>{"$9.8 \\dfrac{m}{s}$"}</Latex> every second, which is the gravitational acceleration. Kaya 'pag ang height ng bola ay mas nahulog sa mas mataas na position, mas matagal ang free fall ng bola papunta sa lapag at mas malaki ang velocity nito pag palapit na ito sa lapag.
+						</p>
+						<br />
+						<p>
+							Ngayon, paano naman kung tinapon natin ang bola vertically upward. Sa ating pagkakaalam, ang bola ay pupunta pataas hanggang kung saang height ang kaya nito marating tas ito’y bababa rin. Kapag binato na natin ang bola pataas, ito ay makakaranas ng positive initial velocity galing sa atin at ng gravitational acceleration dahil sa gravity. Dahil ang velocity ng bola ay pataas habang ang acceleration naman ng bola ay pababa, ang velocity ng bola ay onti-onting bumabagal hanggang maging zero ang velocity nito. Kapag zero na ang velocity ng bola, ito ang maximum height na maabot ng bola at magsisimula na ito bumaba. Kapag pababa na ito, ang velocity at acceleration ay magkakaroon ng parehas na direction kaya’t ito’y bibilis.
+						</p>
+						<br />
+						<img src={FreeFallDiagram} alt="" className="lesson-two-free-fall-diagram center-horizontal-image" />
+						<br />
+						<p>
+							Sa huli, dahil constant ang gravitational acceleration sa pagtaas at pagbaba ng bola, ang pagbagal at pagbilis ng bola midair ay parehas. Kaya pag sinalo niyo yung bola sa parehas na position kung saan niyo binato ang bola, ang velocity ng bola kapag sinalo niyo ay parehas sa velocity ng bola noong binato niyo.
+						</p>
+						<br />
+						<h2>Displacement and Time of Flight</h2>
+						<br />
+						<p>
+							Base sa ating mga tinalakay natin kanina, ang magiging displacement ng isang bagay ay positive kapag ito’y pataas, negative kung ito’y pababa, at zero kung bumalik sa initial position ang isang bagay tulad ng pagbato at pagsalo ng bola na ating tinalakay.
+						</p>
+						<br />
+						<p>
+							Ngayon, balikan natin ang pagbato natin ng bola pataas. Natalakay natin na tataas ang bola hanggang makarating ito sa kanyang maximum height kung kailan zero ang velocity nito. Dahil constant ang gravitational acceleration na nararanasan ng bola midair, mas mataas ang magiging maximum height ng bola at mas matagal ang oras nito para makarating sa kanyang maximum height kapag mas malaki ang initial velocity na binigay natin sa bola. Kaya’t masasabi natin na ang maximum height ng bola ay dependent sa initial velocity ng bola.
+						</p>
+						<br />
+						<p>
+							At dahil constant ang gravitational acceleration sa pagtaas at pagbaba ng bola, ang pagbagal at pagbilis ng bola midair ay parehas. Kaya pag sinalo niyo yung bola sa parehas na position kung saan niyo binato ang bola, ang oras ng pagtaas ng bola papunta sa maximum height at ang pagbaba nito galing sa maximum height ay parehas lamang.
+						</p>
+					</LessonSection>
+					<LessonSection>
+						<h2>Kinematic Equations in Free Fall</h2>
+						<br />
+						<p>
+							Ang kinematic equations ay mga equations na nag-uugnay sa 5 kinematic variables: displacement <Latex>{"$(\\Delta x)$"}</Latex>, time interval <Latex>{"$(\\Delta t)$"}</Latex>, initial velocity <Latex>{"$(v_0)$"}</Latex>, final velocity <Latex>{"$(v_f)$"}</Latex>, at constant acceleration <Latex>{"$(a)$"}</Latex>.
+						</p>
+						<br />
+						<p>
+							Ang mga kinematic equations ay maaari nating gamitin kapag 3 sa 5 kinematic variables ay given para makahanap ng isang unknown variables at para sa free fall. Ang constant acceleration natin ay magiging equal sa gravitational acceleration or: <Latex>{"$$a = -g = -9.8 \\dfrac{m}{s^2}$$"}</Latex>
+						</p>
+						<br />
+						<p>
+							Narito ang mga equations na makukuha natin mula rito:
+						</p>
+						<br />
+						<Latex>{"$$a = \\dfrac{v - v_0}{t} \\rightarrow -g = \\dfrac{v - v_0}{t}$$"}</Latex>
+						<Latex>{"$$\\therefore v = v_0 - gt$$"}</Latex>
+						<p>
+							Ito ang ating equation relating final velocity, initial velocity, at time! Ngayon, alam natin na:
+						</p>
+						<Latex>{"$$\\Delta x = v_{\\text{average}}t$$"}</Latex>
+						<p>
+							Dahil constant ang ating acceleration:
+						</p>
+						<Latex>{"$$\\Delta x = \\dfrac{v + v_0}{2}t$$"}</Latex>
+						<p>
+							Ngayon, dahil <Latex>{"$v = v_0 - gt$"}</Latex>:
+						</p>
+						<Latex>{"$$\\Delta x = \\dfrac{v_0 - gt + v_0}{2}t = v_0t - \\dfrac{1}{2}gt^2$$"}</Latex>
+						<p>
+							Balikan natin ang equation na <Latex>{"$v = v_0 - gt$"}</Latex>. Squaring both sides:
+						</p>
+						<Latex>{"$$v^2 = (v_0 - gt)^2 = v_0^2 - 2v_0gt + g^2t^2 = v_0^2 - 2g(v_0t - \\dfrac{1}{2}gt^2)$$"}</Latex>
+						<p>
+							Kaya nating isubstitute ang equation na <Latex>{"$\\Delta x = v_0t - \\dfrac{1}{2}gt^2$"}</Latex> dito para makuha ang sumusunod:
+						</p>
+						<Latex>{"$$v^2 = v_0^2 - 2g\\Delta x$$"}</Latex>
+					</LessonSection>
+					<LessonSection>
+						<h2>Summary of Equations</h2>
+						<br />
+						<p>
+							Sa kabuua, ang mga equations natin sa free fall ay ang mga sumusunod:
+						</p>
+						<br />
+						<div className="lesson-two-equations">
+							<Latex>{"$$v = v_0 - gt$$"}</Latex>
+							<Latex>{"$$\\Delta x = \\dfrac{(v + v_0)t}{2}$$"}</Latex>
+							<Latex>{"$$\\Delta x = v_0t - \\dfrac{1}{2}gt^2$$"}</Latex>
+							<Latex>{"$$v^2 = v_0^2 - 2g\\Delta x$$"}</Latex>
+						</div>
+						<br />
+						<p>
+							Tandaan na ang mga kinematic equations na ito ay gagana lamang sa one-dimension. Para sa tinalakay natin, ginagamit natin ang y-axis.
+						</p>
+					</LessonSection>
 				</LessonPage>
 			);
 		}
+		// } else {
+		// 	document.title = "Lesson 3";
+		// 	return (
+		// 		<LessonPage setCurScreen={setCurScreen}>
+		// 			<h1>Lesson 3</h1>
+		// 			<p>
+		// 				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		// 				Debitis aspernatur quas neque maiores eligendi soluta
+		// 				culpa. Consequatur incidunt quidem voluptatum.
+		// 			</p>
+		// 			<Latex>{"$A_x = Acos\\theta, A_y = Asin\\theta$"}</Latex>
+		// 		</LessonPage>
+		// 	);
+		// }
 	}
 
 	return (
