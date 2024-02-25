@@ -306,8 +306,29 @@ main .homepage-subtitle {
 .main-lesson-page {
 	color: black;
 	font-family: 'Libre Franklin', sans-serif;
-	font-size: 1.1rem;
+	font-size: 1.05rem;
 	line-height: 1.5rem;
+}
+
+.prac-problems {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.prac-problems div {
+	border: 1px solid black;
+	background: #e9e9f1;
+}
+
+.prac-problems h3 {
+	background: #262686;
+	color: white;
+	padding: 0.5em;
+}
+
+.prac-problems p {
+	padding: 0.5em;
 }
 
 .lesson-dot-navigation {
@@ -328,7 +349,13 @@ main .homepage-subtitle {
 	border-radius: 50%;
 	border: 1px solid var(--te-bg);
 	height: 20px;
-	transition: all 200ms linear;
+	transition: all 25ms linear;
+}
+
+.lesson-dot-navigation .lesson-dot-navigation-dot:hover {
+	scale: 125%;
+	background: var(--te-bg);
+	filter: brightness(200%);
 }
 
 .lesson-two-grav-accel {
@@ -358,12 +385,6 @@ main .homepage-subtitle {
 .indent {
 	position: relative;
 	left: 3em;
-}
-
-.lesson-dot-navigation .lesson-dot-navigation-dot:hover {
-	scale: 125%;
-	background: var(--te-bg);
-	filter: brightness(200%);
 }
 
 .main-lesson-page .iframe-container {

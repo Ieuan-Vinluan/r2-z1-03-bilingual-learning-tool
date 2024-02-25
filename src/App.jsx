@@ -40,10 +40,10 @@ function App() {
 		} else if (curScreen == "lesson1") {
 			document.title = "Lesson 1";
 			return (
-				<LessonPage setCurScreen={setCurScreen}>
+				<LessonPage setCurScreen={setCurScreen} id={0}>
 					<LessonSection>
 						<h1>Lesson 1: Uniformly Accelerated Motion</h1>
-						<h2>Pagpapakilala</h2> <br />
+						<br />
 						<p>
 							Bago tayo nagsimula, panoorin muna natin ang short
 							video na ito.
@@ -392,12 +392,38 @@ function App() {
 							Gawin muna ang LAHAT ng mga task.
 						</p>
 					)}
+					{canProceed ? (
+						<LessonSection>
+							<h2>Practice Problems!</h2>
+							<br />
+							<div className="prac-problems">
+								<div className="problem-one">
+									<h3>Problem 1</h3>
+									<p>
+										Si Bella ay naglalakbay ng mga lugar sa Pilipinas. Siya ay sumakay ng eroplano galing Manila para pumunta sa Cebu. Ang Cebu ay may distance na <Latex>{"$600 \\; km$"}</Latex> sa timog (south) ng Manila. Pero bago pumunta ang eroplano sa Cebu, dumaan muna ito sa Pampanga na may <Latex>{"$100 \\; km$"}</Latex> layo sa hilaga (north) ng Manila. Sa buong lakbay ni Bella, sagutin ang mga tanong. Ano ang distance ng nilipad ng eroplano? Ano ang average speed ng eroplano? Ano ang average velocity ng eroplano?
+									</p>
+								</div>
+								VIDEO HERE
+								<div className="problem-two">
+									<h3>Problem 2</h3>
+									<p>
+										At <Latex>{"$t=0$"}</Latex>, si John ay nagmamaneho ng kanyang kotse na may velocity na <Latex>{"$35.00 \\; \\dfrac{m}{s}$"}</Latex>. Pagkatapos ng <Latex>{"$7.500 \\; s$"}</Latex>, may nadaanan na stoplight na may red light si John at tinigil niya ang kotse. Nakalipas ang <Latex>{"$30.00 \\; s$"}</Latex>, umilaw na ang green light sa stoplight, pinaandar muli ni John ang kanyang kotse at nagkaroon ito ng <Latex>{"$60.00 \\; \\dfrac{m}{s}$"}</Latex> na velocity pagkalipas ng <Latex>{"$15.00 \\; s$"}</Latex> pagkatapos nito huminto.
+										Ano ang average acceleration ni John from <Latex>{"$t=0$"}</Latex> hanggang huminto siya sa stoplight?
+										Ano ang average acceleration ni John from <Latex>{"$t=0$"}</Latex> hanggang nagkaroon siya ng <Latex>{"$60.00 \\; \\dfrac{m}{s}$"}</Latex> na velocity?
+									</p>
+								</div>
+								VIDEO HERE
+							</div>
+						</LessonSection>
+					) : (
+						null
+					)}
 				</LessonPage>
 			);
 		} else {
-			document.title = "Lesson 3";
+			document.title = "Lesson 2";
 			return (
-				<LessonPage setCurScreen={setCurScreen}>
+				<LessonPage setCurScreen={setCurScreen} id={1}>
 					<LessonSection>
 						<h1>Lesson 2: Free Fall</h1>
 						<br />
@@ -507,6 +533,19 @@ function App() {
 						<p>
 							Tandaan na ang mga kinematic equations na ito ay gagana lamang sa one-dimension. Para sa tinalakay natin, ginagamit natin ang y-axis.
 						</p>
+					</LessonSection>
+					<LessonSection>
+						<h2>Practice Problems!</h2>
+						<br />
+						<div className="prac-problems">
+							<div className="problem-one">
+								<h3>Problem 1</h3>
+								<p>
+									Si Rocky ay nagtapon ng ping pong ball pataas at noong pabagsak na an ping pong ball, pumasok ito sa isang plastic cup na nakapatong sa lamesa. Ang kamay ni Rocky noong hinagis niya ang ping pong ball ay <Latex>{"$50 \\; m$"}</Latex> above sa plastic cup.  Kung ang velocity ng ping pong ball ay <Latex>{"$60 \\; \\dfrac{m}{s}$"}</Latex> noong ito’y lumapag sa plastic cup, ano ang initial velocity ng ping pong ball nung tinapon ito ni Rocky?
+								</p>
+							</div>
+							VIDEO HERE
+						</div>
 					</LessonSection>
 				</LessonPage>
 			);
