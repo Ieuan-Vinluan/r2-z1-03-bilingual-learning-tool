@@ -61,18 +61,20 @@
 .box {
 	width: 100%;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	margin: .5em;
+	border: 1px solid black;
+	background: #e6f0e7;
 }
 
-.box>*:first-child {
-	padding: 1em 1.5em;
-	text-align: center;
-	border: 1px solid black;
+.box h3 {
+	background: #006000;
+	color: white;
+	padding: 0.5em;
 }
 
 .box p {
-	width: 80%;
+	padding: 0.5em;
 }
 
 ul {
@@ -329,6 +331,54 @@ main .homepage-subtitle {
 
 .prac-problems p {
 	padding: 0.5em;
+}
+
+.flashcard {
+	border: 1px solid black;
+	width: 60%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	perspective: 1000px;
+}
+
+.flashcard .not-picked {
+	display: none;
+}
+
+.card-front>*,
+.card-back>* {
+	padding: .5em;
+}
+
+.card-front h3,
+.card-back h3 {
+	background: #bf0000;
+	color: white;
+}
+
+.card-back div {
+	display: flex;
+	flex-direction: column;
+}
+
+.lesson-one-gif-one {
+	width: 50%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.flashcard-two-solution {
+	display: grid !important;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	justify-content: center;
+	align-items: center;
+}
+
+.flashcard-two-solution img {
+	width: 100%;
 }
 
 .lesson-dot-navigation {

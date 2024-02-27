@@ -10,6 +10,7 @@ import LessonSection from "./LessonSection";
 import FallGif from "./media/fall.gif";
 import GravAccelDiagram from "./media/gravitational-acceleration-diagram.png";
 import FreeFallDiagram from "./media/freefall-diagram.png";
+import Flashcard from "./Flashcard";
 
 function App() {
 	const [curScreen, setCurScreen] = useState("home");
@@ -101,7 +102,7 @@ function App() {
 									taskDone={taskDone}
 									finishedTasks={finishedTasks}
 								/>
-								Panatilihin ang position ng tao sa 0 meters
+								Panatilihin ang position ng tao sa <Latex>{"$0 \\; m$"}</Latex>
 							</li>
 							<li>
 								<Checkbox
@@ -109,7 +110,7 @@ function App() {
 									taskDone={taskDone}
 									finishedTasks={finishedTasks}
 								/>
-								Lagyan ng 2 m/s na velocity ang tao at pindutin
+								Lagyan ng <Latex>{"$2 \\; \\dfrac{m}{s}$"}</Latex> na velocity ang tao at pindutin
 								ang play button
 							</li>
 							<li>
@@ -118,7 +119,7 @@ function App() {
 									taskDone={taskDone}
 									finishedTasks={finishedTasks}
 								/>
-								Ireset ang simulation at lagyan naman ng 4 m/s
+								Ireset ang simulation at lagyan naman ng <Latex>{"$4 \\; \\dfrac{m}{s}$"}</Latex>
 								ang velocity ang tao at pindutin ang play button
 							</li>
 							<li>
@@ -127,7 +128,7 @@ function App() {
 									taskDone={taskDone}
 									finishedTasks={finishedTasks}
 								/>
-								Ireset ang simulation muli at lagyan ng 1 m/s2
+								Ireset ang simulation muli at lagyan ng <Latex>{"$1 \\; \\dfrac{m}{s^2}$"}</Latex>
 								ang acceleration ng tao at pindutin ang play
 								button. Pansinin ang mangyayari sa velocity ng
 								tao
@@ -147,12 +148,10 @@ function App() {
 							<ol className="indent">
 								<li>
 									Ilang meters ang kailangan lakarin ng tao
-									para pumunta sa kanang pader galing sa 0
-									meters?
+									para pumunta sa kanang pader galing sa <Latex>{"$0 \\; m$"}</Latex> ?
 								</li>
 								<li>
-									Ano ang mapapansin natin na magkaiba sa 2
-									m/s at 4 m/s na velocity ng tao?
+									Ano ang mapapansin natin na magkaiba sa <Latex>{"$2 \\; \\dfrac{m}{s}$"}</Latex> at <Latex>{"$4 \\; \\dfrac{m}{s}$"}</Latex> na velocity ng tao?
 								</li>
 								<li>
 									Ano ang nangyayari sa velocity ng tao kapag
@@ -172,6 +171,7 @@ function App() {
 							<h2>Kinematics</h2>
 							<br />
 							<div className="box">
+								<h3>Definition of Kinematics</h3>
 								<p>
 									Ang kinematics ay isang parte ng mechanics
 									na nagpapaliwanag sa paggalaw ng mga bagay,
@@ -201,6 +201,23 @@ function App() {
 								ng isang bagay.
 							</p>
 							<br />
+							<Flashcard
+								cardTitle="Example One"
+								current={0}
+								answer={<Latex>{"$3 \\; m$"}</Latex>}
+								problem={
+									<div>
+										Kung naglakad si Aydan nang <Latex>{"$2 \\; m$"}</Latex> papunta sa east, at pagkatapos nito ay naglakad pa siya nang karagdagang <Latex>{"$1 \\; m$"}</Latex> papunta sa east, ano ang distance na kanyang linakad? Ibigay ang iyong sagot sa meters.
+									</div>
+								}
+								solution={
+									<div>
+										<p>Ang distansya na linakad ni Aydan ay <Latex>{"$3 \\; m$"}</Latex> dahil <Latex>{"$2 \\; m + 1 \\; m = 3 \\; m$"}</Latex>.</p>
+										<img src="./src/media/lesson-one-flashcard-one-crop.gif" className="lesson-one-gif-one" alt="" />
+									</div>
+								}
+							/>
+							<br />
 							<p>
 								Pero kapag hinahanap lang natin ay ang
 								difference ng original position at final
@@ -216,13 +233,14 @@ function App() {
 							</p>
 							<br />
 							<div className="box">
-								<Latex>{"$\\Delta x = x_{f} - x_{0}$"}</Latex>
+								<h3>Displacement Formula</h3>
+								<p className="center-horizontal">
+									<Latex>{"$\\Delta x = x_{f} - x_{0}$"}</Latex>, where:
+									<Latex>{"$\\; \\Delta x$"}</Latex> - displacement,{" "}
+									<Latex>{"$x_{f}$"}</Latex> - final position,{" "}
+									<Latex>{"$x_{0}$"}</Latex> - initial position
+								</p>
 							</div>
-							<p className="center-horizontal">
-								<Latex>{"$\\Delta x$"}</Latex> - displacement,{" "}
-								<Latex>{"$x_{f}$"}</Latex> - final position,{" "}
-								<Latex>{"$x_{0}$"}</Latex> - initial position
-							</p>
 							<br />
 							<p>
 								Sa simulation, ang kanan o east direction ay
@@ -245,6 +263,26 @@ function App() {
 							<br />
 							<p>VIDEO HERE</p>
 							<br />
+							<Flashcard
+								cardTitle={"Example Two"}
+								answer={<Latex>{"$2 \\; m$ east"}</Latex>}
+								current={0}
+								problem={
+									<div>
+										Si Aydan ay naglakad ng <Latex>{"$4 \\; m$"}</Latex> to the east, tapos naglakad ng <Latex>{"$2 \\; m$"}</Latex> to the west. Ano ang kanyang displacement?
+									</div>
+								}
+								solution={
+									<div className="flashcard-two-solution">
+										<img src="./src/media/lesson-one-flashcard-two-1-crop.gif" alt="" />
+										<p>Ang unang distansya na linakad ni Aydan ay <Latex>{"$4 \\; m$"}</Latex> to the east.</p>
+										<img src="./src/media/lesson-one-flashcard-two-2-crop.gif" alt="" />
+										<p>Ang unang distansya na linakad ni Aydan ay <Latex>{"$3 \\; m$"}</Latex> to the west.</p>
+										<img src="./src/media/lesson-one-flashcard-two-3.png" alt="" />
+										<p>Kung titignan lamang ang final position ni Aydan, siya ay gumalaw lamang ng <Latex>{"$2 \\; m$"}</Latex> to the east.</p>
+									</div>
+								}
+							/>
 							<h3>Velocity</h3>
 							<br />
 							<p>
@@ -277,13 +315,14 @@ function App() {
 							<p>Dahil dito, ang equation ng speed ay:</p>
 							<br />
 							<div className="box">
-								<Latex>{"$v = \\dfrac{d}{t}$"}</Latex>
+								<h3>Speed Formula</h3>
+								<p className="center-horizontal">
+									<Latex>{"$v = \\dfrac{d}{t}$"}</Latex>, where
+									<Latex>{"$\\;v$"}</Latex> - speed,{" "}
+									<Latex>{"$d$"}</Latex> - distance,{" "}
+									<Latex>{"$t$"}</Latex> - time
+								</p>
 							</div>
-							<p className="center-horizontal">
-								<Latex>{"$v$"}</Latex> - speed,{" "}
-								<Latex>{"$d$"}</Latex> - distance,{" "}
-								<Latex>{"$t$"}</Latex> - time
-							</p>
 							<br />
 							<p>
 								Ang average velocity naman ay isang vectory
@@ -299,27 +338,44 @@ function App() {
 							<br />
 							<p>Dahil dito, ang equation ng velocity ay:</p>
 							<div className="box">
-								<Latex>
-									{
-										"$\\vec{v} = \\dfrac{\\vec{\\Delta x}}{t}$"
-									}
-								</Latex>
+								<h3>Velocity Formula</h3>
+								<p className="center-horizontal">
+									<Latex>
+										{
+											"$\\vec{v} = \\dfrac{\\vec{\\Delta x}}{t}$"
+										}
+									</Latex>, where
+									<Latex>{"$\\; \\vec{v}$"}</Latex> - velocity,{" "}
+									<Latex>{"$\\vec{\\Delta x}$"}</Latex> -
+									displacement, <Latex>{"$t$"}</Latex> - time
+								</p>
 							</div>
-							<p className="center-horizontal">
-								<Latex>{"$\\vec{v}$"}</Latex> - velocity,{" "}
-								<Latex>{"$\\vec{\\Delta x}$"}</Latex> -
-								displacement, <Latex>{"$t$"}</Latex> - time
-							</p>
 							<br />
 							<p>
 								Ang speed at velocity ay parehas nagsasabi kung
 								gaano kabilis ang tao o bagay at nagkaiba lamang
 								sa pagkakaroon ng direction. Ang SI unit para sa
 								distance at displacement ay meters per second
-								(m/s).
+								<Latex>{"$\\; (\\dfrac{m}{s})$"}</Latex>.
 							</p>
 							<br />
 							<p>VIDEO HERE</p>
+							<br />
+							<Flashcard
+								current={0}
+								cardTitle={"Example Three"}
+								answer={
+									<Latex>{"$0.8 \\dfrac{m}{s}$ to the right"}</Latex>
+								}
+								problem={
+									<div>
+										Si Jin ay nakatakbo ng <Latex>{"$50 \\; m$"}</Latex> to the right sa kalye pagkatapos ng <Latex>{"$10 \\; s$"}</Latex>. Tapos, tumakbo siya ng <Latex>{"$30 \\; m$"}</Latex> to the left pagkatapos ng <Latex>{"$15\\; s$"}</Latex>. Ano ang average velocity sa buong takbo niya?
+									</div>
+								}
+								solution={
+									<div></div>
+								}
+							/>
 							<br />
 							<h3>Acceleration</h3>
 							<br />
@@ -372,18 +428,18 @@ function App() {
 								acceleration ay:
 							</p>
 							<div className="box">
-								<Latex>
-									{
-										"$\\vec{a} = \\dfrac{\\Delta \\vec{v}}{\\Delta t} = \\dfrac{\\vec{v} - \\vec{v_0}}{\\Delta t}$"
-									}
-								</Latex>
+								<h3>Acceleration Formula</h3>
+								<p className="center-horizontal">
+									<Latex>
+										{
+											"$\\vec{a} = \\dfrac{\\Delta \\vec{v}}{\\Delta t} = \\dfrac{\\vec{v} - \\vec{v_0}}{\\Delta t}$"
+										}
+									</Latex>, where
+									<Latex>{"$\\; \\vec{a}$"}</Latex> - acceleration,{" "}
+									<Latex>{"$\\vec{v}$"}</Latex> - final velocity,{" "}
+									<Latex>{"$\\vec{v_0}$"}</Latex> - initial
+									velocity, <Latex>{"$\\Delta t$"}</Latex> - time</p>
 							</div>
-							<p className="center-horizontal">
-								<Latex>{"$\\vec{a}$"}</Latex> - acceleration,{" "}
-								<Latex>{"$\\vec{v}$"}</Latex> - final velocity,{" "}
-								<Latex>{"$\\vec{v_0}$"}</Latex> - initial
-								velocity, <Latex>{"$\\Delta t$"}</Latex> - time
-							</p>
 							<br />
 							<p>VIDEO HERE</p>
 						</LessonSection>
@@ -496,7 +552,16 @@ function App() {
 						<Latex>{"$$a = \\dfrac{v - v_0}{t} \\rightarrow -g = \\dfrac{v - v_0}{t}$$"}</Latex>
 						<Latex>{"$$\\therefore v = v_0 - gt$$"}</Latex>
 						<p>
-							Ito ang ating equation relating final velocity, initial velocity, at time! Ngayon, alam natin na:
+							Ito ang ating equation relating final velocity, initial velocity, at time!
+						</p>
+						<div className="box">
+							<h3>Important Equation!</h3>
+							<p className="center-horizontal">
+								<Latex>{"$v=v_0-gt$"}</Latex>
+							</p>
+						</div>
+						<p>
+							Ngayon, alam natin na:
 						</p>
 						<Latex>{"$$\\Delta x = v_{\\text{average}}t$$"}</Latex>
 						<p>
@@ -508,6 +573,15 @@ function App() {
 						</p>
 						<Latex>{"$$\\Delta x = \\dfrac{v_0 - gt + v_0}{2}t = v_0t - \\dfrac{1}{2}gt^2$$"}</Latex>
 						<p>
+							Ito ang ating equation relating displacement at initial velocity!
+						</p>
+						<div className="box">
+							<h3>Important Equation!</h3>
+							<p className="center-horizontal">
+								<Latex>{"$\\Delta x = v_0t - \\dfrac{1}{2}gt^2$"}</Latex>
+							</p>
+						</div>
+						<p>
 							Balikan natin ang equation na <Latex>{"$v = v_0 - gt$"}</Latex>. Squaring both sides:
 						</p>
 						<Latex>{"$$v^2 = (v_0 - gt)^2 = v_0^2 - 2v_0gt + g^2t^2 = v_0^2 - 2g(v_0t - \\dfrac{1}{2}gt^2)$$"}</Latex>
@@ -515,6 +589,16 @@ function App() {
 							Kaya nating isubstitute ang equation na <Latex>{"$\\Delta x = v_0t - \\dfrac{1}{2}gt^2$"}</Latex> dito para makuha ang sumusunod:
 						</p>
 						<Latex>{"$$v^2 = v_0^2 - 2g\\Delta x$$"}</Latex>
+						<p>
+							Ito naman ang ating equation relating initial velocity, final velocity, at displacement!
+						</p>
+						<div className="box">
+							<h3>Important Equation!</h3>
+							<p className="center-horizontal">
+								<Latex>{"$v^2=v_0^2-2g\\Delta x$"}</Latex>
+							</p>
+						</div>
+						<br />
 					</LessonSection>
 					<LessonSection>
 						<h2>Summary of Equations</h2>
