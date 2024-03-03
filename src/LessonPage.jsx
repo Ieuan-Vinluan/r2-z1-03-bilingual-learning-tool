@@ -11,8 +11,8 @@ export default function LessonPage(props) {
 	// let lessons = props.children;
 	let chl = props.children;
 	let lessons = [];
-	for(let i = 0; i < chl.length; i++) {
-		if(chl[i] != null) {
+	for (let i = 0; i < chl.length; i++) {
+		if (chl[i] != null) {
 			lessons.push(chl[i]);
 		}
 	}
@@ -24,14 +24,16 @@ export default function LessonPage(props) {
 		currentSections[props.id] = parseInt(event.target.id);
 		console.log(currentSections)
 	};
+	let ok = 0;
 	return (
 		<>
 			<div className="lesson-dot-navigation">
 				{lessons.map((lesson, idx) => {
+					ok |= idx == currentSections[props.id];
 					return (
 						<div
 							id={idx}
-							className={"lesson-dot-navigation-dot" + (idx == currentSections[props.id] ? " current-lesson" : "")}
+							className={"lesson-dot-navigation-dot" + (ok ? "" : " part-of-bar") + (idx == currentSections[props.id] ? " current-lesson" : "")}
 							onClick={handleClick}
 						>
 							&nbsp;

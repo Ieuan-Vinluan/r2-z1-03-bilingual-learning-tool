@@ -369,11 +369,29 @@ function App() {
 								}
 								problem={
 									<div>
-										Si Jin ay nakatakbo ng <Latex>{"$50 \\; m$"}</Latex> to the right sa kalye pagkatapos ng <Latex>{"$10 \\; s$"}</Latex>. Tapos, tumakbo siya ng <Latex>{"$30 \\; m$"}</Latex> to the left pagkatapos ng <Latex>{"$15\\; s$"}</Latex>. Ano ang average velocity sa buong takbo niya?
+										Si Aydan ay nakatakbo ng <Latex>{"$50 \\; m$"}</Latex> to the right sa kalye pagkatapos ng <Latex>{"$10 \\; s$"}</Latex>. Tapos, tumakbo siya ng <Latex>{"$30 \\; m$"}</Latex> to the left pagkatapos ng <Latex>{"$15\\; s$"}</Latex>. Ano ang average velocity sa buong takbo niya?
 									</div>
 								}
 								solution={
-									<div></div>
+									<div className="flashcard-three-solution">
+										<img src="./src/media/lesson-one-flashcard-three-1-crop.gif" alt="" />
+										<p>
+											Sa unang paggalaw, gumalaw si Aydan nang <Latex>{"$50 \\; m$"}</Latex> papuntang east sa loob ng <Latex>{"$10 \\; s$"}</Latex>.
+										</p>
+										<img src="./src/media/lesson-one-flashcard-three-2-crop.gif" alt="" />
+										<p>
+											Sa pangalawang paggalaw, gumalaw si Aydan ng <Latex>{"$30 \\; m$"}</Latex> papuntang west sa loob ng <Latex>{"$15 \\; s$"}</Latex>.
+										</p>
+										<p>
+											Kunin muna ang displacement: <Latex>{"$d = 50 \\; m - 30 \\; m = 20 \\; m$"}</Latex>
+										</p>
+										<p>
+											Pangalawa, kunin ang total time: <Latex>{"$t = 10 \\; s + 15 \\; s = 25 \\; s$"}</Latex>
+										</p>
+										<p>
+											Ngayon, malalaman na natin ang velocity: <Latex>{"$v = \\dfrac{d}{t} = \\dfrac{20 \\; m}{25 \\; s} = 0.8 \\; \\dfrac{m}{s}$"}</Latex>
+										</p>
+									</div>
 								}
 							/>
 							<br />
@@ -441,7 +459,27 @@ function App() {
 									velocity, <Latex>{"$\\Delta t$"}</Latex> - time</p>
 							</div>
 							<br />
-							<p>VIDEO HERE</p>
+							<Flashcard
+								cardTitle={"Example Four"}
+								current={0}
+								answer={<Latex>{"$2.67 \\; \\dfrac{m}{s^2}$"}</Latex>}
+								problem={
+									<div>
+										Si Kira ay nagpapatakbo ng kotse sa bilis ng <Latex>{"$48 \\dfrac{m}{s}$"}</Latex>. Pagkatapos ng <Latex>{"$12 \\; s$"}</Latex>, ang kanyang kotse ay umaandar na sa bilis ng <Latex>{"$80 \\; \\dfrac{m}{s}$"}</Latex>. Ano ang average acceleration ni Kira?
+									</div>
+								}
+								solution={
+									<div>
+										<p>
+											Given: <Latex>{"$v_f = 80 \\; \\dfrac{m}{s}, \\; v_0 = 48 \\; \\dfrac{m}{s}, \\; \\Delta t = 12 \\; s$"}</Latex>
+										</p>
+										<p>
+											Kunin muna ang change in velocity! <Latex>{"$$\\Delta v = v_f - v_0 = 80 \\; \\dfrac{m}{s} - 48 \\; \\dfrac{m}{s} = 32 \\; \\dfrac{m}{s}$$"}</Latex>
+										</p>
+										<p>Tapos, <Latex>{"$$a = \\dfrac{\\Delta v}{\\Delta t} = \\dfrac{32 \\; \\dfrac{m}{s}}{12 \\; s} = 2.67 \\; \\dfrac{m}{s^2}$$"}</Latex></p>
+									</div>
+								}
+							/>
 						</LessonSection>
 					) : (
 						<p className="redText">
@@ -533,6 +571,21 @@ function App() {
 						<p>
 							At dahil constant ang gravitational acceleration sa pagtaas at pagbaba ng bola, ang pagbagal at pagbilis ng bola midair ay parehas. Kaya pag sinalo niyo yung bola sa parehas na position kung saan niyo binato ang bola, ang oras ng pagtaas ng bola papunta sa maximum height at ang pagbaba nito galing sa maximum height ay parehas lamang.
 						</p>
+						<br />
+						<Flashcard
+							current={0}
+							cardTitle={"Example One"}
+							problem={
+								<div>
+									Si Carlo ay may hawak na feather sa kanyang kaliwang kamay at metal ball naman sa kanyang kanang kamay, sabay niya ito hinulog. Ignoring air resistance, ano ang mauuna makakarating sa lupa?
+								</div>
+							}
+							solution={
+								<div>
+									Sabay silang makakarating sa lupa dahil pareho ang kanilang rate of acceleration which is ang gravitational acceleration.
+								</div>
+							}
+						/>
 					</LessonSection>
 					<LessonSection>
 						<h2>Kinematic Equations in Free Fall</h2>
@@ -604,19 +657,47 @@ function App() {
 						<h2>Summary of Equations</h2>
 						<br />
 						<p>
-							Sa kabuua, ang mga equations natin sa free fall ay ang mga sumusunod:
+							Sa kabuuan, ang mga equations natin sa free fall ay ang mga sumusunod:
 						</p>
 						<br />
-						<div className="lesson-two-equations">
-							<Latex>{"$$v = v_0 - gt$$"}</Latex>
-							<Latex>{"$$\\Delta x = \\dfrac{(v + v_0)t}{2}$$"}</Latex>
-							<Latex>{"$$\\Delta x = v_0t - \\dfrac{1}{2}gt^2$$"}</Latex>
-							<Latex>{"$$v^2 = v_0^2 - 2g\\Delta x$$"}</Latex>
+						<div className="box">
+							<h3>Important Equations</h3>
+							<div className="lesson-two-equations">
+								<Latex>{"$$v = v_0 - gt$$"}</Latex>
+								<Latex>{"$$\\Delta x = \\dfrac{(v + v_0)t}{2}$$"}</Latex>
+								<Latex>{"$$\\Delta x = v_0t - \\dfrac{1}{2}gt^2$$"}</Latex>
+								<Latex>{"$$v^2 = v_0^2 - 2g\\Delta x$$"}</Latex>
+							</div>
 						</div>
 						<br />
 						<p>
 							Tandaan na ang mga kinematic equations na ito ay gagana lamang sa one-dimension. Para sa tinalakay natin, ginagamit natin ang y-axis.
 						</p>
+						<br />
+						<Flashcard
+							current={0}
+							cardTitle={"Example Two"}
+							problem={
+								<div>
+									Si Caleb ay naghulog ng basketball. Nag-undergo ang basketball sa free fall at ito’y tumagal ng <Latex>{"$2.5 \\; s$"}</Latex> sa ere. Ano ang velocity ng basketball nang ito’y tumama sa lupa?
+								</div>
+							}
+							solution={
+								<div>
+									<p>
+										Dahil hinulog lang ni Caleb ang bola, ang initial velocity nito ay <Latex>{"$0 \\; \\dfrac{m}{s}$"}</Latex>.
+									</p>
+									<p>
+										Alam na rin natin na ang gravitational acceleration ng bola ay <Latex>{"$9.8 \\; \\dfrac{m}{s}$"}</Latex> at ang time ng free fall ng bola ay <Latex>{"$2.5 \\; s$"}</Latex>. Kaya’t gamitin natin ang equation na <Latex>{"$v_f = v_0 - gt$"}</Latex> para mahanap ang final velocity ng bola kung saan ito tumama sa lupa.
+									</p>
+									<p><Latex>{"$$v_f = v_0 - gt = 0 \\; \\dfrac{m}{s} - (9.8 \\; \\dfrac{m}{s^2} \\cdot 2.5 \\; \\dfrac{m}{s}) = -24.5 \\dfrac{m}{s}$$"}</Latex>
+									</p>
+								</div>
+							}
+							answer={
+								<Latex>{"$-24.5 \\; \\dfrac{m}{s}$"}</Latex>
+							}
+						/>
 					</LessonSection>
 					<LessonSection>
 						<h2>Practice Problems!</h2>

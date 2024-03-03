@@ -59,7 +59,8 @@
 }
 
 .box {
-	width: 100%;
+	width: 80%;
+	margin: 50px auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -340,6 +341,7 @@ main .homepage-subtitle {
 	left: 50%;
 	transform: translateX(-50%);
 	perspective: 1000px;
+	cursor: pointer;
 }
 
 .flashcard .not-picked {
@@ -362,6 +364,11 @@ main .homepage-subtitle {
 	flex-direction: column;
 }
 
+.answer-alert {
+	color: gray;
+	text-align: right;
+}
+
 .lesson-one-gif-one {
 	width: 50%;
 	position: relative;
@@ -381,31 +388,81 @@ main .homepage-subtitle {
 	width: 100%;
 }
 
+.flashcard-three-solution img {
+	width: 50%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 .lesson-dot-navigation {
 	position: relative;
-	top: 0.5em;
-	right: 2em;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
 	align-items: flex-end;
 	width: 100%;
+	padding: 2em 2em 1em;
 	gap: 1em;
 	cursor: pointer;
+	border-radius: 25px;
 }
 
 .lesson-dot-navigation .lesson-dot-navigation-dot {
+	position: relative;
 	width: 20px;
 	/* background: var(--te-bg); */
 	border-radius: 50%;
+	background: var(--main-bg);
 	border: 1px solid var(--te-bg);
 	height: 20px;
 	transition: all 25ms linear;
 }
 
+
+
+.current-lesson {
+	/* filter: brightness(200%); */
+	background: var(--te-bg) !important;
+}
+
+.lesson-dot-navigation-dot:nth-child(1)::before {
+	content: '';
+	position: absolute;
+	width: 100vw;
+	height: 10px;
+	top: 50%;
+	right: 18px;
+	transform: translateY(-50%);
+	background: white;
+	z-index: -1;
+}
+
+.lesson-dot-navigation-dot:nth-last-child(1)::after {
+	background: white;
+	;
+}
+
+.lesson-dot-navigation-dot::after {
+	content: '';
+	position: absolute;
+	width: 100vw;
+	height: 10px;
+	top: 50%;
+	left: 18px;
+	transform: translateY(-50%);
+	background: var(--main-bg);
+	z-index: -1;
+}
+
+.part-of-bar,
+.part-of-bar::after {
+	background: var(--te-bg) !important;
+}
+
 .lesson-dot-navigation .lesson-dot-navigation-dot:hover {
-	scale: 125%;
+	/* scale: 125%; */
 	background: var(--te-bg);
-	filter: brightness(200%);
+	/* filter: brightness(200%); */
 }
 
 .lesson-two-grav-accel {
@@ -425,11 +482,6 @@ main .homepage-subtitle {
 
 .lesson-two-equations span.__Latex__ {
 	padding: 0.5em;
-}
-
-.current-lesson {
-	/* filter: brightness(200%); */
-	background: var(--te-bg);
 }
 
 .indent {
