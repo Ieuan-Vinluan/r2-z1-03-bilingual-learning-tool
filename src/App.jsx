@@ -715,20 +715,6 @@ function App() {
 				</LessonPage>
 			);
 		}
-		// } else {
-		// 	document.title = "Lesson 3";
-		// 	return (
-		// 		<LessonPage setCurScreen={setCurScreen}>
-		// 			<h1>Lesson 3</h1>
-		// 			<p>
-		// 				Lorem ipsum dolor sit amet consectetur adipisicing elit.
-		// 				Debitis aspernatur quas neque maiores eligendi soluta
-		// 				culpa. Consequatur incidunt quidem voluptatum.
-		// 			</p>
-		// 			<Latex>{"$A_x = Acos\\theta, A_y = Asin\\theta$"}</Latex>
-		// 		</LessonPage>
-		// 	);
-		// }
 	}
 
 	return (
