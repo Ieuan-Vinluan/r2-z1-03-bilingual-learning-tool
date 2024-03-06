@@ -11,6 +11,7 @@ import FallGif from "./media/fall.gif";
 import GravAccelDiagram from "./media/gravitational-acceleration-diagram.png";
 import FreeFallDiagram from "./media/freefall-diagram.png";
 import Flashcard from "./Flashcard";
+import PracticeProblem from "./PracticeProblem";
 
 function App() {
 	const [curScreen, setCurScreen] = useState("home");
@@ -261,8 +262,6 @@ function App() {
 								displacement ay meters (m).
 							</p>
 							<br />
-							<p>VIDEO HERE</p>
-							<br />
 							<Flashcard
 								cardTitle={"Example Two"}
 								answer={<Latex>{"$2 \\; m$ east"}</Latex>}
@@ -358,8 +357,6 @@ function App() {
 								distance at displacement ay meters per second
 								<Latex>{"$\\; (\\dfrac{m}{s})$"}</Latex>.
 							</p>
-							<br />
-							<p>VIDEO HERE</p>
 							<br />
 							<Flashcard
 								current={0}
@@ -490,23 +487,106 @@ function App() {
 						<LessonSection>
 							<h2>Practice Problems!</h2>
 							<br />
-							<div className="prac-problems">
-								<div className="problem-one">
-									<h3>Problem 1</h3>
-									<p>
-										Si Bella ay naglalakbay ng mga lugar sa Pilipinas. Siya ay sumakay ng eroplano galing Manila para pumunta sa Cebu. Ang Cebu ay may distance na <Latex>{"$600 \\; km$"}</Latex> sa timog (south) ng Manila. Pero bago pumunta ang eroplano sa Cebu, dumaan muna ito sa Pampanga na may <Latex>{"$100 \\; km$"}</Latex> layo sa hilaga (north) ng Manila. Sa buong lakbay ni Bella, sagutin ang mga tanong. Ano ang distance ng nilipad ng eroplano? Ano ang average speed ng eroplano? Ano ang average velocity ng eroplano?
-									</p>
-								</div>
-								VIDEO HERE
-								<div className="problem-two">
-									<h3>Problem 2</h3>
-									<p>
-										At <Latex>{"$t=0$"}</Latex>, si John ay nagmamaneho ng kanyang kotse na may velocity na <Latex>{"$35.00 \\; \\dfrac{m}{s}$"}</Latex>. Pagkatapos ng <Latex>{"$7.500 \\; s$"}</Latex>, may nadaanan na stoplight na may red light si John at tinigil niya ang kotse. Nakalipas ang <Latex>{"$30.00 \\; s$"}</Latex>, umilaw na ang green light sa stoplight, pinaandar muli ni John ang kanyang kotse at nagkaroon ito ng <Latex>{"$60.00 \\; \\dfrac{m}{s}$"}</Latex> na velocity pagkalipas ng <Latex>{"$15.00 \\; s$"}</Latex> pagkatapos nito huminto.
-										Ano ang average acceleration ni John from <Latex>{"$t=0$"}</Latex> hanggang huminto siya sa stoplight?
-										Ano ang average acceleration ni John from <Latex>{"$t=0$"}</Latex> hanggang nagkaroon siya ng <Latex>{"$60.00 \\; \\dfrac{m}{s}$"}</Latex> na velocity?
-									</p>
-								</div>
-								VIDEO HERE
+							<div className="prac-problems-container">
+								<PracticeProblem
+									current={0}
+									problem={
+										<div>
+											Mayroong Jollibee na nakaposition ng <Latex>{"$60 \\; m$"}</Latex> galing sa bahay ni Bong. Kung kailangan niya makarating sa loob ng <Latex>{"$1 \\; hr$"}</Latex> gaano kabilis dapat siya maglakad in meters per second?
+										</div>
+									}
+									cardTitle={"Problem 1"}
+									answer={<Latex>{"$0.0166 \\; \\dfrac{m}{s}$"}</Latex>}
+									solution={
+										<div>
+											<video src="./src/media/Elaborate No.3.mp4" className="solution-video" controls></video>
+										</div>
+									}
+								/>
+								<PracticeProblem
+									current={0}
+									problem={
+										<div>
+											Si Ian ay nagsimula sa isang parke tapos naglalakad siya nang <Latex>{"$30 \\; m$"}</Latex> east  papunta sa supermarket, tapos siya ay naglakad nang <Latex>{"$50 \\; m$"}</Latex> north para puntahan ang paaralan, tapos naglakad siya nang <Latex>{"$30 \\; m$"}</Latex> west papunta sa kanyang bahay. Kung ginawa niya ito lahat sa loob ng <Latex>{"$22 \\; min$"}</Latex>. Ano ang (1) distance, (2) displacement, (3) average speed, at (4) average velocity?
+
+										</div>
+									}
+									cardTitle={"Problem 2"}
+									answer={<Latex>{"$2.273 \\; \\dfrac{m}{s}$"}</Latex>}
+									solution={
+										<div>
+											<video src="./src/media/Elaborate No.3.mp4" className="solution-video" controls></video>
+										</div>
+									}
+								/>
+								<PracticeProblem
+									current={0}
+									problem={
+										<div>
+											Si Juan ay naglalaro ng baseball, ang bola ay may velocity <Latex>{"$30 \\; \\dfrac{m}{s}$"}</Latex> pagkatapon niya papunta sa kaliwa. Kung ang bola ay may deceleration na <Latex>{"$3 \\; \\dfrac{m}{s^2}$"}</Latex> ilang segundo bago natigil ang paggalaw ng bola?
+										</div>
+									}
+									cardTitle={"Problem 3"}
+									answer={<Latex>{"$10 \\; s$"}</Latex>}
+									solution={
+										<div>
+											<video src="./src/media/Elaborate No.3.mp4" className="solution-video" controls></video>
+										</div>
+									}
+								/>
+								<PracticeProblem
+									current={0}
+									problem={
+										<div>
+											Mayroong pulis na bumaril sa isang target. Ang bala ay mayroong final velocity na <Latex>{"$40 \\; \\dfrac{m}{s}$"}</Latex>, kung ito ay nagdedecelerate sa rate na <Latex>{"$40 \\; \\dfrac{m}{s^2}$"}</Latex> ano ang position nito pagkatapos ng <Latex>{"$4 \\; s$"}</Latex>?
+										</div>
+									}
+									cardTitle={"Problem 4"}
+									answer={<Latex>{"$480 \\; m$"}</Latex>}
+									solution={
+										<div>
+											<video src="./src/media/Elaborate No.5.mp4" className="solution-video" controls></video>
+										</div>
+									}
+								/>
+							</div>
+						</LessonSection>
+					) : (
+						null
+					)}
+					{canProceed ? (
+						<LessonSection>
+							<h2>Challenge Problems!</h2>
+							<br />
+							<div className="prac-problems-container">
+								<PracticeProblem
+									current={0}
+									problem={
+										<div>
+											Si Bella ay naglalakbay ng mga lugar sa Pilipinas. Siya ay sumakay ng eroplano galing Manila para pumunta sa Cebu. Ang Cebu ay may distance na <Latex>{"$600 \\; km$"}</Latex> sa timog (south) ng Manila. Pero bago pumunta ang eroplano sa Cebu, dumaan muna ito sa Pampanga na may <Latex>{"$100 \\; km$"}</Latex> layo sa hilaga (north) ng Manila. Sa buong lakbay ni Bella, sagutin ang mga tanong. Ano ang distance ng nilipad ng eroplano? Ano ang average speed ng eroplano? Ano ang average velocity ng eroplano?
+										</div>
+									}
+									cardTitle={"Challenge Problem 1"}
+									answer={null}
+									solution={
+										null
+									}
+								/>
+								<PracticeProblem
+									current={0}
+									problem={
+										<div>
+											At <Latex>{"$t=0$"}</Latex>, si John ay nagmamaneho ng kanyang kotse na may velocity na <Latex>{"$35.00\\dfrac{m}{s}$"}</Latex>. Pagkatapos ng <Latex>{"$7.500 \\; s$"}</Latex>, may nadaanan na stoplight na may red light si John at tinigil niya ang kotse. Nakalipas ang <Latex>{"$30.00 \\; s$"}</Latex>, umilaw na ang green light sa stoplight, pinaandar muli ni John ang kanyang kotse at nagkaroon ito ng <Latex>{"$60.00 \\; \\dfrac{m}{s}$"}</Latex> na velocity pagkalipas ng <Latex>{"$15.00 \\; s$"}</Latex> pagkatapos nito huminto.
+											Ano ang average acceleration ni John from <Latex>{"$t=0$"}</Latex> hanggang huminto siya sa stoplight?
+											Ano ang average acceleration ni John from <Latex>{"$t=0$"}</Latex> hanggang nagkaroon siya ng <Latex>{"$60.00 \\; \\dfrac{m}{s}$"}</Latex> na velocity?
+										</div>
+									}
+									cardTitle={"Challenge Problem 2"}
+									answer={null}
+									solution={
+										null
+									}
+								/>
 							</div>
 						</LessonSection>
 					) : (
@@ -702,14 +782,37 @@ function App() {
 					<LessonSection>
 						<h2>Practice Problems!</h2>
 						<br />
-						<div className="prac-problems">
-							<div className="problem-one">
-								<h3>Problem 1</h3>
-								<p>
-									Si Rocky ay nagtapon ng ping pong ball pataas at noong pabagsak na an ping pong ball, pumasok ito sa isang plastic cup na nakapatong sa lamesa. Ang kamay ni Rocky noong hinagis niya ang ping pong ball ay <Latex>{"$50 \\; m$"}</Latex> above sa plastic cup.  Kung ang velocity ng ping pong ball ay <Latex>{"$60 \\; \\dfrac{m}{s}$"}</Latex> noong ito’y lumapag sa plastic cup, ano ang initial velocity ng ping pong ball nung tinapon ito ni Rocky?
-								</p>
-							</div>
-							VIDEO HERE
+						<div className="prac-problems-container">
+							<PracticeProblem
+								current={0}
+								problem={
+									<div>
+										Si Rocky ay nagtapon ng ping pong ball pataas at noong pabagsak na an ping pong ball, pumasok ito sa isang plastic cup na nakapatong sa lamesa. Ang kamay ni Rocky noong hinagis niya ang ping pong ball ay <Latex>{"$50 \\; m$"}</Latex> above sa plastic cup.  Kung ang velocity ng ping pong ball ay <Latex>{"$60 \\; \\dfrac{m}{s}$"}</Latex> noong ito’y lumapag sa plastic cup, ano ang initial velocity ng ping pong ball nung tinapon ito ni Rocky?
+									</div>
+								}
+								cardTitle={"Problem 1"}
+								answer={<Latex>{"$0.0166 \\; \\dfrac{m}{s}$"}</Latex>}
+								solution={
+									<div>
+										<video src="./src/media/Elaborate No.3.mp4" className="solution-video" controls></video>
+									</div>
+								}
+							/>
+							<PracticeProblem
+								current={0}
+								problem={
+									<div>
+										Nagpalipad ang mga estudyante ng bottle rocket pataas. Kung ito ay may initial velocity na <Latex>{"$30 \\; \\dfrac{m}{s}$"}</Latex>, at may mass ito na <Latex>{"$1 \\; kg$"}</Latex>, ano ang maximum height nito?
+									</div>
+								}
+								cardTitle={"Problem 2"}
+								answer={<Latex>{"$0.0166 \\; \\dfrac{m}{s}$"}</Latex>}
+								solution={
+									<div>
+										<video src="./src/media/Elaborate No.5.mp4" className="solution-video" controls></video>
+									</div>
+								}
+							/>
 						</div>
 					</LessonSection>
 				</LessonPage>

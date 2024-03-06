@@ -319,21 +319,45 @@ main .homepage-subtitle {
 	line-height: 1.5rem;
 }
 
-.prac-problems {
-	display: flex;
-	flex-direction: column;
-	gap: 1em;
+.prac-problems-container {
+	display: grid;
+	width: 95%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	grid-template-columns: repeat(1, 1fr);
+	gap: 2em;
 }
 
-.prac-problems div {
+.solution-video {
+	width: 40%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.prac-problems-container>div {
 	border: 1px solid black;
 	background: #e9e9f1;
+}
+
+.prac-problems {
+	cursor: pointer;
+	/* height: 420px; */
+}
+
+.prac-problems-front>*,
+.prac-problems-back>* {
+	padding: .5em;
+}
+
+.no-back-side {
+	cursor: default;
 }
 
 .prac-problems h3 {
 	background: #262686;
 	color: white;
-	padding: 0.5em;
 }
 
 /* .prac-problems p {} */
@@ -348,7 +372,7 @@ main .homepage-subtitle {
 	cursor: pointer;
 }
 
-.flashcard .not-picked {
+.not-picked {
 	display: none;
 }
 
@@ -421,7 +445,6 @@ main .homepage-subtitle {
 	height: 20px;
 	transition: all 25ms linear;
 }
-
 
 
 .current-lesson {
