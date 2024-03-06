@@ -13,6 +13,7 @@ import FreeFallDiagram from "./media/freefall-diagram.png";
 import Flashcard from "./Flashcard";
 import PracticeProblem from "./PracticeProblem";
 
+
 function App() {
 	const [curScreen, setCurScreen] = useState("home");
 	const [canProceed, setCanProceed] = useState(false);
@@ -34,6 +35,7 @@ function App() {
 		}
 		return ok;
 	};
+
 
 	function goTo() {
 		if (curScreen == "home") {
@@ -137,6 +139,7 @@ function App() {
 						</ul>
 					</LessonSection>
 					{/* so users cannot access the rest of the page without doing the tasks */}
+
 
 					{canProceed ? (
 						<LessonSection>
@@ -499,7 +502,8 @@ function App() {
 									answer={<Latex>{"$0.0166 \\; \\dfrac{m}{s}$"}</Latex>}
 									solution={
 										<div>
-											<video src="./src/media/Elaborate No.3.mp4" className="solution-video" controls></video>
+											<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/cR929k_iAo0?si=674caBbkmi6kH0yF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+											{/* temporary */}
 										</div>
 									}
 								/>
@@ -508,14 +512,13 @@ function App() {
 									problem={
 										<div>
 											Si Ian ay nagsimula sa isang parke tapos naglalakad siya nang <Latex>{"$30 \\; m$"}</Latex> east  papunta sa supermarket, tapos siya ay naglakad nang <Latex>{"$50 \\; m$"}</Latex> north para puntahan ang paaralan, tapos naglakad siya nang <Latex>{"$30 \\; m$"}</Latex> west papunta sa kanyang bahay. Kung ginawa niya ito lahat sa loob ng <Latex>{"$22 \\; min$"}</Latex>. Ano ang (1) distance, (2) displacement, (3) average speed, at (4) average velocity?
-
 										</div>
 									}
 									cardTitle={"Problem 2"}
 									answer={<Latex>{"$2.273 \\; \\dfrac{m}{s}$"}</Latex>}
 									solution={
 										<div>
-											<video src="./src/media/Elaborate No.3.mp4" className="solution-video" controls></video>
+											<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/k2sxwAGzlxc?si=0K5aUC97H13FwCTp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 										</div>
 									}
 								/>
@@ -530,7 +533,7 @@ function App() {
 									answer={<Latex>{"$10 \\; s$"}</Latex>}
 									solution={
 										<div>
-											<video src="./src/media/Elaborate No.3.mp4" className="solution-video" controls></video>
+											<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/lMBEwliD0fg?si=4snrVExFxd9kaolc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 										</div>
 									}
 								/>
@@ -545,7 +548,7 @@ function App() {
 									answer={<Latex>{"$480 \\; m$"}</Latex>}
 									solution={
 										<div>
-											<video src="./src/media/Elaborate No.5.mp4" className="solution-video" controls></video>
+											<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/cR929k_iAo0?si=674caBbkmi6kH0yF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 										</div>
 									}
 								/>
@@ -787,30 +790,34 @@ function App() {
 								current={0}
 								problem={
 									<div>
-										Si Rocky ay nagtapon ng ping pong ball pataas at noong pabagsak na an ping pong ball, pumasok ito sa isang plastic cup na nakapatong sa lamesa. Ang kamay ni Rocky noong hinagis niya ang ping pong ball ay <Latex>{"$50 \\; m$"}</Latex> above sa plastic cup.  Kung ang velocity ng ping pong ball ay <Latex>{"$60 \\; \\dfrac{m}{s}$"}</Latex> noong ito’y lumapag sa plastic cup, ano ang initial velocity ng ping pong ball nung tinapon ito ni Rocky?
+										Nagpalipad ang mga estudyante ng bottle rocket pataas. Kung ito ay may initial velocity na <Latex>{"$30 \\; \\dfrac{m}{s}$"}</Latex>, at may mass ito na <Latex>{"$1 \\; kg$"}</Latex>, ano ang maximum height nito?
 									</div>
 								}
-								cardTitle={"Problem 1"}
+								cardTitle={"Practice Problem 1"}
 								answer={<Latex>{"$0.0166 \\; \\dfrac{m}{s}$"}</Latex>}
 								solution={
 									<div>
-										<video src="./src/media/Elaborate No.3.mp4" className="solution-video" controls></video>
+										<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/s6W_itvXXR0?si=pCOCn-lTNHP4DP91" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 									</div>
 								}
 							/>
+						</div>
+					</LessonSection>
+					<LessonSection>
+						<h2>Challenge Problems!</h2>
+						<br />
+						<div className="prac-problems-container">
 							<PracticeProblem
 								current={0}
 								problem={
 									<div>
-										Nagpalipad ang mga estudyante ng bottle rocket pataas. Kung ito ay may initial velocity na <Latex>{"$30 \\; \\dfrac{m}{s}$"}</Latex>, at may mass ito na <Latex>{"$1 \\; kg$"}</Latex>, ano ang maximum height nito?
+										Si Rocky ay nagtapon ng ping pong ball pataas at noong pabagsak na an ping pong ball, pumasok ito sa isang plastic cup na nakapatong sa lamesa. Ang kamay ni Rocky noong hinagis niya ang ping pong ball ay <Latex>{"$50 \\; m$"}</Latex> above sa plastic cup.  Kung ang velocity ng ping pong ball ay <Latex>{"$60 \\; \\dfrac{m}{s}$"}</Latex> noong ito’y lumapag sa plastic cup, ano ang initial velocity ng ping pong ball nung tinapon ito ni Rocky?
 									</div>
 								}
-								cardTitle={"Problem 2"}
-								answer={<Latex>{"$0.0166 \\; \\dfrac{m}{s}$"}</Latex>}
+								cardTitle={"Challenge Problem 1"}
+								answer={null}
 								solution={
-									<div>
-										<video src="./src/media/Elaborate No.5.mp4" className="solution-video" controls></video>
-									</div>
+									null
 								}
 							/>
 						</div>
@@ -819,6 +826,7 @@ function App() {
 			);
 		}
 	}
+
 
 	return (
 		<>
@@ -829,6 +837,7 @@ function App() {
 	);
 }
 
+
 {
 	/* TODO add images and other media */
 }
@@ -836,4 +845,7 @@ function App() {
 	/* TODO add footer */
 }
 
+
 export default App;
+
+
