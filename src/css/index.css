@@ -39,6 +39,12 @@
 	transform: translateX(50%);
 }
 
+.video-center-horizontal {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 .center-horizontal-image {
 	max-width: 100%;
 	height: auto;
@@ -330,9 +336,7 @@ main .homepage-subtitle {
 	padding: 0.5em;
 }
 
-.prac-problems p {
-	padding: 0.5em;
-}
+/* .prac-problems p {} */
 
 .flashcard {
 	border: 1px solid black;
