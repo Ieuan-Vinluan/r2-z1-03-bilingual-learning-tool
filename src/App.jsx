@@ -502,8 +502,7 @@ function App() {
 									answer={<Latex>{"$0.0166 \\; \\dfrac{m}{s}$"}</Latex>}
 									solution={
 										<div>
-											<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/cR929k_iAo0?si=674caBbkmi6kH0yF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-											{/* temporary */}
+											<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/kCpR4o05DWM?si=EIUT7h4BZ_y52Ssi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 										</div>
 									}
 								/>
@@ -821,6 +820,19 @@ function App() {
 								}
 							/>
 						</div>
+					</LessonSection>
+					<LessonSection>
+						<h2>Confirmatory Experiment</h2>
+						<br />
+						<p>
+							Panoorin ang paghulog ng eraser sa baba. Kung hinulog ang eraser mula sa taas na <Latex>{"$3 \\; m$"}</Latex>, gaano katagal ito mahuhulog hanggang marating ito ang lupa?
+						</p>
+						<br />
+						<img src="./src/media/confirmatory.gif" alt="" className="confirmatory" />
+						<br />
+						<p>
+							Ayon sa video, tama ba ang iyong sagot? Kung hindi, bakit kaya? Ano ang pwedeng paliwanag para rito? Pagnilayan!
+						</p>
 					</LessonSection>
 				</LessonPage>
 			);

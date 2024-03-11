@@ -568,6 +568,13 @@ main .homepage-subtitle {
 	border: 1px solid black;
 }
 
+.confirmatory {
+	width: 25%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 footer {
 	background: black;
 	font-family: "Libre Franklin", sans-serif;
