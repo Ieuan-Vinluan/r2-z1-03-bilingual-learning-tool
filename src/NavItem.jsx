@@ -16,15 +16,15 @@ export default function NavItem(props) {
     }}>
       <a className="nav-item-text" onClick={() => {
         setClicked(!clicked);
-        if (!renderText) {
-          console.log("switching!");
-          props.setCurScreen(props.id);
-        }
+        // if (!renderText) {
+        console.log("switching!");
+        props.setCurScreen(props.id);
+        // }
       }}>
         {props.icon}
         {renderText && <p>{props.text}</p>}
       </a>
-      {clicked && renderText && props.children}
+      {/* {clicked && renderText && props.children} */}
     </li>
   );
 }

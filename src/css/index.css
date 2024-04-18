@@ -426,24 +426,28 @@ main .homepage-subtitle {
 .lesson-dot-navigation {
 	position: relative;
 	display: flex;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	align-items: flex-end;
-	width: 100%;
+	/* width: 100%; */
+	/* width: 25%; */
 	padding: 2em 2em 1em;
-	gap: 1em;
+	gap: 2em;
 	cursor: pointer;
 	border-radius: 25px;
+	/* changes for simplicity */
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .lesson-dot-navigation .lesson-dot-navigation-dot {
 	position: relative;
 	width: 20px;
+	height: 20px;
 	/* background: var(--te-bg); */
 	border-radius: 50%;
 	background: var(--main-bg);
-	border: 1px solid var(--te-bg);
-	height: 20px;
-	transition: all 25ms linear;
+	/* border: 1px solid var(--te-bg); */
+	transition: all 250ms linear;
 }
 
 
@@ -452,7 +456,36 @@ main .homepage-subtitle {
 	background: var(--te-bg) !important;
 }
 
-.lesson-dot-navigation-dot:nth-child(1)::before {
+.prev-next {
+	display: flex;
+	padding: 1em 2em;
+	width: 95%;
+	position: relative;
+	justify-content: space-between;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.prev-next button {
+	width: 10%;
+	padding: 1em 2em;
+	background: var(--main-bg);
+	color: white;
+	border-radius: 5px;
+	transition: background 150ms linear;
+}
+
+.prev-next button:hover {
+	cursor: pointer;
+	background: var(--te-bg);
+}
+
+.prev-next button:disabled {
+	background: gray;
+	cursor: default;
+}
+
+/* .lesson-dot-navigation-dot:nth-child(1)::before {
 	content: '';
 	position: absolute;
 	width: 100vw;
@@ -479,15 +512,15 @@ main .homepage-subtitle {
 	transform: translateY(-50%);
 	background: var(--main-bg);
 	z-index: -1;
-}
+} */
 
-.part-of-bar,
+/* .part-of-bar,
 .part-of-bar::after {
 	background: var(--te-bg) !important;
-}
+} */
 
 .lesson-dot-navigation .lesson-dot-navigation-dot:hover {
-	/* scale: 125%; */
+	scale: 125%;
 	background: var(--te-bg);
 	/* filter: brightness(200%); */
 }

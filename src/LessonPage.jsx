@@ -44,6 +44,18 @@ export default function LessonPage(props) {
 			<main className="main-lesson-page">
 				{lessons[currentSections[props.id]]}
 			</main>
+			<div className="prev-next">
+				<button disabled={parseInt(currentLessonSection) === 0} type="button" onClick={() => {
+					let newId = parseInt(currentLessonSection) - 1;
+					setCurrentLessonSection(newId);
+					currentSections[props.id] = newId;
+				}}>&laquo; Previous</button>
+				<button disabled={parseInt(currentLessonSection) + 1 >= lessons.length} type="button" onClick={() => {
+					let newId = parseInt(currentLessonSection) + 1;
+					setCurrentLessonSection(newId);
+					currentSections[props.id] = newId;
+				}}>Next &raquo;</button>
+			</div>
 		</>
 	);
 }
