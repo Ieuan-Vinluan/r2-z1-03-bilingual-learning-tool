@@ -15,7 +15,7 @@ export default function HomeScreen({ setCurScreen }) {
 					<h1>An Introduction to Kinematics</h1>
 					<p>The geometry of motion, kinematics is seen in our everyday life.</p>
 				</div>
-				<img src="../src/media/basketball.png" alt="" />
+				<img src="/media/basketball.png" alt="" />
 			</div>
 			<main className="main-home-page">
 				<h1 className="homepage-subtitle">
