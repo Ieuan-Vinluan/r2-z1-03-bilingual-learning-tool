@@ -13,7 +13,8 @@ export default function HomeScreen({ setCurScreen }) {
 			<div className="page-header">
 				<div className="header-text">
 					<h1>An Introduction to Kinematics</h1>
-					<p>The geometry of motion, kinematics is seen in our everyday life.</p>
+					<hr />
+					<p>Magsimula sa mga aralin sa baba!</p>
 				</div>
 				<img src="./media/basketball.png" alt="" />
 			</div>

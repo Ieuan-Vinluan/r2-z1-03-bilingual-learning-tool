@@ -49,7 +49,7 @@ function App() {
 						<h1>Lesson 1: Uniformly Accelerated Motion</h1>
 						<br />
 						<p>
-							Bago tayo nagsimula, panoorin muna natin ang short
+							Bago tayo magsimula, panoorin muna natin ang short
 							video na ito.
 						</p>
 						<div className="iframe-container">
@@ -63,16 +63,8 @@ function App() {
 							></iframe>
 						</div>
 						<p>
-							Sa short video na ito, makikita natin ang pagbagsak
-							ng dahon sa tubig. Ano ang mapapansin niyo sa
-							pagbagsak ng dahon? At sa tingin niyo, bakit ganoon
-							ang pagbagsak ng dahon? <br />
-							<br /> Sa ating mundo, araw-araw tayong nakakakita
-							ng motion sa mga tao at bagay sa ating paligid.
-							Pwede itong maging mabilis, mabagal, nakahinto,
-							pabilis ng pabilis, at iba pa. So to differentiate
-							and describe motion? Siyempre, gagamit tayo ng
-							Physics.
+							Sa short video na ito, pinakita ang pagbagsak ng dahon sa tubig. Batay sa iyong obserbasyon, ano ang napansin niyo sa pagbagsak ng dahon at bakit ganoon ang pagbagsak ng dahon sa iyong palagay? <br />
+							<br /> Sa ating mundo, araw-araw tayong nakakakita ng motion sa ating paligid tulad ng paglakad ng tao at paggalaw ng mga ibang bagay. Ang motion na ito ay maaaring maging mabilis, mabagal, nakahinto, pabilis nang pabilis, at iba pa. Kaya’t para mailarawan at mapagkaiba natin ang iba’t ibang motion, syempre gagamit tayo ng <b>Physics</b>.
 						</p>
 						<br />
 					</LessonSection>
@@ -96,7 +88,7 @@ function App() {
 								frameBorder="0"
 							></iframe>
 						</div>
-						<p>Gawin ang sumusunod:</p>
+						<p>Pagkatapos natin buksan ang PHET simulation, gawin ang mga sumusunod:</p>
 						<ul className="task-list">
 							<li>
 								<Checkbox
@@ -152,66 +144,55 @@ function App() {
 						<LessonSection>
 							<p className="greenText">Maaari nang magpatuloy!</p> <br />
 							<p>Heto ang iyong ginawa kanina.</p>
-							<img src="./media/simulation-ss.png" className="simulation-ss" alt="" />
+							<br />
+							<div className="simulation-questions" >
+								<img src="./media/simulation-ss.png" className="simulation-ss" alt="" />
+								<br />
+								<div>
+									<p>
+										Sagutin ang mga sumusunod
+										na tanong:
+									</p>
+									<ol className="indent">
+										<li>
+											Ilang meters ang kailangan lakarin ng tao
+											para pumunta sa kanang pader galing sa <Latex>{"$0 \\, m$"}</Latex> ?
+										</li>
+										<li>
+											Ano ang mapapansin natin na magkaiba sa <Latex>{"$2 \\, m/s$"}</Latex> at <Latex>{"$4 \\, m/s$"}</Latex> na velocity ng tao?
+										</li>
+										<li>
+											Ano ang nangyayari sa velocity ng tao kapag
+											may acceleration?
+										</li>
+									</ol>
+								</div>
+							</div>
 							<br />
 							<p>
-								Sagutin ang mga sumusunod
-								na tanong:
-							</p>
-							<ol className="indent">
-								<li>
-									Ilang meters ang kailangan lakarin ng tao
-									para pumunta sa kanang pader galing sa <Latex>{"$0 \\, m$"}</Latex> ?
-								</li>
-								<li>
-									Ano ang mapapansin natin na magkaiba sa <Latex>{"$2 \\, m/s$"}</Latex> at <Latex>{"$4 \\, m/s$"}</Latex> na velocity ng tao?
-								</li>
-								<li>
-									Ano ang nangyayari sa velocity ng tao kapag
-									may acceleration?
-								</li>
-							</ol>
-							<br />
-							<p>
-								Ang paggalaw o motion ng tao sa simulation ay
-								may kinalaman sa isang branch ng Physics na
-								tinatawag na mechanics. Sa ilalim ng mechanics
-								ay may dalawang bahagi, kinematics at dynamics.
-								Pero para sa lesson na ito, magpopokus tayo sa
-								kinematics.
+								Ang paggalaw o motion ng tao sa simulation ay may kinalaman sa isang sangay ng Physics na tinatawag na mechanics. Sa ilalim ng sangay ng mechanics ay mayroon itong dalawang bahagi, kinematics at dynamics. Ngunit para sa lesson na ito, magpopokus tayo sa kinematics.
 							</p>
 							<br />
 							<h2>Kinematics</h2>
 							<br />
 							<div className="box">
-								<h3>Definition of Kinematics</h3>
+								<h3 className="box-title">Definition of Kinematics</h3>
 								<p>
-									Ang kinematics ay isang parte ng mechanics
-									na nagpapaliwanag sa paggalaw ng mga bagay,
-									without considering the forces acting upon
-									it.
+									Ang kinematics ay isang parte ng mechanics na nagpapaliwanag sa motion ng mga bagay na hindi kinokonsidera ang mga forces na kumikilos dito.
 								</p>
 							</div>
 							<br />
 							<h3>Position</h3>
 							<br />
 							<p>
-								Sa pagpapaliwanag ng paggalaw o motion,
-								kailangan din natin ipakita ang position ng
-								isang bagay. Gawin nating halimbawa ang
-								simulation na ating ginagamit kanina, makikita
-								natin na nag-iba ang position ng tao kapag siya
-								ay naglalakad from one position to another.
+								Sa pagpapaliwanag ng motion, kailangan din natin ipakita ang position ng isang bagay. Gawin nating halimbawa ang simulation na ating ginamit kanina, makikita natin ang pagkakaiba ng position ng tao kapag siya ay nasa gitna at sa kanang pader. Sabihin natin nasa gitna ang initial position ng tao, at yung kanang pader ang final position ng tao.
 							</p>
 							<br />
 							<p>
-								Ang lahat ng linakad ng tao from their original
-								position para makarating sa kanyang final
-								position ay tinatawag na distance. Ito ay isang
+								Ang linakad ng tao galing sa pinagmulan niyang position para makarating sa kanyang paroroonan na position ay tinatawag natin na <b>distance</b>. Ito ay isang
 								scalar unit, kaya ito ay may magnitude (na
 								laging positive) lamang. Ang magnitude ng
-								distance ay ang kabuuang haba ng daan na tinahak
-								ng isang bagay.
+								distance ay ang lahat ng nadaanan ng isang bagay sa motion nito.
 							</p>
 							<br />
 							<Flashcard
@@ -220,33 +201,29 @@ function App() {
 								answer={<Latex>{"$3 \\, m$"}</Latex>}
 								problem={
 									<div>
-										Kung naglakad si Aydan nang <Latex>{"$2 \\, m$"}</Latex> papunta sa east, at pagkatapos nito ay naglakad pa siya nang karagdagang <Latex>{"$1 \\, m$"}</Latex> papunta sa east, ano ang distance na kanyang linakad? Ibigay ang iyong sagot sa meters.
+										Kung naglakad si Aydan nang <Latex>{"$2 \\, m$"}</Latex> papunta sa east, at pagkatapos nito ay naglakad pa siya nang karagdagang <Latex>{"$1 \\, m$"}</Latex> papunta sa east, ano ang distance na kanyang linakad?
 									</div>
 								}
 								solution={
 									<div>
-										<p>Ang distansya na linakad ni Aydan ay <Latex>{"$3 \\, m$"}</Latex> dahil <Latex>{"$2 \\, m + 1 \\, m = 3 \\, m$"}</Latex>.</p>
+										<p>Ang distansya na linakad ni Aydan ay <Latex>{"$3 \\, m$"}</Latex> dahil <Latex>{"$2 \\, m + 1 \\, m = 3 \\, m$"}</Latex>. Makikita ito sa diagram sa baba; ang isang linya ay <Latex>{"$1 \\, m$"}</Latex>.</p>
 										<img src="./media/lesson-one-flashcard-one-crop.gif" className="lesson-one-gif-one" alt="" />
 									</div>
 								}
 							/>
 							<br />
 							<p>
-								Pero kapag hinahanap lang natin ay ang
-								difference ng original position at final
-								position ng tao, ito ay tinatawag natin na
-								displacement. Ito ay isang vector unit, kaya ito
+								Ngunit paano naman kung gusto lang natin malaman ang distance ng pinagmulan na position at pinal na position ng isang bagay at hindi sa buong dinaanan nito?
+
+								Ito ngayon ay tinatawag natin na <b>displacement</b>. Ito ay isang vector unit, kaya ito
 								ay may parehong magnitude at direction. Ang
 								magnitude ng displacement ay ang pinakamaikling
-								distance from the original position to the final
-								position of an object, habang ang direction
-								naman ay nakaturo mula sa initial position
-								towards the final position. Para sa
+								distance mula sa initial position patungo sa final position ng isang bagay; ito ay isang straight line mula sa starting point hanggang endpoint. Sa direction naman ng displacement, nakaturo ito sa pinagmulan na position papunta sa pinal na position at gumagamit tayo ng +/- signs para matukoy saan nakaturo ang displacement vector. Para sa
 								one-dimensional motion:
 							</p>
 							<br />
 							<div className="box">
-								<h3>Displacement Formula</h3>
+								<h3 className="box-title">Displacement Formula</h3>
 								<p className="center-horizontal">
 									<Latex>{"$\\Delta x = x_{f} - x_{0}$"}</Latex>, where:
 									<Latex>{"$\\, \\Delta x$"}</Latex> - displacement,{" "}
@@ -256,22 +233,16 @@ function App() {
 							</div>
 							<br />
 							<p>
-								Sa simulation, ang kanan o east direction ay
-								positive sign. Kaya nung naglakad yun tao sa
-								papunta sa kanan na pader, ang sign ng kanyang
-								displacement vector ay positive. Pero kung
-								naglakad siya papunta sa kaliwang pader, ang
-								sign ng kanyang displacement vector ay negative.
+								Sa simulation, ang kanan o east direction ay positive sign. Kaya’t nung naglakad yung tao papunta sa kanan na pader, ang sign ng kanyang displacement vector ay positibo. Ngunit kung naglakad siya papunta sa kaliwang pader, ang sign ng kanyang displacement vector ay negatibo.
 							</p>
 							<br />
+							<div className="displacement-figures">
+								<img src="./media/positive-displacement-fig.png" alt="" />
+								<img src="./media/negative-displacement-fig.png" alt="" />
+							</div>
+							<br />
 							<p>
-								Dahil ang displacement ang pinakamaikling
-								distance ng initial at final positions ng isang
-								bagay, ito ay isang straight line lamang habang
-								ang distance naman ay nakadepende sa dadaanan ng
-								isang bagay at hindi ito palagi sang straight
-								line. Ang SI unit para sa distance at
-								displacement ay meters (m).
+								Sapagkat ang displacement ang pinakamaikling distance ng initial at final positions ng isang bagay, ito lamang ay isang diretsong linya habang ang distance naman ay nakadepende sa dadaanan ng isang bagay at hindi ito palagi isang diretsong linya. Ang SI unit para sa distance at displacement ay meters (m). Para makita ang pinagkaiba ng distance at displacement, tingnan natin ang halimbawang ito.
 							</p>
 							<br />
 							<Flashcard
@@ -280,7 +251,7 @@ function App() {
 								current={0}
 								problem={
 									<div>
-										Si Aydan ay naglakad ng <Latex>{"$4 \\, m$"}</Latex> to the east, tapos naglakad ng <Latex>{"$2 \\, m$"}</Latex> to the west. Ano ang kanyang displacement?
+										Si Aydan ay naglakad ng <Latex>{"$4 \\, m$"}</Latex> to the east, tapos naglakad ng <Latex>{"$2 \\, m$"}</Latex> to the west. Ano ang kanyang distance at displacement?
 									</div>
 								}
 								solution={
@@ -290,43 +261,38 @@ function App() {
 										<img src="./media/lesson-one-flashcard-two-2-crop.gif" alt="" />
 										<p>Ang unang distansya na linakad ni Aydan ay <Latex>{"$3 \\, m$"}</Latex> to the west.</p>
 										<img src="./media/lesson-one-flashcard-two-3.png" alt="" />
-										<p>Kung titignan lamang ang final position ni Aydan, siya ay gumalaw lamang ng <Latex>{"$2 \\, m$"}</Latex> to the east.</p>
+										<p>Kung titignan lamang ang final position ni Aydan, ang kanyang displacement ay<Latex>{"$4 \\, m - 2 \\, m = 2 \\, m$"}</Latex> lamang, ngunit ang kabuuang distansyang linakad niya ay <Latex>{"$4 \\, m + 2 \\, m = 6 \\, m$"}</Latex> </p>
 									</div>
 								}
 							/>
+						</LessonSection>
+					) : (
+						<p className="redText">
+							Gawin muna ang LAHAT ng mga task.
+						</p>
+					)}
+					{canProceed ? (
+						<LessonSection>
 							<h3>Velocity</h3>
 							<br />
 							<p>
-								Sa simulation. Kapag naglalakad yun tao papunta
-								sa pader, paano natin malalaman kung gaano siya
-								kabilis naglalakad? Well, ito ang sinasabi sa
-								atin ng speed at velocity.
+								Sa simulation, paano natin malalaman kung gaano kabilis naglalakad yung tao papunta sa pader? Ito ngayon ang tinatawag natin na speed at velocity.
 							</p>
 							<br />
 							<p>
-								May dalawang paraan para ipakita ang speed at
-								velocity, pwede ito maging average or
-								instantaneous. Ang average speed at velocity ay
-								nagpapakita ng bilis depende sa layo ng narating
-								ng isang bagay at a certain time interval.
-								Habang ang instantaneous naman ay nagpapakita ng
-								bilis ng isang bagay in a specific point in
-								time. Para sa modyul na ito, tatalakayin lang
-								natin ang average speed at velocity.
+								May dalawang paraan para ipakita ang speed at velocity, pwede ito maging average or instantaneous. Ang average speed at velocity ay nagpapakita ng bilis depende sa layo ng narating ng isang bagay sa isang espisipikong time interval. Habang ang instantaneous naman ay nagpapakita ng bilis ng isang bagay sa isang partikular na oras. Para sa modyul na ito, tatalakayin lang natin ang average speed at velocity.
 							</p>
 							<br />
 							<p>
 								Ang average speed ay isang scalar unit na
 								nagpapakita ng bilis ng isang bagay base sa
-								dinaanan ng isang bagay from its initial
-								position to its final position at a certain time
-								interval. Ito ay palaging may positive na value.
+								dinaanan ng isang bagay galing sa pinagmulan nitong position hanggang sa pinal na position nito sa isang espisipikong time interval. Ito ay palaging may positive na value.
 							</p>
 							<br />
 							<p>Dahil dito, ang equation ng speed ay:</p>
 							<br />
 							<div className="box">
-								<h3>Speed Formula</h3>
+								<h3 className="box-title">Speed Formula</h3>
 								<p className="center-horizontal">
 									<Latex>{"$v = \\dfrac{d}{t}$"}</Latex>, where
 									<Latex>{"$\\,v$"}</Latex> - speed,{" "}
@@ -337,19 +303,12 @@ function App() {
 							<br />
 							<p>
 								Ang average velocity naman ay isang vectory
-								unit. Di tulad ng speed, ang average velocity ay
-								nagpapakita lamang ng bilis ng isang bagay base
-								sa displacement ng isang bagay at a certain time
-								interval. Ito ang "bilis" ng pagbago ng posisyon
-								ng bagay at hindi ang bilis ng pagtakbo nito.
-								Ang value ng velocity ay maaaring maging
-								positive o negative, depende sa direction ng
-								displacement.
+								unit. Hindi tulad ng speed, ang average velocity ay nagpapakita lamang ng bilis ng isang bagay base sa displacement ng isang bagay sa isang espisipikong time interval. Ang value ng velocity ay maaaring maging positibo o negatibo, depende sa direction ng displacement.
 							</p>
 							<br />
 							<p>Dahil dito, ang equation ng velocity ay:</p>
 							<div className="box">
-								<h3>Velocity Formula</h3>
+								<h3 className="box-title">Velocity Formula</h3>
 								<p className="center-horizontal">
 									<Latex>
 										{
@@ -362,19 +321,29 @@ function App() {
 								</p>
 							</div>
 							<br />
+							<p>Para sa one-dimensional motion:</p>
+							<div className="box">
+								<h3 className="box-title">Velocity Formula</h3>
+								<p className="center-horizontal">
+									<Latex>
+										{
+											"$v = \\dfrac{x_f - x_0}{t}$"
+										}
+									</Latex>, where
+									<Latex>{"$\\, v$"}</Latex> - velocity,{" "}
+									<Latex>{"$x_f$"}</Latex> -
+									final position, <Latex>{"$x_0$"}</Latex> - initial position, <Latex>{"$t$"}</Latex> - time
+								</p>
+							</div>
 							<p>
-								Ang speed at velocity ay parehas nagsasabi kung
-								gaano kabilis ang tao o bagay at nagkaiba lamang
-								sa pagkakaroon ng direction. Ang SI unit para sa
-								distance at displacement ay meters per second
-								<Latex>{"$\\, (m/s)$"}</Latex>.
+								Sa kabuuan, ang speed at velocity ay parehas nagsasabi kung gaano kabilis ang tao o bagay at nagkakaiba lamang sa pagkakaroon ng direction. Ang SI unit para sa distance at displacement ay meters per second <Latex>{"$\\, (m/s)$"}</Latex>.
 							</p>
 							<br />
 							<Flashcard
 								current={0}
 								cardTitle={"Example Three"}
 								answer={
-									<Latex>{"$0.8 m/s$ to the right"}</Latex>
+									<Latex>{"$0.8 m/s$ pakanan"}</Latex>
 								}
 								problem={
 									<div>
@@ -404,20 +373,22 @@ function App() {
 								}
 							/>
 							<br />
+						</LessonSection>
+					) : (
+						<p className="redText">
+							Gawin muna ang LAHAT ng mga task.
+						</p>
+					)}
+					{canProceed ? (
+						<LessonSection>
 							<h3>Acceleration</h3>
 							<br />
 							<p>
-								Sa simulation, alam na natin ang bilis ng
-								paglalakad ng tao. Pero, hindi naman laging
-								pare-pareho ang bilis ng tao sa iba’t ibang
-								oras. Minsan ito’y bumibilis, bumabagal, o
-								nakahinto. Ang pagbilis o pagbagal ng tao ay
-								tinatawag natin na acceleration.
+								Sa simulation, maaari na natin malaman ang bilis ng paglalakad ng tao. Ngunit, hindi naman palagi pare-pareho ang bilis ng tao sa iba’t ibang oras. Minsan ito’y bumibilis, bumabagal, o nakahinto lamang. Ang pagbilis o pagbagal ng tao o bagay ay tinatawag natin na acceleration.
 							</p>
 							<br />
 							<p>
-								Ang acceleration ay isang vector unit, at ito ay
-								nangyayari kapag may pagbabago sa velocity. Ang
+								Ang acceleration ay isang vector unit, at ito ay ang pagbabago sa velocity. Ang
 								direction ng acceleration ay nakadepende sa
 								dalawang bagay: ang direction ng velocity at
 								kung ang acceleration ay accelerating or
@@ -435,12 +406,12 @@ function App() {
 								<p>Ang bagay ay bumibilis</p>
 								<p>Ang bagay ay bumabagal</p>
 								<p>
-									Ang direction ng acceleration ay parehas
-									sa direction ng velocity
+									Ang direction ng acceleration ay kapareho ng
+									direction ng velocity
 								</p>
 								<p>
 									Ang direction ng acceleration object ay
-									opposite sa direction ng velocity
+									kabaliktaran ng direction ng velocity
 								</p>
 							</div>
 							<br />
@@ -451,7 +422,7 @@ function App() {
 								acceleration ay:
 							</p>
 							<div className="box">
-								<h3>Acceleration Formula</h3>
+								<h3 className="box-title">Acceleration Formula</h3>
 								<p className="center-horizontal">
 									<Latex>
 										{
@@ -463,6 +434,14 @@ function App() {
 									<Latex>{"$\\vec{v_0}$"}</Latex> - initial
 									velocity, <Latex>{"$\\Delta t$"}</Latex> - time</p>
 							</div>
+							<br />
+							<p>
+								Ngayon na alam na natin ang acceleration, tanungin ko naman kayo. Kung ang isang bagay ay may positibong acceleration, accelerating ba ito palagi? At kung ang bagay ay may negatibong acceleration, decelerating ba ito palagi?
+							</p>
+							<br />
+							<p>
+								Dahil may direction ang acceleration, ang positibong acceleration ay pwedeng accelerating ang isang bagay na gumagalaw pakanan, ngunit pwede rin decelerating ang isang bagay na gumagalaw pakaliwa. Parehas lamang ang konsepto kung may negatibong acceleration, pwedeng accelerating ang isang bagay pakaliwa o decelerating ang isang bagay pakanan.
+							</p>
 							<br />
 							<Flashcard
 								cardTitle={"Example Four"}
@@ -487,7 +466,7 @@ function App() {
 							/>
 						</LessonSection>
 					) : (
-						<p className="redText">
+						<p>
 							Gawin muna ang LAHAT ng mga task.
 						</p>
 					)}
@@ -609,13 +588,13 @@ function App() {
 						<h1>Lesson 2: Free Fall</h1>
 						<br />
 						<p>
-							Ngayon na tinalakay na natin ang kinematics in one-dimension, tatalakayin naman natin ang isang special case nito which is free fall. Sa simula ng modyul, nakita natin na nalaglag ng dahan-dahan ang dahon at yun ay isang halimbawa ng free fall. Nakikita natin ang free fall palagi araw-araw tulad ng patak ng ulan o pag nabitawan natin ang ating hawak na bagay.
+							Ngayon na tinalakay na natin ang kinematics in one-dimension, tatalakayin naman natin ang isang special case nito na tinatawag na free fall. Sa simula ng modyul, nakita natin na nalalaglag ng dahan-dahan ang dahon at iyon ay isang halimbawa ng free fall. Nakikita natin ang free fall sa ating araw-araw na pamumuhay tulad ng patak ng ulan o pagbitaw natin sa bagay na ating hinahawakan.
 						</p>
 						<br />
 						<img src={FallGif} alt="" className="center-horizontal-image" />
 						<br />
 						<p>
-							Ngayon, bakit nga ba nag undergo ng free fall ang mga ito? Ito ay dahil sa isang force lamang na tinatawag natin na gravity. Ang gravity ay ang nag-iisang tanging force that acts upon the object in the free fall. Ito ang rason bakit bumabagsak lahat ng bagay at ika nga ni Newton na “what goes up must come down”. Natalakay natin sa kinematics ang motion ng mga bagay within the x-axis. Pero para sa pagtalakay natin ng free-fall, gagamitin naman natin ang y-axis at hindi natin iintindihin ang air resistance.
+							Ngayon, bakit nga ba nakakaranas ng free fall ang mga ito? Ito ay dahil sa isang force  na tinatawag natin na gravity. Ito ay ang nag-iisang tanging force na kumikilos sa isang bagay sa free fall. Dahil dito, nalalaglag lahat ng bagay at ika nga ni Newton na “what goes up must come down”. Natalakay natin sa kinematics ang motion ng mga bagay within the x-axis. Pero para sa pagtalakay natin ng free-fall, gagamitin naman natin ang y-axis at hindi natin iintindihin ang air resistance.
 						</p>
 						<br />
 					</LessonSection>
@@ -623,7 +602,7 @@ function App() {
 						<h2>Gravitational Acceleration</h2>
 						<br />
 						<p>
-							Ang acceleration ng isang bagay dahil sa force ng gravity ay tinatawag natin na gravitational acceleration. Ang magnitude nito ay tinatawag natin na g at ito ay may value na: <Latex>{"$$g=9.8 m/s^2$$"}</Latex> Ang magnitude na ito ay constant at hindi nakadepende sa bigat ng isang bagay na nasa free fall. Para sa direction ng gravitational acceleration, palagi itong pababa kaya’t ang sign nito ay negative.
+							Ang acceleration ng isang bagay dahil sa force ng gravity ay tinatawag natin na gravitational acceleration. Ang magnitude nito ay tinatawag natin sa simbolong <Latex>{"$g$"}</Latex> na may value na: <Latex>{"$$g=9.8 \\, m/s^2$$"}</Latex> Ang magnitude na ito ay hindi nagbabago at hindi nakadepende sa bigat ng isang bagay na nakakaranas ng free fall. Ang direction ng gravitational acceleration ay pababa kaya’t ang sign na ginagamit dito ay negatibo.
 						</p>
 						<br />
 						<img src={GravAccelDiagram} alt="" className="lesson-two-grav-accel center-horizontal-image" />
@@ -632,31 +611,31 @@ function App() {
 						<h2>Velocity</h2>
 						<br />
 						<p>
-							Imagine natin na may hawak kayong bola at nabitawan niyo ito midair. Sa initial position ng bola, hindi ito gumagalaw kaya’t ang velocity nito ay zero. Nung nabitawan natin ang bola, ito ay nahuhulog hangga’t mapunta sa lapag dahil sa gravitational acceleration mula sa gravity. Dahil ang velocity at acceleration ng bola ay parehas pababa, ang velocity ng bola ay pataas ng pataas in a negative direction. Specifically, ang magnitude ng velocity ng bola ay tumataas ng <Latex>{"$9.8 m/s$"}</Latex> every second, which is the gravitational acceleration. Kaya 'pag ang height ng bola ay mas nahulog sa mas mataas na position, mas matagal ang free fall ng bola papunta sa lapag at mas malaki ang velocity nito pag palapit na ito sa lapag.
+							Isipin natin na may hawak kayong bola at nabitawan niyo ito sa ere. Sa pinagmulan na position ng bola, hindi ito gumagalaw kaya’t ang velocity nito ay zero. Pagkatapos nating bitawan ang bola, ito ay nahulog hangga’t mapunta sa lapag dahil sa gravitational acceleration mula sa gravity. Dahil ang velocity at acceleration ng bola ay parehas pababa, ang velocity ng bola ay pataas ng pataas sa negatibong direction. Kung magiging espisipiko, ang magnitude ng velocity ng bola ay tumataas ng <Latex>{"$9.8 \\, m/s$"}</Latex>, kada segundo. Ito ang ating gravitational acceleration! Kaya kung ang height ng bola ay mas nahulog sa mas mataas na position, mas matagal ang free fall ng bola papunta sa lapag at mas malaki ang velocity nito kapag mas malapit na ito sa lapag.
 						</p>
 						<br />
 						<p>
-							Ngayon, paano naman kung tinapon natin ang bola vertically upward. Sa ating pagkakaalam, ang bola ay pupunta pataas hanggang kung saang height ang kaya nito marating tas ito’y bababa rin. Kapag binato na natin ang bola pataas, ito ay makakaranas ng positive initial velocity galing sa atin at ng gravitational acceleration dahil sa gravity. Dahil ang velocity ng bola ay pataas habang ang acceleration naman ng bola ay pababa, ang velocity ng bola ay onti-onting bumabagal hanggang maging zero ang velocity nito. Kapag zero na ang velocity ng bola, ito ang maximum height na maabot ng bola at magsisimula na ito bumaba. Kapag pababa na ito, ang velocity at acceleration ay magkakaroon ng parehas na direction kaya’t ito’y bibilis.
+							Ngayon, paano naman kung tinapon natin ang bola vertically upward. Sa ating pagkakaalam, ang bola ay gagalaw pataas hanggang saang height ang kaya nito marating at pagkatapos ay babagsak rin ito. Kapag tinapon na natin ang bola pataas, ito ay makakaranas ng positibong initial velocity galing sa atin at sa gravitational acceleration dahil sa gravity. Ang velocity ng bola ay pataas habang ang acceleration naman ng bola ay pababa, ang velocity ng bola ay unti-unting bumabagal hanggang maging zero ang velocity nito. Kapag zero na ang velocity ng bola, ito ang pinakamataas na height na maabot ng bola bago ito magsisimulang bumaba. Tuwing pababa na ito, ang velocity at acceleration ay magkakaroon ng parehas na direction kaya’t ito’y bibilis.
 						</p>
 						<br />
 						<img src={FreeFallDiagram} alt="" className="lesson-two-free-fall-diagram center-horizontal-image" />
 						<br />
 						<p>
-							Sa huli, dahil constant ang gravitational acceleration sa pagtaas at pagbaba ng bola, ang pagbagal at pagbilis ng bola midair ay parehas. Kaya pag sinalo niyo yung bola sa parehas na position kung saan niyo binato ang bola, ang velocity ng bola kapag sinalo niyo ay parehas sa velocity ng bola noong binato niyo.
+							Sa huli, dahil hindi nagbabago ang gravitational acceleration sa pagtaas at pagbaba ng bola, ang pagbagal at pagbilis ng bola midair ay parehas. Kaya pag sinalo natin ang bola sa parehas na position kung saan natin tinapon ang bola, ang velocity ng bola sa oras na sinalo natin ay pareho sa velocity ng bola na ating tinapon.
 						</p>
 						<br />
 						<h2>Displacement and Time of Flight</h2>
 						<br />
 						<p>
-							Base sa ating mga tinalakay natin kanina, ang magiging displacement ng isang bagay ay positive kapag ito’y pataas, negative kung ito’y pababa, at zero kung bumalik sa initial position ang isang bagay tulad ng pagbato at pagsalo ng bola na ating tinalakay.
+							Base sa ating mga tinalakay natin kanina, ang magiging displacement ng isang bagay ay positibo kapag ito’y pataas, negatibo kung ito’y pababa, at zero kung bumalik sa pinagmulan na position ang isang bagay tulad ng pagtapon at pagsalo ng bola na ating tinalakay.
 						</p>
 						<br />
 						<p>
-							Ngayon, balikan natin ang pagbato natin ng bola pataas. Natalakay natin na tataas ang bola hanggang makarating ito sa kanyang maximum height kung kailan zero ang velocity nito. Dahil constant ang gravitational acceleration na nararanasan ng bola midair, mas mataas ang magiging maximum height ng bola at mas matagal ang oras nito para makarating sa kanyang maximum height kapag mas malaki ang initial velocity na binigay natin sa bola. Kaya’t masasabi natin na ang maximum height ng bola ay dependent sa initial velocity ng bola.
+							Ngayon, balikan natin ang pagtapon natin ng bola pataas. Tinalakay natin na mananatiling tumataas ang bola hanggang makarating ito sa kanyang maximum height kung kailan zero ang velocity nito. Sapagkat hindi nagbabago ang gravitational acceleration na nararanasan ng bola midair, mas mataas ang maabot na height ng bola at mas matagal ang magiging oras ng bola para makarating sa kanyang pinakamataas na height kapag mas malaki ang initial velocity na binigay natin sa bola. Kaya’t masasabi natin na ang pinakamataas na height ng bola ay nakadepende sa initial velocity ng bola.
 						</p>
 						<br />
 						<p>
-							At dahil constant ang gravitational acceleration sa pagtaas at pagbaba ng bola, ang pagbagal at pagbilis ng bola midair ay parehas. Kaya pag sinalo niyo yung bola sa parehas na position kung saan niyo binato ang bola, ang oras ng pagtaas ng bola papunta sa maximum height at ang pagbaba nito galing sa maximum height ay parehas lamang.
+							At dahil hindi nagbabago ang gravitational acceleration sa pagtaas at pagbaba ng bola, ang pagbagal at pagbilis ng bola midair ay magkapareho ng magnitude. Kaya pag sinalo natin ang bola sa parehas na position kung saan natin tinapon ang bola, ang oras ng pagtaas ng bola papunta sa pinakamataas na height nito at ang pagbaba nito ay pareho lamang.
 						</p>
 						<br />
 						<Flashcard
@@ -664,12 +643,12 @@ function App() {
 							cardTitle={"Example One"}
 							problem={
 								<div>
-									Si Carlo ay may hawak na feather sa kanyang kaliwang kamay at metal ball naman sa kanyang kanang kamay, sabay niya ito hinulog. Ignoring air resistance, ano ang mauuna makakarating sa lupa?
+									Si Carlo ay may hawak na feather sa kanyang kaliwang kamay at metal ball naman sa kanyang kanang kamay. Pagkatapos ay sabay niyang binitawan ang dalawang bagay na ito sa kanyang kamay. Ano ang mauuna makakarating sa lupa? (Wag natin intindihin ang air resistance)
 								</div>
 							}
 							solution={
 								<div>
-									Sabay silang makakarating sa lupa dahil pareho ang kanilang rate of acceleration which is ang gravitational acceleration.
+									Sabay silang makakarating sa lupa dahil ang kanilang acceleration ay parehas na gravitational acceleration.
 								</div>
 							}
 						/>
@@ -678,15 +657,15 @@ function App() {
 						<h2>Kinematic Equations in Free Fall</h2>
 						<br />
 						<p>
-							Ang kinematic equations ay mga equations na nag-uugnay sa 5 kinematic variables: displacement <Latex>{"$(\\Delta x)$"}</Latex>, time interval <Latex>{"$(\\Delta t)$"}</Latex>, initial velocity <Latex>{"$(v_0)$"}</Latex>, final velocity <Latex>{"$(v_f)$"}</Latex>, at constant acceleration <Latex>{"$(a)$"}</Latex>.
+							Ang kinematic equations ay ang mga equations na nag-uugnay sa 5 kinematic variables: displacement <Latex>{"$(\\Delta x)$"}</Latex>, time interval <Latex>{"$(\\Delta t)$"}</Latex>, initial velocity <Latex>{"$(v_0)$"}</Latex>, final velocity <Latex>{"$(v_f)$"}</Latex>, at constant acceleration <Latex>{"$(a)$"}</Latex>.
 						</p>
 						<br />
 						<p>
-							Ang mga kinematic equations ay maaari nating gamitin kapag 3 sa 5 kinematic variables ay given para makahanap ng isang unknown variables at para sa free fall. Ang constant acceleration natin ay magiging equal sa gravitational acceleration or: <Latex>{"$$a = -g = -9.8 m/s^2$$"}</Latex>
+							Ang mga kinematic equations ay maaari nating magamit kung tatlo sa limang kinematic variables ay ibinigay para makahanap ng isang unknown variables. Para sa free fall, ang constant acceleration natin ay magiging equal sa gravitational acceleration or: <Latex>{"$$a = -g = -9.8 \\, m/s^2$$"}</Latex>
 						</p>
 						<br />
 						<p>
-							Narito ang mga equations na makukuha natin mula rito:
+							Narito ang mga equations na ating makukuha mula rito:
 						</p>
 						<br />
 						<Latex>{"$$a = \\dfrac{v - v_0}{t} \\rightarrow -g = \\dfrac{v - v_0}{t}$$"}</Latex>
@@ -695,7 +674,7 @@ function App() {
 							Ito ang ating equation relating final velocity, initial velocity, at time!
 						</p>
 						<div className="box">
-							<h3>Important Equation!</h3>
+							<h3 className="box-title">Important Equation!</h3>
 							<p className="center-horizontal">
 								<Latex>{"$v=v_0-gt$"}</Latex>
 							</p>
@@ -705,35 +684,39 @@ function App() {
 						</p>
 						<Latex>{"$$\\Delta x = v_{\\text{average}}t$$"}</Latex>
 						<p>
-							Dahil constant ang ating acceleration:
+							Dahil constant ang ating acceleration na <Latex>{"$a = -g$"}</Latex>:
 						</p>
 						<Latex>{"$$\\Delta x = \\dfrac{v + v_0}{2}t$$"}</Latex>
 						<p>
-							Ngayon, dahil <Latex>{"$v = v_0 - gt$"}</Latex>:
+							Ngayon, i-substitute natin ang <Latex>{"$v = v_0 - gt$"}</Latex> sa equation na ito:
 						</p>
 						<Latex>{"$$\\Delta x = \\dfrac{v_0 - gt + v_0}{2}t = v_0t - \\dfrac{1}{2}gt^2$$"}</Latex>
 						<p>
 							Ito ang ating equation relating displacement at initial velocity!
 						</p>
 						<div className="box">
-							<h3>Important Equation!</h3>
+							<h3 className="box-title">Important Equation!</h3>
 							<p className="center-horizontal">
 								<Latex>{"$\\Delta x = v_0t - \\dfrac{1}{2}gt^2$"}</Latex>
 							</p>
 						</div>
 						<p>
-							Balikan natin ang equation na <Latex>{"$v = v_0 - gt$"}</Latex>. Squaring both sides:
+							Balikan natin ang ating unang equation na <Latex>{"$v = v_0 - gt$"}</Latex>. I-square natin ang parehong side ng equation:
 						</p>
-						<Latex>{"$$v^2 = (v_0 - gt)^2 = v_0^2 - 2v_0gt + g^2t^2 = v_0^2 - 2g(v_0t - \\dfrac{1}{2}gt^2)$$"}</Latex>
+						<Latex>{"$$v^2 = (v_0 - gt)^2 = v_0^2 - 2v_0gt + g^2t^2$$"}</Latex>
 						<p>
-							Kaya nating isubstitute ang equation na <Latex>{"$\\Delta x = v_0t - \\dfrac{1}{2}gt^2$"}</Latex> dito para makuha ang sumusunod:
+							Ngayon, obserbahan natin ang mangyayari kung i-multiply natin ng <Latex>{"$-2g$"}</Latex> ang equation na <Latex>{"$\\Delta x = v_0t - \\dfrac{1}{2}gt^2$"}</Latex>:
+						</p>
+						<Latex>{"$$-2g\\Delta x = -2v_0gt + g^2t^2$$"}</Latex>
+						<p>
+							Dahil doon, kaya nating i-substitute ito sa <Latex>{"$v^2 = v_0^2 - 2v_0gt + g^2t^2$"}</Latex> para makuha ang:
 						</p>
 						<Latex>{"$$v^2 = v_0^2 - 2g\\Delta x$$"}</Latex>
 						<p>
 							Ito naman ang ating equation relating initial velocity, final velocity, at displacement!
 						</p>
 						<div className="box">
-							<h3>Important Equation!</h3>
+							<h3 className="box-title">Important Equation!</h3>
 							<p className="center-horizontal">
 								<Latex>{"$v^2=v_0^2-2g\\Delta x$"}</Latex>
 							</p>
@@ -748,7 +731,7 @@ function App() {
 						</p>
 						<br />
 						<div className="box">
-							<h3>Important Equations</h3>
+							<h3 className="box-title">Important Equations</h3>
 							<div className="lesson-two-equations">
 								<Latex>{"$$v = v_0 - gt$$"}</Latex>
 								<Latex>{"$$\\Delta x = \\dfrac{(v + v_0)t}{2}$$"}</Latex>
@@ -758,7 +741,7 @@ function App() {
 						</div>
 						<br />
 						<p>
-							Tandaan na ang mga kinematic equations na ito ay gagana lamang sa one-dimension. Para sa tinalakay natin, ginagamit natin ang y-axis.
+							Tandaan na ang mga kinematic equations na ito ay gagana lamang sa one-dimension. Sa ating tinalakay, ginamit natin ang y-axis.
 						</p>
 						<br />
 						<Flashcard
@@ -766,7 +749,7 @@ function App() {
 							cardTitle={"Example Two"}
 							problem={
 								<div>
-									Si Caleb ay naghulog ng basketball. Nag-undergo ang basketball sa free fall at ito’y tumagal ng <Latex>{"$2.5 \\, s$"}</Latex> sa ere. Ano ang velocity ng basketball nang ito’y tumama sa lupa?
+									Si Caleb ay naghulog ng basketball. Nakararanas ang basketball ng free fall na tumagal ng <Latex>{"$2.5 \\, s$"}</Latex> sa ere. Ano ang velocity ng basketball nang ito’y tumama sa lupa?
 								</div>
 							}
 							solution={

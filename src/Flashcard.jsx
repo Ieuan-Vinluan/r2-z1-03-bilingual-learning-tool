@@ -5,7 +5,7 @@ export default function Flashcard({ cardTitle, problem, solution, current, answe
     return (
         <div className="flashcard" onClick={() => setSide(1 - side)}>
             <div className={"card-front" + (side == 0 ? "" : " not-picked")}>
-                <h3>{cardTitle}</h3>
+                <h3 className="flashcard-title">{cardTitle}</h3>
                 {problem}
                 <p className={"answer-alert"}>Click to see answer</p>
             </div>
