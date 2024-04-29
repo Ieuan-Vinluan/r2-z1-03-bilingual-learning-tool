@@ -27,7 +27,7 @@ export default function LessonPage(props) {
 	let ok = 0;
 	return (
 		<>
-			<div className="lesson-dot-navigation">
+			{/* <div className="lesson-dot-navigation">
 				{lessons.map((lesson, idx) => {
 					ok |= idx == currentSections[props.id];
 					return (
@@ -40,7 +40,7 @@ export default function LessonPage(props) {
 						</div>
 					);
 				})}
-			</div>
+			</div> */}
 			<main className="main-lesson-page">
 				{lessons[currentSections[props.id]]}
 			</main>

@@ -4,8 +4,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-
-/* TODO import all fonts to be used */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
 *,
 *::before,
@@ -18,7 +19,7 @@
 
 :root {
 	--main-bg: #7360df;
-	--home-page-tint: rgba(41, 27, 122, 0.3);
+	--home-page-tint: rgba(255, 255, 255, 0.2);
 	--nav-bar-size: 60px;
 	--se-bg: #ca006c;
 	--te-bg: #2b016d;
@@ -72,6 +73,7 @@
 	justify-content: center;
 	border: 1px solid black;
 	background: #e6f0e7;
+	color: black;
 }
 
 .box h3 {
@@ -127,17 +129,19 @@ body {
 }
 
 .page-header {
-	height: 60%;
-	background: url("../media/basketball.jpg") no-repeat;
+	height: 70%;
+	/* background: url("../media/basketball.jpg") no-repeat; */
 	/* SOURCE https://www.wallpaperflare.com/brown-basketball-ball-and-white-and-orange-basketball-hoop-ring-wallpaper-qwui/download */
-	background-position: 0 15%;
+	background-position: 0 18%;
 	background-size: cover;
 	position: relative;
 	isolation: isolate;
 	overflow: hidden;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: black;
 }
 
 .page-header::before {
@@ -149,11 +153,28 @@ body {
 }
 
 .page-header h1 {
-	font-family: "Playfair Display", serif;
-	font-size: 4rem;
-	padding: 1em 2em;
-	text-align: center;
+	font-family: "League Spartan", sans-serif;
+	font-size: 3.5rem;
+	/* text-align: center; */
+}
+
+.header-text {
+	display: flex;
+	flex-direction: column;
+	/* text-align: center; */
 	font-weight: bold;
+	gap: 1em;
+	padding: 1em 2em;
+}
+
+.header-text p {
+	color: #5f5c5c;
+	font-family: 'Libre Baskerville', sans-serif;
+	font-size: 1.25rem;
+}
+
+.page-header img {
+	height: 100%;
 }
 
 .navbar {
@@ -161,7 +182,7 @@ body {
 	width: 100%;
 	background: var(--nav-bar-initial);
 	/* padding: 1em 2em; */
-	/* background: transparent; */
+	background: #387bc9;
 }
 
 .navbar-list {
@@ -169,23 +190,23 @@ body {
 	height: 100%;
 	display: flex;
 	/* gap: 5px; */
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: center;
-	color: var(--text-color);
+	color: black;
 }
 
 .nav-item {
-	width: 13.5%;
 	height: 75%;
-	/* padding: 1em 2em; */
+	padding: 1em 2em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-left: 1px solid rgba(0, 0, 0, 0.2);
+	font-weight: bold;
+	color: white;
 }
 
 .is-selected {
-	font-weight: bold;
+	color: rgb(14, 52, 96);
 }
 
 .nav-item:hover {
@@ -251,6 +272,7 @@ main.main-home-page {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	background: #e2e8f5;
 }
 
 main .homepage-subtitle {
@@ -258,7 +280,7 @@ main .homepage-subtitle {
 	font-size: 2.5rem;
 	text-align: center;
 	font-weight: bold;
-	font-family: "Libre Franklin", sans-serif;
+	font-family: "League Spartan", sans-serif;
 }
 
 .content-container {
@@ -273,22 +295,32 @@ main .homepage-subtitle {
 
 .clickable-dropdown {
 	width: 80%;
-	background: #7360df;
-	font-size: 1.1rem;
-	font-family: Montserrat, sans-serif;
+	color: white;
+	background: #347ccc;
+	font-size: 1.2rem;
+	cursor: pointer;
+	transition: background 100ms linear;
+}
+
+.clickable-dropdown:hover {
+	background: #183f6c;
+}
+
+.clickable-dropdown-header-container svg {
+	width: 100%;
 }
 
 .clickable-dropdown-header-container {
 	/* outline: 1px solid white; */
 	height: 100%;
 	padding: 1em 2em;
-	background: var(--clickable-dropdown-header-bg);
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 10% 90%;
+	justify-content: center;
 	align-items: center;
 }
 
-.arrow-right {
+/* .arrow-right {
 	width: 0;
 	height: 0;
 	border-top: var(--triangle-size) solid transparent;
@@ -300,12 +332,12 @@ main .homepage-subtitle {
 .arrow-right:hover {
 	border-left: calc(2 * var(--triangle-size)) solid white;
 	cursor: pointer;
-	/* background: color-mix(in srgb, var(--clickable-dropdown-header-bg) 90%, white); */
-}
+} */
 
 .clickable-dropdown-header {
-	font-family: "Lato", sans-serif;
+	font-family: 'Libre Baskerville', sans-serif;
 	font-weight: 700;
+	text-align: center;
 }
 
 .clickable-dropdown-body {
@@ -314,9 +346,21 @@ main .homepage-subtitle {
 
 .main-lesson-page {
 	color: black;
-	font-family: 'Libre Franklin', sans-serif;
+	font-family: 'Libre Baskerville', sans-serif;
 	font-size: 1.05rem;
 	line-height: 1.5rem;
+}
+
+.main-lesson-page h1,h2, h3 {
+	font-family: 'League Spartan', sans-serif;
+}
+
+.main-lesson-page h2 {
+	font-size: 2rem;
+}
+
+.main-lesson-page h3 {
+	font-size: 1.25rem;
 }
 
 .prac-problems-container {
@@ -383,7 +427,7 @@ main .homepage-subtitle {
 
 .card-front h3,
 .card-back h3 {
-	background: #bf0000;
+	background: #535C91;
 	color: white;
 }
 
@@ -395,6 +439,13 @@ main .homepage-subtitle {
 .answer-alert {
 	color: gray;
 	text-align: right;
+}
+
+.simulation-ss {
+	width: 40%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .lesson-one-gif-one {
@@ -471,13 +522,18 @@ main .homepage-subtitle {
 	padding: 1em 2em;
 	background: var(--main-bg);
 	color: white;
-	border-radius: 5px;
+	border-radius: 9.6px;
+	border: none;
 	transition: background 150ms linear;
 }
 
 .prev-next button:hover {
 	cursor: pointer;
-	background: var(--te-bg);
+	filter: brightness(125%);
+}
+
+.prev-next button:active {
+	filter: brightness(125%);
 }
 
 .prev-next button:disabled {
@@ -575,7 +631,7 @@ main .homepage-subtitle {
 	transform: translateX(-50%);
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
 	border: 1px solid black;
 }
 
@@ -587,18 +643,14 @@ main .homepage-subtitle {
 	color: white;
 }
 
-.lesson-one-table ul {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.lesson-one-table ul li {
-	text-align: center;
+.lesson-one-table p {
 	width: 100%;
-	padding: .5em;
+	text-align: center;
 	border: 1px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1em 1.5em;
 }
 
 .confirmatory {

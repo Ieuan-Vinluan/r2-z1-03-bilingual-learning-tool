@@ -56,9 +56,8 @@ function App() {
 							<iframe
 								width="560"
 								height="315"
-								src="https://www.youtube.com/embed/UWMBj-uD37Y?si=sY2E-kF_TCoN-7Nr"
+								src="https://www.youtube.com/embed/UWMBj-uD37Y?si=sY2E-kF_TCoN-7Nr&autoplay=1"
 								title="YouTube video player"
-								frameBorder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 								allowFullScreen
 							></iframe>
@@ -105,7 +104,9 @@ function App() {
 									taskDone={taskDone}
 									finishedTasks={finishedTasks}
 								/>
-								Panatilihin ang position ng tao sa <Latex>{"$0 \\; m$"}</Latex>
+								<p>
+									Panatilihin ang position ng tao sa <Latex>{"$0 \\, m$"}</Latex>
+								</p>
 							</li>
 							<li>
 								<Checkbox
@@ -113,8 +114,10 @@ function App() {
 									taskDone={taskDone}
 									finishedTasks={finishedTasks}
 								/>
-								Lagyan ng <Latex>{"$2 \\; \\dfrac{m}{s}$"}</Latex> na velocity ang tao at pindutin
-								ang play button
+								<p>
+									Lagyan ng <Latex>{"$2 \\, m/s$"}</Latex> na velocity ang tao at pindutin
+									ang play button
+								</p>
 							</li>
 							<li>
 								<Checkbox
@@ -122,8 +125,10 @@ function App() {
 									taskDone={taskDone}
 									finishedTasks={finishedTasks}
 								/>
-								Ireset ang simulation at lagyan naman ng <Latex>{"$4 \\; \\dfrac{m}{s}$"}</Latex>
-								ang velocity ang tao at pindutin ang play button
+								<p>
+									Ireset ang simulation at lagyan naman ng <Latex>{"$4 \\, m/s$"}</Latex>
+									ang velocity ang tao at pindutin ang play button
+								</p>
 							</li>
 							<li>
 								<Checkbox
@@ -131,10 +136,12 @@ function App() {
 									taskDone={taskDone}
 									finishedTasks={finishedTasks}
 								/>
-								Ireset ang simulation muli at lagyan ng <Latex>{"$1 \\; \\dfrac{m}{s^2}$"}</Latex>
-								ang acceleration ng tao at pindutin ang play
-								button. Pansinin ang mangyayari sa velocity ng
-								tao
+								<p>
+									Ireset ang simulation muli at lagyan ng <Latex>{"$1 \\, m/s^2$"}</Latex>
+									ang acceleration ng tao at pindutin ang play
+									button. Pansinin ang mangyayari sa velocity ng
+									tao
+								</p>
 							</li>
 						</ul>
 					</LessonSection>
@@ -143,19 +150,21 @@ function App() {
 
 					{canProceed ? (
 						<LessonSection>
-							<p className="greenText">Maaari nang magpatuloy!</p>
+							<p className="greenText">Maaari nang magpatuloy!</p> <br />
+							<p>Heto ang iyong ginawa kanina.</p>
+							<img src="../src/media/simulation-ss.png" className="simulation-ss" alt="" />
 							<br />
 							<p>
-								Pagkatapos ito gawin, sagutin ang mga sumusunod
+								Sagutin ang mga sumusunod
 								na tanong:
 							</p>
 							<ol className="indent">
 								<li>
 									Ilang meters ang kailangan lakarin ng tao
-									para pumunta sa kanang pader galing sa <Latex>{"$0 \\; m$"}</Latex> ?
+									para pumunta sa kanang pader galing sa <Latex>{"$0 \\, m$"}</Latex> ?
 								</li>
 								<li>
-									Ano ang mapapansin natin na magkaiba sa <Latex>{"$2 \\; \\dfrac{m}{s}$"}</Latex> at <Latex>{"$4 \\; \\dfrac{m}{s}$"}</Latex> na velocity ng tao?
+									Ano ang mapapansin natin na magkaiba sa <Latex>{"$2 \\, m/s$"}</Latex> at <Latex>{"$4 \\, m/s$"}</Latex> na velocity ng tao?
 								</li>
 								<li>
 									Ano ang nangyayari sa velocity ng tao kapag
@@ -208,15 +217,15 @@ function App() {
 							<Flashcard
 								cardTitle="Example One"
 								current={0}
-								answer={<Latex>{"$3 \\; m$"}</Latex>}
+								answer={<Latex>{"$3 \\, m$"}</Latex>}
 								problem={
 									<div>
-										Kung naglakad si Aydan nang <Latex>{"$2 \\; m$"}</Latex> papunta sa east, at pagkatapos nito ay naglakad pa siya nang karagdagang <Latex>{"$1 \\; m$"}</Latex> papunta sa east, ano ang distance na kanyang linakad? Ibigay ang iyong sagot sa meters.
+										Kung naglakad si Aydan nang <Latex>{"$2 \\, m$"}</Latex> papunta sa east, at pagkatapos nito ay naglakad pa siya nang karagdagang <Latex>{"$1 \\, m$"}</Latex> papunta sa east, ano ang distance na kanyang linakad? Ibigay ang iyong sagot sa meters.
 									</div>
 								}
 								solution={
 									<div>
-										<p>Ang distansya na linakad ni Aydan ay <Latex>{"$3 \\; m$"}</Latex> dahil <Latex>{"$2 \\; m + 1 \\; m = 3 \\; m$"}</Latex>.</p>
+										<p>Ang distansya na linakad ni Aydan ay <Latex>{"$3 \\, m$"}</Latex> dahil <Latex>{"$2 \\, m + 1 \\, m = 3 \\, m$"}</Latex>.</p>
 										<img src="./src/media/lesson-one-flashcard-one-crop.gif" className="lesson-one-gif-one" alt="" />
 									</div>
 								}
@@ -240,7 +249,7 @@ function App() {
 								<h3>Displacement Formula</h3>
 								<p className="center-horizontal">
 									<Latex>{"$\\Delta x = x_{f} - x_{0}$"}</Latex>, where:
-									<Latex>{"$\\; \\Delta x$"}</Latex> - displacement,{" "}
+									<Latex>{"$\\, \\Delta x$"}</Latex> - displacement,{" "}
 									<Latex>{"$x_{f}$"}</Latex> - final position,{" "}
 									<Latex>{"$x_{0}$"}</Latex> - initial position
 								</p>
@@ -267,21 +276,21 @@ function App() {
 							<br />
 							<Flashcard
 								cardTitle={"Example Two"}
-								answer={<Latex>{"$2 \\; m$ east"}</Latex>}
+								answer={<Latex>{"$2 \\, m$ east"}</Latex>}
 								current={0}
 								problem={
 									<div>
-										Si Aydan ay naglakad ng <Latex>{"$4 \\; m$"}</Latex> to the east, tapos naglakad ng <Latex>{"$2 \\; m$"}</Latex> to the west. Ano ang kanyang displacement?
+										Si Aydan ay naglakad ng <Latex>{"$4 \\, m$"}</Latex> to the east, tapos naglakad ng <Latex>{"$2 \\, m$"}</Latex> to the west. Ano ang kanyang displacement?
 									</div>
 								}
 								solution={
 									<div className="flashcard-two-solution">
 										<img src="./src/media/lesson-one-flashcard-two-1-crop.gif" alt="" />
-										<p>Ang unang distansya na linakad ni Aydan ay <Latex>{"$4 \\; m$"}</Latex> to the east.</p>
+										<p>Ang unang distansya na linakad ni Aydan ay <Latex>{"$4 \\, m$"}</Latex> to the east.</p>
 										<img src="./src/media/lesson-one-flashcard-two-2-crop.gif" alt="" />
-										<p>Ang unang distansya na linakad ni Aydan ay <Latex>{"$3 \\; m$"}</Latex> to the west.</p>
+										<p>Ang unang distansya na linakad ni Aydan ay <Latex>{"$3 \\, m$"}</Latex> to the west.</p>
 										<img src="./src/media/lesson-one-flashcard-two-3.png" alt="" />
-										<p>Kung titignan lamang ang final position ni Aydan, siya ay gumalaw lamang ng <Latex>{"$2 \\; m$"}</Latex> to the east.</p>
+										<p>Kung titignan lamang ang final position ni Aydan, siya ay gumalaw lamang ng <Latex>{"$2 \\, m$"}</Latex> to the east.</p>
 									</div>
 								}
 							/>
@@ -320,7 +329,7 @@ function App() {
 								<h3>Speed Formula</h3>
 								<p className="center-horizontal">
 									<Latex>{"$v = \\dfrac{d}{t}$"}</Latex>, where
-									<Latex>{"$\\;v$"}</Latex> - speed,{" "}
+									<Latex>{"$\\,v$"}</Latex> - speed,{" "}
 									<Latex>{"$d$"}</Latex> - distance,{" "}
 									<Latex>{"$t$"}</Latex> - time
 								</p>
@@ -344,10 +353,10 @@ function App() {
 								<p className="center-horizontal">
 									<Latex>
 										{
-											"$\\vec{v} = \\dfrac{\\vec{\\Delta x}}{t}$"
+											"$\\vec{v} = \\dfrac{\\Delta \\vec{x}}{t}$"
 										}
 									</Latex>, where
-									<Latex>{"$\\; \\vec{v}$"}</Latex> - velocity,{" "}
+									<Latex>{"$\\, \\vec{v}$"}</Latex> - velocity,{" "}
 									<Latex>{"$\\vec{\\Delta x}$"}</Latex> -
 									displacement, <Latex>{"$t$"}</Latex> - time
 								</p>
@@ -358,38 +367,38 @@ function App() {
 								gaano kabilis ang tao o bagay at nagkaiba lamang
 								sa pagkakaroon ng direction. Ang SI unit para sa
 								distance at displacement ay meters per second
-								<Latex>{"$\\; (\\dfrac{m}{s})$"}</Latex>.
+								<Latex>{"$\\, (m/s)$"}</Latex>.
 							</p>
 							<br />
 							<Flashcard
 								current={0}
 								cardTitle={"Example Three"}
 								answer={
-									<Latex>{"$0.8 \\dfrac{m}{s}$ to the right"}</Latex>
+									<Latex>{"$0.8 m/s$ to the right"}</Latex>
 								}
 								problem={
 									<div>
-										Si Aydan ay nakatakbo ng <Latex>{"$50 \\; m$"}</Latex> to the right sa kalye pagkatapos ng <Latex>{"$10 \\; s$"}</Latex>. Tapos, tumakbo siya ng <Latex>{"$30 \\; m$"}</Latex> to the left pagkatapos ng <Latex>{"$15\\; s$"}</Latex>. Ano ang average velocity sa buong takbo niya?
+										Si Aydan ay nakatakbo ng <Latex>{"$50 \\, m$"}</Latex> to the right sa kalye pagkatapos ng <Latex>{"$10 \\, s$"}</Latex>. Tapos, tumakbo siya ng <Latex>{"$30 \\, m$"}</Latex> to the left pagkatapos ng <Latex>{"$15\\, s$"}</Latex>. Ano ang average velocity sa buong takbo niya?
 									</div>
 								}
 								solution={
 									<div className="flashcard-three-solution">
 										<img src="./src/media/lesson-one-flashcard-three-1-crop.gif" alt="" />
 										<p>
-											Sa unang paggalaw, gumalaw si Aydan nang <Latex>{"$50 \\; m$"}</Latex> papuntang east sa loob ng <Latex>{"$10 \\; s$"}</Latex>.
+											Sa unang paggalaw, gumalaw si Aydan nang <Latex>{"$50 \\, m$"}</Latex> papuntang east sa loob ng <Latex>{"$10 \\, s$"}</Latex>.
 										</p>
 										<img src="./src/media/lesson-one-flashcard-three-2-crop.gif" alt="" />
 										<p>
-											Sa pangalawang paggalaw, gumalaw si Aydan ng <Latex>{"$30 \\; m$"}</Latex> papuntang west sa loob ng <Latex>{"$15 \\; s$"}</Latex>.
+											Sa pangalawang paggalaw, gumalaw si Aydan ng <Latex>{"$30 \\, m$"}</Latex> papuntang west sa loob ng <Latex>{"$15 \\, s$"}</Latex>.
 										</p>
 										<p>
-											Kunin muna ang displacement: <Latex>{"$d = 50 \\; m - 30 \\; m = 20 \\; m$"}</Latex>
+											Kunin muna ang displacement: <Latex>{"$d = 50 \\, m - 30 \\, m = 20 \\, m$"}</Latex>
 										</p>
 										<p>
-											Pangalawa, kunin ang total time: <Latex>{"$t = 10 \\; s + 15 \\; s = 25 \\; s$"}</Latex>
+											Pangalawa, kunin ang total time: <Latex>{"$t = 10 \\, s + 15 \\, s = 25 \\, s$"}</Latex>
 										</p>
 										<p>
-											Ngayon, malalaman na natin ang velocity: <Latex>{"$v = \\dfrac{d}{t} = \\dfrac{20 \\; m}{25 \\; s} = 0.8 \\; \\dfrac{m}{s}$"}</Latex>
+											Ngayon, malalaman na natin ang velocity: <Latex>{"$v = \\dfrac{d}{t} = \\dfrac{20 \\, m}{25 \\, s} = 0.8 \\, \\dfrac{m}{s}$"}</Latex>
 										</p>
 									</div>
 								}
@@ -423,20 +432,16 @@ function App() {
 								<p className="center-horizontal">
 									Decelerating
 								</p>
-								<ul>
-									<li>Ang bagay ay bumibilis</li>
-									<li>
-										Ang direction ng acceleration ay parehas
-										sa direction ng velocity
-									</li>
-								</ul>
-								<ul>
-									<li>Ang bagay ay bumabagal</li>
-									<li>
-										Ang direction ng acceleration object ay
-										opposite sa direction ng velocity
-									</li>
-								</ul>
+								<p>Ang bagay ay bumibilis</p>
+								<p>Ang bagay ay bumabagal</p>
+								<p>
+									Ang direction ng acceleration ay parehas
+									sa direction ng velocity
+								</p>
+								<p>
+									Ang direction ng acceleration object ay
+									opposite sa direction ng velocity
+								</p>
 							</div>
 							<br />
 							<p>
@@ -453,7 +458,7 @@ function App() {
 											"$\\vec{a} = \\dfrac{\\Delta \\vec{v}}{\\Delta t} = \\dfrac{\\vec{v} - \\vec{v_0}}{\\Delta t}$"
 										}
 									</Latex>, where
-									<Latex>{"$\\; \\vec{a}$"}</Latex> - acceleration,{" "}
+									<Latex>{"$\\, \\vec{a}$"}</Latex> - acceleration,{" "}
 									<Latex>{"$\\vec{v}$"}</Latex> - final velocity,{" "}
 									<Latex>{"$\\vec{v_0}$"}</Latex> - initial
 									velocity, <Latex>{"$\\Delta t$"}</Latex> - time</p>
@@ -462,21 +467,21 @@ function App() {
 							<Flashcard
 								cardTitle={"Example Four"}
 								current={0}
-								answer={<Latex>{"$2.67 \\; \\dfrac{m}{s^2}$"}</Latex>}
+								answer={<Latex>{"$2.67 \\, m/s^2$"}</Latex>}
 								problem={
 									<div>
-										Si Kira ay nagpapatakbo ng kotse sa bilis ng <Latex>{"$48 \\dfrac{m}{s}$"}</Latex>. Pagkatapos ng <Latex>{"$12 \\; s$"}</Latex>, ang kanyang kotse ay umaandar na sa bilis ng <Latex>{"$80 \\; \\dfrac{m}{s}$"}</Latex>. Ano ang average acceleration ni Kira?
+										Si Kira ay nagpapatakbo ng kotse sa bilis ng <Latex>{"$48 \\, m/s$"}</Latex>. Pagkatapos ng <Latex>{"$12 \\, s$"}</Latex>, ang kanyang kotse ay umaandar na sa bilis ng <Latex>{"$80 \\, m/s$"}</Latex>. Ano ang average acceleration ni Kira?
 									</div>
 								}
 								solution={
 									<div>
 										<p>
-											Given: <Latex>{"$v_f = 80 \\; \\dfrac{m}{s}, \\; v_0 = 48 \\; \\dfrac{m}{s}, \\; \\Delta t = 12 \\; s$"}</Latex>
+											Given: <Latex>{"$v_f = 80 \\, m/s, \\, v_0 = 48 \\, m/s, \\, \\Delta t = 12 \\, s$"}</Latex>
 										</p>
 										<p>
-											Kunin muna ang change in velocity! <Latex>{"$$\\Delta v = v_f - v_0 = 80 \\; \\dfrac{m}{s} - 48 \\; \\dfrac{m}{s} = 32 \\; \\dfrac{m}{s}$$"}</Latex>
+											Kunin muna ang change in velocity! <Latex>{"$$\\Delta v = v_f - v_0 = 80 \\, \\dfrac{m}{s} - 48 \\, \\dfrac{m}{s} = 32 \\, \\dfrac{m}{s}$$"}</Latex>
 										</p>
-										<p>Tapos, <Latex>{"$$a = \\dfrac{\\Delta v}{\\Delta t} = \\dfrac{32 \\; \\dfrac{m}{s}}{12 \\; s} = 2.67 \\; \\dfrac{m}{s^2}$$"}</Latex></p>
+										<p>Tapos, <Latex>{"$$a = \\dfrac{\\Delta v}{\\Delta t} = \\dfrac{32 \\, \\dfrac{m}{s}}{12 \\, s} = 2.67 \\, \\dfrac{m}{s^2}$$"}</Latex></p>
 									</div>
 								}
 							/>
@@ -495,11 +500,11 @@ function App() {
 									current={0}
 									problem={
 										<div>
-											Mayroong Jollibee na nakaposition ng <Latex>{"$60 \\; m$"}</Latex> galing sa bahay ni Bong. Kung kailangan niya makarating sa loob ng <Latex>{"$1 \\; hr$"}</Latex> gaano kabilis dapat siya maglakad in meters per second?
+											Mayroong Jollibee na nakaposition ng <Latex>{"$60 \\, m$"}</Latex> galing sa bahay ni Bong. Kung kailangan niya makarating sa loob ng <Latex>{"$1 \\text{ hr}$"}</Latex> gaano kabilis dapat siya maglakad in meters per second?
 										</div>
 									}
 									cardTitle={"Problem 1"}
-									answer={<Latex>{"$0.0166 \\; \\dfrac{m}{s}$"}</Latex>}
+									answer={<Latex>{"$0.0166 \\, m/s$"}</Latex>}
 									solution={
 										<div>
 											<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/kCpR4o05DWM?si=EIUT7h4BZ_y52Ssi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -510,11 +515,11 @@ function App() {
 									current={0}
 									problem={
 										<div>
-											Si Ian ay nagsimula sa isang parke tapos naglalakad siya nang <Latex>{"$30 \\; m$"}</Latex> east  papunta sa supermarket, tapos siya ay naglakad nang <Latex>{"$50 \\; m$"}</Latex> north para puntahan ang paaralan, tapos naglakad siya nang <Latex>{"$30 \\; m$"}</Latex> west papunta sa kanyang bahay. Kung ginawa niya ito lahat sa loob ng <Latex>{"$22 \\; min$"}</Latex>. Ano ang (1) distance, (2) displacement, (3) average speed, at (4) average velocity?
+											Si Ian ay nagsimula sa isang parke tapos naglalakad siya nang <Latex>{"$30 \\, m$"}</Latex> east  papunta sa supermarket, tapos siya ay naglakad nang <Latex>{"$50 \\, m$"}</Latex> north para puntahan ang paaralan, tapos naglakad siya nang <Latex>{"$30 \\, m$"}</Latex> west papunta sa kanyang bahay. Kung ginawa niya ito lahat sa loob ng <Latex>{"$22 \\text{ min}$"}</Latex>. Ano ang (1) distance, (2) displacement, (3) average speed, at (4) average velocity?
 										</div>
 									}
 									cardTitle={"Problem 2"}
-									answer={<Latex>{"$2.273 \\; \\dfrac{m}{s}$"}</Latex>}
+									answer={<Latex>{"$2.273 \\, m/s$"}</Latex>}
 									solution={
 										<div>
 											<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/k2sxwAGzlxc?si=0K5aUC97H13FwCTp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -525,11 +530,11 @@ function App() {
 									current={0}
 									problem={
 										<div>
-											Si Juan ay naglalaro ng baseball, ang bola ay may velocity <Latex>{"$30 \\; \\dfrac{m}{s}$"}</Latex> pagkatapon niya papunta sa kaliwa. Kung ang bola ay may deceleration na <Latex>{"$3 \\; \\dfrac{m}{s^2}$"}</Latex> ilang segundo bago natigil ang paggalaw ng bola?
+											Si Juan ay naglalaro ng baseball, ang bola ay may velocity <Latex>{"$30 \\, m/s$"}</Latex> pagkatapon niya papunta sa kaliwa. Kung ang bola ay may deceleration na <Latex>{"$3 \\, m/s^2$"}</Latex> ilang segundo bago natigil ang paggalaw ng bola?
 										</div>
 									}
 									cardTitle={"Problem 3"}
-									answer={<Latex>{"$10 \\; s$"}</Latex>}
+									answer={<Latex>{"$10 \\, s$"}</Latex>}
 									solution={
 										<div>
 											<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/lMBEwliD0fg?si=4snrVExFxd9kaolc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -540,11 +545,11 @@ function App() {
 									current={0}
 									problem={
 										<div>
-											Mayroong pulis na bumaril sa isang target. Ang bala ay mayroong final velocity na <Latex>{"$40 \\; \\dfrac{m}{s}$"}</Latex>, kung ito ay nagdedecelerate sa rate na <Latex>{"$40 \\; \\dfrac{m}{s^2}$"}</Latex> ano ang position nito pagkatapos ng <Latex>{"$4 \\; s$"}</Latex>?
+											Mayroong pulis na bumaril sa isang target. Ang bala ay mayroong final velocity na <Latex>{"$40 \\, m/s$"}</Latex>, kung ito ay nagdedecelerate sa rate na <Latex>{"$40 \\, m/s^2$"}</Latex> ano ang position nito pagkatapos ng <Latex>{"$4 \\, s$"}</Latex>?
 										</div>
 									}
 									cardTitle={"Problem 4"}
-									answer={<Latex>{"$480 \\; m$"}</Latex>}
+									answer={<Latex>{"$480 \\, m$"}</Latex>}
 									solution={
 										<div>
 											<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/cR929k_iAo0?si=674caBbkmi6kH0yF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -565,7 +570,7 @@ function App() {
 									current={0}
 									problem={
 										<div>
-											Si Bella ay naglalakbay ng mga lugar sa Pilipinas. Siya ay sumakay ng eroplano galing Manila para pumunta sa Cebu. Ang Cebu ay may distance na <Latex>{"$600 \\; km$"}</Latex> sa timog (south) ng Manila. Pero bago pumunta ang eroplano sa Cebu, dumaan muna ito sa Pampanga na may <Latex>{"$100 \\; km$"}</Latex> layo sa hilaga (north) ng Manila. Sa buong lakbay ni Bella, sagutin ang mga tanong. Ano ang distance ng nilipad ng eroplano? Ano ang average speed ng eroplano? Ano ang average velocity ng eroplano?
+											Si Bella ay naglalakbay ng mga lugar sa Pilipinas. Siya ay sumakay ng eroplano galing Manila para pumunta sa Cebu. Ang Cebu ay may distance na <Latex>{"$600 \\, km$"}</Latex> sa timog (south) ng Manila. Pero bago pumunta ang eroplano sa Cebu, dumaan muna ito sa Pampanga na may <Latex>{"$100 \\, km$"}</Latex> layo sa hilaga (north) ng Manila. Sa buong lakbay ni Bella, sagutin ang mga tanong. Ano ang distance ng nilipad ng eroplano? Ano ang average speed ng eroplano? Ano ang average velocity ng eroplano?
 										</div>
 									}
 									cardTitle={"Challenge Problem 1"}
@@ -578,9 +583,9 @@ function App() {
 									current={0}
 									problem={
 										<div>
-											At <Latex>{"$t=0$"}</Latex>, si John ay nagmamaneho ng kanyang kotse na may velocity na <Latex>{"$35.00\\dfrac{m}{s}$"}</Latex>. Pagkatapos ng <Latex>{"$7.500 \\; s$"}</Latex>, may nadaanan na stoplight na may red light si John at tinigil niya ang kotse. Nakalipas ang <Latex>{"$30.00 \\; s$"}</Latex>, umilaw na ang green light sa stoplight, pinaandar muli ni John ang kanyang kotse at nagkaroon ito ng <Latex>{"$60.00 \\; \\dfrac{m}{s}$"}</Latex> na velocity pagkalipas ng <Latex>{"$15.00 \\; s$"}</Latex> pagkatapos nito huminto.
+											At <Latex>{"$t=0$"}</Latex>, si John ay nagmamaneho ng kanyang kotse na may velocity na <Latex>{"$35.00 \\, m/s$"}</Latex>. Pagkatapos ng <Latex>{"$7.500 \\, s$"}</Latex>, may nadaanan na stoplight na may red light si John at tinigil niya ang kotse. Nakalipas ang <Latex>{"$30.00 \\, s$"}</Latex>, umilaw na ang green light sa stoplight, pinaandar muli ni John ang kanyang kotse at nagkaroon ito ng <Latex>{"$60.00 \\, m/s$"}</Latex> na velocity pagkalipas ng <Latex>{"$15.00 \\, s$"}</Latex> pagkatapos nito huminto.
 											Ano ang average acceleration ni John from <Latex>{"$t=0$"}</Latex> hanggang huminto siya sa stoplight?
-											Ano ang average acceleration ni John from <Latex>{"$t=0$"}</Latex> hanggang nagkaroon siya ng <Latex>{"$60.00 \\; \\dfrac{m}{s}$"}</Latex> na velocity?
+											Ano ang average acceleration ni John from <Latex>{"$t=0$"}</Latex> hanggang nagkaroon siya ng <Latex>{"$60.00 \\, m/s$"}</Latex> na velocity?
 										</div>
 									}
 									cardTitle={"Challenge Problem 2"}
@@ -618,7 +623,7 @@ function App() {
 						<h2>Gravitational Acceleration</h2>
 						<br />
 						<p>
-							Ang acceleration ng isang bagay dahil sa force ng gravity ay tinatawag natin na gravitational acceleration. Ang magnitude nito ay tinatawag natin na g at ito ay may value na: <Latex>{"$$g=9.8 \\dfrac{m}{s^2}$$"}</Latex> Ang magnitude na ito ay constant at hindi nakadepende sa bigat ng isang bagay na nasa free fall. Para sa direction ng gravitational acceleration, palagi itong pababa kaya’t ang sign nito ay negative.
+							Ang acceleration ng isang bagay dahil sa force ng gravity ay tinatawag natin na gravitational acceleration. Ang magnitude nito ay tinatawag natin na g at ito ay may value na: <Latex>{"$$g=9.8 m/s^2$$"}</Latex> Ang magnitude na ito ay constant at hindi nakadepende sa bigat ng isang bagay na nasa free fall. Para sa direction ng gravitational acceleration, palagi itong pababa kaya’t ang sign nito ay negative.
 						</p>
 						<br />
 						<img src={GravAccelDiagram} alt="" className="lesson-two-grav-accel center-horizontal-image" />
@@ -627,7 +632,7 @@ function App() {
 						<h2>Velocity</h2>
 						<br />
 						<p>
-							Imagine natin na may hawak kayong bola at nabitawan niyo ito midair. Sa initial position ng bola, hindi ito gumagalaw kaya’t ang velocity nito ay zero. Nung nabitawan natin ang bola, ito ay nahuhulog hangga’t mapunta sa lapag dahil sa gravitational acceleration mula sa gravity. Dahil ang velocity at acceleration ng bola ay parehas pababa, ang velocity ng bola ay pataas ng pataas in a negative direction. Specifically, ang magnitude ng velocity ng bola ay tumataas ng <Latex>{"$9.8 \\dfrac{m}{s}$"}</Latex> every second, which is the gravitational acceleration. Kaya 'pag ang height ng bola ay mas nahulog sa mas mataas na position, mas matagal ang free fall ng bola papunta sa lapag at mas malaki ang velocity nito pag palapit na ito sa lapag.
+							Imagine natin na may hawak kayong bola at nabitawan niyo ito midair. Sa initial position ng bola, hindi ito gumagalaw kaya’t ang velocity nito ay zero. Nung nabitawan natin ang bola, ito ay nahuhulog hangga’t mapunta sa lapag dahil sa gravitational acceleration mula sa gravity. Dahil ang velocity at acceleration ng bola ay parehas pababa, ang velocity ng bola ay pataas ng pataas in a negative direction. Specifically, ang magnitude ng velocity ng bola ay tumataas ng <Latex>{"$9.8 m/s$"}</Latex> every second, which is the gravitational acceleration. Kaya 'pag ang height ng bola ay mas nahulog sa mas mataas na position, mas matagal ang free fall ng bola papunta sa lapag at mas malaki ang velocity nito pag palapit na ito sa lapag.
 						</p>
 						<br />
 						<p>
@@ -677,7 +682,7 @@ function App() {
 						</p>
 						<br />
 						<p>
-							Ang mga kinematic equations ay maaari nating gamitin kapag 3 sa 5 kinematic variables ay given para makahanap ng isang unknown variables at para sa free fall. Ang constant acceleration natin ay magiging equal sa gravitational acceleration or: <Latex>{"$$a = -g = -9.8 \\dfrac{m}{s^2}$$"}</Latex>
+							Ang mga kinematic equations ay maaari nating gamitin kapag 3 sa 5 kinematic variables ay given para makahanap ng isang unknown variables at para sa free fall. Ang constant acceleration natin ay magiging equal sa gravitational acceleration or: <Latex>{"$$a = -g = -9.8 m/s^2$$"}</Latex>
 						</p>
 						<br />
 						<p>
@@ -761,23 +766,23 @@ function App() {
 							cardTitle={"Example Two"}
 							problem={
 								<div>
-									Si Caleb ay naghulog ng basketball. Nag-undergo ang basketball sa free fall at ito’y tumagal ng <Latex>{"$2.5 \\; s$"}</Latex> sa ere. Ano ang velocity ng basketball nang ito’y tumama sa lupa?
+									Si Caleb ay naghulog ng basketball. Nag-undergo ang basketball sa free fall at ito’y tumagal ng <Latex>{"$2.5 \\, s$"}</Latex> sa ere. Ano ang velocity ng basketball nang ito’y tumama sa lupa?
 								</div>
 							}
 							solution={
 								<div>
 									<p>
-										Dahil hinulog lang ni Caleb ang bola, ang initial velocity nito ay <Latex>{"$0 \\; \\dfrac{m}{s}$"}</Latex>.
+										Dahil hinulog lang ni Caleb ang bola, ang initial velocity nito ay <Latex>{"$0 \\, m/s$"}</Latex>.
 									</p>
 									<p>
-										Alam na rin natin na ang gravitational acceleration ng bola ay <Latex>{"$9.8 \\; \\dfrac{m}{s}$"}</Latex> at ang time ng free fall ng bola ay <Latex>{"$2.5 \\; s$"}</Latex>. Kaya’t gamitin natin ang equation na <Latex>{"$v_f = v_0 - gt$"}</Latex> para mahanap ang final velocity ng bola kung saan ito tumama sa lupa.
+										Alam na rin natin na ang gravitational acceleration ng bola ay <Latex>{"$9.8 \\, m/s^2$"}</Latex> at ang time ng free fall ng bola ay <Latex>{"$2.5 \\, s$"}</Latex>. Kaya’t gamitin natin ang equation na <Latex>{"$v_f = v_0 - gt$"}</Latex> para mahanap ang final velocity ng bola kung saan ito tumama sa lupa.
 									</p>
-									<p><Latex>{"$$v_f = v_0 - gt = 0 \\; \\dfrac{m}{s} - (9.8 \\; \\dfrac{m}{s^2} \\cdot 2.5 \\; \\dfrac{m}{s}) = -24.5 \\dfrac{m}{s}$$"}</Latex>
+									<p><Latex>{"$$v_f = v_0 - gt = 0 \\, \\dfrac{m}{s} - (9.8 \\, \\dfrac{m}{s^2} \\cdot 2.5 \\, \\dfrac{m}{s}) = -24.5 \\dfrac{m}{s}$$"}</Latex>
 									</p>
 								</div>
 							}
 							answer={
-								<Latex>{"$-24.5 \\; \\dfrac{m}{s}$"}</Latex>
+								<Latex>{"$-24.5 \\, m/s$"}</Latex>
 							}
 						/>
 					</LessonSection>
@@ -789,11 +794,11 @@ function App() {
 								current={0}
 								problem={
 									<div>
-										Nagpalipad ang mga estudyante ng bottle rocket pataas. Kung ito ay may initial velocity na <Latex>{"$30 \\; \\dfrac{m}{s}$"}</Latex>, at may mass ito na <Latex>{"$1 \\; kg$"}</Latex>, ano ang maximum height nito?
+										Nagpalipad ang mga estudyante ng bottle rocket pataas. Kung ito ay may initial velocity na <Latex>{"$30 \\, m/s$"}</Latex>, at may mass ito na <Latex>{"$1 \\, kg$"}</Latex>, ano ang maximum height nito?
 									</div>
 								}
 								cardTitle={"Practice Problem 1"}
-								answer={<Latex>{"$0.0166 \\; \\dfrac{m}{s}$"}</Latex>}
+								answer={<Latex>{"$0.0166 \\, \\dfrac{m}{s}$"}</Latex>}
 								solution={
 									<div>
 										<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/s6W_itvXXR0?si=pCOCn-lTNHP4DP91" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -810,7 +815,7 @@ function App() {
 								current={0}
 								problem={
 									<div>
-										Si Rocky ay nagtapon ng ping pong ball pataas at noong pabagsak na an ping pong ball, pumasok ito sa isang plastic cup na nakapatong sa lamesa. Ang kamay ni Rocky noong hinagis niya ang ping pong ball ay <Latex>{"$50 \\; m$"}</Latex> above sa plastic cup.  Kung ang velocity ng ping pong ball ay <Latex>{"$60 \\; \\dfrac{m}{s}$"}</Latex> noong ito’y lumapag sa plastic cup, ano ang initial velocity ng ping pong ball nung tinapon ito ni Rocky?
+										Si Rocky ay nagtapon ng ping pong ball pataas at noong pabagsak na an ping pong ball, pumasok ito sa isang plastic cup na nakapatong sa lamesa. Ang kamay ni Rocky noong hinagis niya ang ping pong ball ay <Latex>{"$50 \\, m$"}</Latex> above sa plastic cup.  Kung ang velocity ng ping pong ball ay <Latex>{"$60 \\, m/s$"}</Latex> noong ito’y lumapag sa plastic cup, ano ang initial velocity ng ping pong ball nung tinapon ito ni Rocky?
 									</div>
 								}
 								cardTitle={"Challenge Problem 1"}
@@ -825,7 +830,7 @@ function App() {
 						<h2>Confirmatory Experiment</h2>
 						<br />
 						<p>
-							Panoorin ang paghulog ng eraser sa baba. Kung hinulog ang eraser mula sa taas na <Latex>{"$3 \\; m$"}</Latex>, gaano katagal ito mahuhulog hanggang marating ito ang lupa?
+							Panoorin ang paghulog ng eraser sa baba. Kung hinulog ang eraser mula sa taas na <Latex>{"$3 \\, m$"}</Latex>, gaano katagal ito mahuhulog hanggang marating ito ang lupa?
 						</p>
 						<br />
 						<img src="./src/media/confirmatory.gif" alt="" className="confirmatory" />

@@ -6,11 +6,10 @@ export default function ClickableDropdown(props) {
 
 function noDescription(props) {
   return (
-    <div className="clickable-dropdown">
+    <div className="clickable-dropdown" onClick={() => props.setCurScreen(props.id)}>
       <div className="clickable-dropdown-header-container">
         {props.icon != null && props.icon}
         <a href="#" className="clickable-dropdown-header" onClick={() => props.setCurScreen(props.id)}>{props.headerText}</a>
-        <div className="arrow-right" onClick={() => props.setCurScreen(props.id)}></div>
       </div>
     </div>
   );
