@@ -152,7 +152,7 @@ function App() {
 						<LessonSection>
 							<p className="greenText">Maaari nang magpatuloy!</p> <br />
 							<p>Heto ang iyong ginawa kanina.</p>
-							<img src="../src/media/simulation-ss.png" className="simulation-ss" alt="" />
+							<img src="./media/simulation-ss.png" className="simulation-ss" alt="" />
 							<br />
 							<p>
 								Sagutin ang mga sumusunod
@@ -226,7 +226,7 @@ function App() {
 								solution={
 									<div>
 										<p>Ang distansya na linakad ni Aydan ay <Latex>{"$3 \\, m$"}</Latex> dahil <Latex>{"$2 \\, m + 1 \\, m = 3 \\, m$"}</Latex>.</p>
-										<img src="./src/media/lesson-one-flashcard-one-crop.gif" className="lesson-one-gif-one" alt="" />
+										<img src="./media/lesson-one-flashcard-one-crop.gif" className="lesson-one-gif-one" alt="" />
 									</div>
 								}
 							/>
@@ -285,11 +285,11 @@ function App() {
 								}
 								solution={
 									<div className="flashcard-two-solution">
-										<img src="./src/media/lesson-one-flashcard-two-1-crop.gif" alt="" />
+										<img src="./media/lesson-one-flashcard-two-1-crop.gif" alt="" />
 										<p>Ang unang distansya na linakad ni Aydan ay <Latex>{"$4 \\, m$"}</Latex> to the east.</p>
-										<img src="./src/media/lesson-one-flashcard-two-2-crop.gif" alt="" />
+										<img src="./media/lesson-one-flashcard-two-2-crop.gif" alt="" />
 										<p>Ang unang distansya na linakad ni Aydan ay <Latex>{"$3 \\, m$"}</Latex> to the west.</p>
-										<img src="./src/media/lesson-one-flashcard-two-3.png" alt="" />
+										<img src="./media/lesson-one-flashcard-two-3.png" alt="" />
 										<p>Kung titignan lamang ang final position ni Aydan, siya ay gumalaw lamang ng <Latex>{"$2 \\, m$"}</Latex> to the east.</p>
 									</div>
 								}
@@ -383,11 +383,11 @@ function App() {
 								}
 								solution={
 									<div className="flashcard-three-solution">
-										<img src="./src/media/lesson-one-flashcard-three-1-crop.gif" alt="" />
+										<img src="./media/lesson-one-flashcard-three-1-crop.gif" alt="" />
 										<p>
 											Sa unang paggalaw, gumalaw si Aydan nang <Latex>{"$50 \\, m$"}</Latex> papuntang east sa loob ng <Latex>{"$10 \\, s$"}</Latex>.
 										</p>
-										<img src="./src/media/lesson-one-flashcard-three-2-crop.gif" alt="" />
+										<img src="./media/lesson-one-flashcard-three-2-crop.gif" alt="" />
 										<p>
 											Sa pangalawang paggalaw, gumalaw si Aydan ng <Latex>{"$30 \\, m$"}</Latex> papuntang west sa loob ng <Latex>{"$15 \\, s$"}</Latex>.
 										</p>
