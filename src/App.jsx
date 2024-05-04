@@ -12,6 +12,7 @@ import GravAccelDiagram from "./media/gravitational-acceleration-diagram.png";
 import FreeFallDiagram from "./media/freefall-diagram.png";
 import Flashcard from "./Flashcard";
 import PracticeProblem from "./PracticeProblem";
+import PracticeProblemPage from "./PracticeProblemPage";
 
 
 function App() {
@@ -107,7 +108,7 @@ function App() {
 									finishedTasks={finishedTasks}
 								/>
 								<p>
-									Lagyan ng <Latex>{"$2 \\, m/s$"}</Latex> na velocity ang tao at pindutin
+									Gawing <Latex>{"$2 \\, m/s$"}</Latex> ang velocity ng tao at pindutin
 									ang play button
 								</p>
 							</li>
@@ -118,8 +119,7 @@ function App() {
 									finishedTasks={finishedTasks}
 								/>
 								<p>
-									Ireset ang simulation at lagyan naman ng <Latex>{"$4 \\, m/s$"}</Latex>
-									ang velocity ang tao at pindutin ang play button
+									Ireset ang simulation at lagyan naman ng <Latex>{"$4 \\, m/s$"}</Latex> ang velocity ang tao at pindutin ang play button
 								</p>
 							</li>
 							<li>
@@ -129,8 +129,7 @@ function App() {
 									finishedTasks={finishedTasks}
 								/>
 								<p>
-									Ireset ang simulation muli at lagyan ng <Latex>{"$1 \\, m/s^2$"}</Latex>
-									ang acceleration ng tao at pindutin ang play
+									Ireset ang simulation muli at lagyan ng <Latex>{"$1 \\, m/s^2$"}</Latex> ang acceleration ng tao at pindutin ang play
 									button. Pansinin ang mangyayari sa velocity ng
 									tao
 								</p>
@@ -170,7 +169,7 @@ function App() {
 							</div>
 							<br />
 							<p>
-								Ang paggalaw o motion ng tao sa simulation ay may kinalaman sa isang sangay ng Physics na tinatawag na mechanics. Sa ilalim ng sangay ng mechanics ay mayroon itong dalawang bahagi, kinematics at dynamics. Ngunit para sa lesson na ito, magpopokus tayo sa kinematics.
+								Ang paggalaw o motion ng tao sa simulation ay may kinalaman sa isang larangan ng Physics na tinatawag na mechanics. Sa ilalim ng larangan ng mechanics ay mayroon itong dalawang bahagi, kinematics at dynamics. Ngunit para sa lesson na ito, tututukan natin ang kinematics.
 							</p>
 							<br />
 							<h2>Kinematics</h2>
@@ -185,14 +184,14 @@ function App() {
 							<h3>Position</h3>
 							<br />
 							<p>
-								Sa pagpapaliwanag ng motion, kailangan din natin ipakita ang position ng isang bagay. Gawin nating halimbawa ang simulation na ating ginamit kanina, makikita natin ang pagkakaiba ng position ng tao kapag siya ay nasa gitna at sa kanang pader. Sabihin natin nasa gitna ang initial position ng tao, at yung kanang pader ang final position ng tao.
+								Sa pagpapaliwanag ng motion, kailangan natin ipakita ang position ng isang bagay. Gawin nating halimbawa ang simulation na ating ginamit kanina, makikita natin ang pagkakaiba ng position ng tao kapag siya ay nasa gitna at sa kanang pader. Sabihin natin nasa gitna ang initial position ng tao, at ang kanang pader ay ang final position ng tao.
 							</p>
 							<br />
 							<p>
-								Ang linakad ng tao galing sa pinagmulan niyang position para makarating sa kanyang paroroonan na position ay tinatawag natin na <b>distance</b>. Ito ay isang
+								Ang haba ng linakad ng tao galing sa pinagmulan niyang position para makarating sa kanyang paroroonan na position ay tinatawag natin na <b>distance</b>. Ito ay isang
 								scalar unit, kaya ito ay may magnitude (na
 								laging positive) lamang. Ang magnitude ng
-								distance ay ang lahat ng nadaanan ng isang bagay sa motion nito.
+								distance ay ang haba ng lahat ng nadaanan ng isang bagay sa motion nito.
 							</p>
 							<br />
 							<Flashcard
@@ -201,7 +200,7 @@ function App() {
 								answer={<Latex>{"$3 \\, m$"}</Latex>}
 								problem={
 									<div>
-										Kung naglakad si Aydan nang <Latex>{"$2 \\, m$"}</Latex> papunta sa east, at pagkatapos nito ay naglakad pa siya nang karagdagang <Latex>{"$1 \\, m$"}</Latex> papunta sa east, ano ang distance na kanyang linakad?
+										Kung naglakad si Aydan nang <Latex>{"$2 \\, m$"}</Latex> papunta sa east, at pagkatapos nito ay naglakad pa siya nang karagdagang <Latex>{"$1 \\, m$"}</Latex> papunta sa east, ano ang distance ng kanyang linakad?
 									</div>
 								}
 								solution={
@@ -213,12 +212,12 @@ function App() {
 							/>
 							<br />
 							<p>
-								Ngunit paano naman kung gusto lang natin malaman ang distance ng pinagmulan na position at pinal na position ng isang bagay at hindi sa buong dinaanan nito?
+								Ngunit paano naman kung gusto lang natin malaman ang distance ng initial position at final position ng isang bagay at hindi sa buong dinaanan nito?
 
 								Ito ngayon ay tinatawag natin na <b>displacement</b>. Ito ay isang vector unit, kaya ito
 								ay may parehong magnitude at direction. Ang
 								magnitude ng displacement ay ang pinakamaikling
-								distance mula sa initial position patungo sa final position ng isang bagay; ito ay isang straight line mula sa starting point hanggang endpoint. Sa direction naman ng displacement, nakaturo ito sa pinagmulan na position papunta sa pinal na position at gumagamit tayo ng +/- signs para matukoy saan nakaturo ang displacement vector. Para sa
+								distance mula sa initial position patungo sa final position ng isang bagay; ito ay isang straight line mula sa starting point hanggang endpoint. Sa direction naman ng displacement, nakaturo ito mula sa initial position papunta sa final position at gumagamit tayo ng +/- signs para matukoy saan nakaturo ang displacement vector. Para sa
 								one-dimensional motion:
 							</p>
 							<br />
@@ -233,7 +232,7 @@ function App() {
 							</div>
 							<br />
 							<p>
-								Sa simulation, ang kanan o east direction ay positive sign. Kaya’t nung naglakad yung tao papunta sa kanan na pader, ang sign ng kanyang displacement vector ay positibo. Ngunit kung naglakad siya papunta sa kaliwang pader, ang sign ng kanyang displacement vector ay negatibo.
+								Sa simulation, ang kanan o east direction ay positive sign. Kaya’t nung naglakad yung tao papunta sa kanan na pader, ang sign ng kanyang displacement vector ay positive. Ngunit kung naglakad siya papunta sa kaliwang pader, ang sign ng kanyang displacement vector ay negative.
 							</p>
 							<br />
 							<div className="displacement-figures">
@@ -242,7 +241,7 @@ function App() {
 							</div>
 							<br />
 							<p>
-								Sapagkat ang displacement ang pinakamaikling distance ng initial at final positions ng isang bagay, ito lamang ay isang diretsong linya habang ang distance naman ay nakadepende sa dadaanan ng isang bagay at hindi ito palagi isang diretsong linya. Ang SI unit para sa distance at displacement ay meters (m). Para makita ang pinagkaiba ng distance at displacement, tingnan natin ang halimbawang ito.
+								Sapagkat ang displacement ang pinakamaikling distance ng initial at final positions ng isang bagay, ito lamang ay isang diretsong linya habang ang distance naman ay nakadepende sa nadaanan ng isang bagay at hindi ito palagi isang diretsong linya. Ang SI unit para sa distance at displacement ay meters (m). Para makita ang pinagkaiba ng distance at displacement, tingnan natin ang halimbawang ito.
 							</p>
 							<br />
 							<Flashcard
@@ -261,7 +260,7 @@ function App() {
 										<img src="./media/lesson-one-flashcard-two-2-crop.gif" alt="" />
 										<p>Ang unang distansya na linakad ni Aydan ay <Latex>{"$3 \\, m$"}</Latex> to the west.</p>
 										<img src="./media/lesson-one-flashcard-two-3.png" alt="" />
-										<p>Kung titignan lamang ang final position ni Aydan, ang kanyang displacement ay<Latex>{"$4 \\, m - 2 \\, m = 2 \\, m$"}</Latex> lamang, ngunit ang kabuuang distansyang linakad niya ay <Latex>{"$4 \\, m + 2 \\, m = 6 \\, m$"}</Latex> </p>
+										<p>Kung titignan lamang ang final position ni Aydan, ang kanyang displacement ay <Latex>{"$4 \\, m - 2 \\, m = 2 \\, m$"}</Latex> lamang, ngunit ang kabuuang distansyang linakad niya ay <Latex>{"$4 \\, m + 2 \\, m = 6 \\, m$"}</Latex> </p>
 									</div>
 								}
 							/>
@@ -276,17 +275,17 @@ function App() {
 							<h3>Velocity</h3>
 							<br />
 							<p>
-								Sa simulation, paano natin malalaman kung gaano kabilis naglalakad yung tao papunta sa pader? Ito ngayon ang tinatawag natin na speed at velocity.
+								Sa simulation, paano natin malalaman kung gaano kabilis naglalakad yung tao papunta sa pader? Ito ngayon ang tinatawag natin na <b>speed</b> at <b>velocty</b>.
 							</p>
 							<br />
 							<p>
-								May dalawang paraan para ipakita ang speed at velocity, pwede ito maging average or instantaneous. Ang average speed at velocity ay nagpapakita ng bilis depende sa layo ng narating ng isang bagay sa isang espisipikong time interval. Habang ang instantaneous naman ay nagpapakita ng bilis ng isang bagay sa isang partikular na oras. Para sa modyul na ito, tatalakayin lang natin ang average speed at velocity.
+								May dalawang paraan para ipakita ang speed at velocity, pwede ito maging average or instantaneous. Ang average speed at velocity ay nagpapakita ng bilis depende sa layong narating ng isang bagay sa isang time interval. Habang ang instantaneous speed at velocity naman ay nagpapakita ng bilis ng isang bagay sa isang partikular na oras. Para sa modyul na ito, tatalakayin lang natin ang average speed at velocity.
 							</p>
 							<br />
 							<p>
-								Ang average speed ay isang scalar unit na
+								Ang <b>average speed</b> ay isang scalar unit na
 								nagpapakita ng bilis ng isang bagay base sa
-								dinaanan ng isang bagay galing sa pinagmulan nitong position hanggang sa pinal na position nito sa isang espisipikong time interval. Ito ay palaging may positive na value.
+								distance ng nadaanan ng isang bagay galing sa initial position hanggang sa final position nito sa isang espisipikong time interval. Ito ay palaging may positive na value.
 							</p>
 							<br />
 							<p>Dahil dito, ang equation ng speed ay:</p>
@@ -302,8 +301,8 @@ function App() {
 							</div>
 							<br />
 							<p>
-								Ang average velocity naman ay isang vectory
-								unit. Hindi tulad ng speed, ang average velocity ay nagpapakita lamang ng bilis ng isang bagay base sa displacement ng isang bagay sa isang espisipikong time interval. Ang value ng velocity ay maaaring maging positibo o negatibo, depende sa direction ng displacement.
+								Ang average velocity naman ay isang vector
+								unit. Hindi tulad ng speed, ang average velocity ay nagpapakita lamang ng bilis ng isang bagay base sa displacement ng isang bagay sa isang time interval. Ang value ng velocity ay maaaring maging positive o negative, depende sa direction ng displacement.
 							</p>
 							<br />
 							<p>Dahil dito, ang equation ng velocity ay:</p>
@@ -336,7 +335,7 @@ function App() {
 								</p>
 							</div>
 							<p>
-								Sa kabuuan, ang speed at velocity ay parehas nagsasabi kung gaano kabilis ang tao o bagay at nagkakaiba lamang sa pagkakaroon ng direction. Ang SI unit para sa distance at displacement ay meters per second <Latex>{"$\\, (m/s)$"}</Latex>.
+								Sa kabuuan, ang speed at velocity ay parehas nagsasabi kung gaano kabilis ang tao o bagay at nagkakaiba lamang sa pagkakaroon ng direction. Ang SI unit para sa speed at velocity ay meters per second <Latex>{"$\\, (m/s)$"}</Latex>.
 							</p>
 							<br />
 							<Flashcard
@@ -347,24 +346,24 @@ function App() {
 								}
 								problem={
 									<div>
-										Si Aydan ay nakatakbo ng <Latex>{"$50 \\, m$"}</Latex> to the right sa kalye pagkatapos ng <Latex>{"$10 \\, s$"}</Latex>. Tapos, tumakbo siya ng <Latex>{"$30 \\, m$"}</Latex> to the left pagkatapos ng <Latex>{"$15\\, s$"}</Latex>. Ano ang average velocity sa buong takbo niya?
+										Si Aydan ay tumakbo ng <Latex>{"$50 \\, m$"}</Latex> to the right sa kalye sa loob ng <Latex>{"$10 \\, s$"}</Latex>. Tapos, tumakbo siya ng <Latex>{"$30 \\, m$"}</Latex> to the left sa loob ng <Latex>{"$15\\, s$"}</Latex>. Ano ang average velocity sa buong pagtakbo niya?
 									</div>
 								}
 								solution={
 									<div className="flashcard-three-solution">
 										<img src="./media/lesson-one-flashcard-three-1-crop.gif" alt="" />
 										<p>
-											Sa unang paggalaw, gumalaw si Aydan nang <Latex>{"$50 \\, m$"}</Latex> papuntang east sa loob ng <Latex>{"$10 \\, s$"}</Latex>.
+											Sa unang paggalaw, tumakbo si Aydan nang <Latex>{"$50 \\, m$"}</Latex> papuntang east sa loob ng <Latex>{"$10 \\, s$"}</Latex>.
 										</p>
 										<img src="./media/lesson-one-flashcard-three-2-crop.gif" alt="" />
 										<p>
-											Sa pangalawang paggalaw, gumalaw si Aydan ng <Latex>{"$30 \\, m$"}</Latex> papuntang west sa loob ng <Latex>{"$15 \\, s$"}</Latex>.
+											Sa pangalawang paggalaw, tumakbo si Aydan ng <Latex>{"$30 \\, m$"}</Latex> papuntang west sa loob ng <Latex>{"$15 \\, s$"}</Latex>.
 										</p>
 										<p>
 											Kunin muna ang displacement: <Latex>{"$d = 50 \\, m - 30 \\, m = 20 \\, m$"}</Latex>
 										</p>
 										<p>
-											Pangalawa, kunin ang total time: <Latex>{"$t = 10 \\, s + 15 \\, s = 25 \\, s$"}</Latex>
+											Pagkatapos, kunin ang total time: <Latex>{"$t = 10 \\, s + 15 \\, s = 25 \\, s$"}</Latex>
 										</p>
 										<p>
 											Ngayon, malalaman na natin ang velocity: <Latex>{"$v = \\dfrac{d}{t} = \\dfrac{20 \\, m}{25 \\, s} = 0.8 \\, \\dfrac{m}{s}$"}</Latex>
@@ -471,40 +470,53 @@ function App() {
 						</p>
 					)}
 					{canProceed ? (
-						<LessonSection>
-							<h2>Practice Problems!</h2>
-							<br />
-							<div className="prac-problems-container">
-								<PracticeProblem
-									current={0}
-									problem={
-										<div>
-											Mayroong Jollibee na nakaposition ng <Latex>{"$60 \\, m$"}</Latex> galing sa bahay ni Bong. Kung kailangan niya makarating sa loob ng <Latex>{"$1 \\text{ hr}$"}</Latex> gaano kabilis dapat siya maglakad in meters per second?
-										</div>
-									}
-									cardTitle={"Problem 1"}
-									answer={<Latex>{"$0.0166 \\, m/s$"}</Latex>}
-									solution={
-										<div>
-											<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/kCpR4o05DWM?si=EIUT7h4BZ_y52Ssi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-										</div>
-									}
-								/>
-								<PracticeProblem
-									current={0}
-									problem={
-										<div>
-											Si Ian ay nagsimula sa isang parke tapos naglalakad siya nang <Latex>{"$30 \\, m$"}</Latex> east  papunta sa supermarket, tapos siya ay naglakad nang <Latex>{"$50 \\, m$"}</Latex> north para puntahan ang paaralan, tapos naglakad siya nang <Latex>{"$30 \\, m$"}</Latex> west papunta sa kanyang bahay. Kung ginawa niya ito lahat sa loob ng <Latex>{"$22 \\text{ min}$"}</Latex>. Ano ang (1) distance, (2) displacement, (3) average speed, at (4) average velocity?
-										</div>
-									}
-									cardTitle={"Problem 2"}
-									answer={<Latex>{"$2.273 \\, m/s$"}</Latex>}
-									solution={
-										<div>
-											<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/k2sxwAGzlxc?si=0K5aUC97H13FwCTp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-										</div>
-									}
-								/>
+						<PracticeProblemPage
+							challenge={false}
+							practiceProblem={<PracticeProblem
+								current={0}
+								problem={
+									<div>
+										Mayroong Jollibee na nakaposition ng <Latex>{"$60 \\, m$"}</Latex> galing sa bahay ni Bong. Kung kailangan niya makarating sa loob ng <Latex>{"$1 \\text{ hr}$"}</Latex> gaano kabilis dapat siya maglakad in meters per second?
+									</div>
+								}
+								cardTitle={"Problem 1"}
+								answer={<Latex>{"$0.0166 \\, m/s$"}</Latex>}
+								solution={
+									<div>
+										<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/kCpR4o05DWM?si=EIUT7h4BZ_y52Ssi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
+								}
+							/>}
+						/>
+					) : (
+						null
+					)}
+					{canProceed ? (
+						<PracticeProblemPage
+							challenge={false}
+							practiceProblem={<PracticeProblem
+								current={0}
+								problem={
+									<div>
+										Si Ian ay nagsimula sa isang parke tapos naglalakad siya nang <Latex>{"$30 \\, m$"}</Latex> east  papunta sa supermarket, tapos siya ay naglakad nang <Latex>{"$50 \\, m$"}</Latex> north para puntahan ang paaralan, tapos naglakad siya nang <Latex>{"$30 \\, m$"}</Latex> west papunta sa kanyang bahay. Kung ginawa niya ito lahat sa loob ng <Latex>{"$22 \\text{ min}$"}</Latex>. Ano ang (1) distance, (2) displacement, (3) average speed, at (4) average velocity?
+									</div>
+								}
+								cardTitle={"Problem 2"}
+								answer={<Latex>{"$2.273 \\, m/s$"}</Latex>}
+								solution={
+									<div>
+										<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/k2sxwAGzlxc?si=0K5aUC97H13FwCTp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
+								}
+							/>}
+						/>
+					) : (
+						null
+					)}
+					{canProceed ? (
+						<PracticeProblemPage
+							challenge={0}
+							practiceProblem={
 								<PracticeProblem
 									current={0}
 									problem={
@@ -520,23 +532,30 @@ function App() {
 										</div>
 									}
 								/>
-								<PracticeProblem
-									current={0}
-									problem={
-										<div>
-											Mayroong pulis na bumaril sa isang target. Ang bala ay mayroong final velocity na <Latex>{"$40 \\, m/s$"}</Latex>, kung ito ay nagdedecelerate sa rate na <Latex>{"$40 \\, m/s^2$"}</Latex> ano ang position nito pagkatapos ng <Latex>{"$4 \\, s$"}</Latex>?
-										</div>
-									}
-									cardTitle={"Problem 4"}
-									answer={<Latex>{"$480 \\, m$"}</Latex>}
-									solution={
-										<div>
-											<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/cR929k_iAo0?si=674caBbkmi6kH0yF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-										</div>
-									}
-								/>
-							</div>
-						</LessonSection>
+							}
+						/>
+					) : (
+						null
+					)}
+					{canProceed ? (
+						<PracticeProblemPage
+							challenge={0}
+							practiceProblem={<PracticeProblem
+								current={0}
+								problem={
+									<div>
+										Mayroong pulis na bumaril sa isang target. Ang bala ay mayroong final velocity na <Latex>{"$40 \\, m/s$"}</Latex>, kung ito ay nagdedecelerate sa rate na <Latex>{"$40 \\, m/s^2$"}</Latex> ano ang position nito pagkatapos ng <Latex>{"$4 \\, s$"}</Latex>?
+									</div>
+								}
+								cardTitle={"Problem 4"}
+								answer={<Latex>{"$480 \\, m$"}</Latex>}
+								solution={
+									<div>
+										<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/cR929k_iAo0?si=674caBbkmi6kH0yF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
+								}
+							/>}
+						/>
 					) : (
 						null
 					)}
@@ -769,27 +788,24 @@ function App() {
 							}
 						/>
 					</LessonSection>
-					<LessonSection>
-						<h2>Practice Problems!</h2>
-						<br />
-						<div className="prac-problems-container">
-							<PracticeProblem
-								current={0}
-								problem={
-									<div>
-										Nagpalipad ang mga estudyante ng bottle rocket pataas. Kung ito ay may initial velocity na <Latex>{"$30 \\, m/s$"}</Latex>, at may mass ito na <Latex>{"$1 \\, kg$"}</Latex>, ano ang maximum height nito?
-									</div>
-								}
-								cardTitle={"Practice Problem 1"}
-								answer={<Latex>{"$0.0166 \\, \\dfrac{m}{s}$"}</Latex>}
-								solution={
-									<div>
-										<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/s6W_itvXXR0?si=pCOCn-lTNHP4DP91" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-									</div>
-								}
-							/>
-						</div>
-					</LessonSection>
+					<PracticeProblemPage
+						challenge={0}
+						practiceProblem={<PracticeProblem
+							current={0}
+							problem={
+								<div>
+									Nagpalipad ang mga estudyante ng bottle rocket pataas. Kung ito ay may initial velocity na <Latex>{"$30 \\, m/s$"}</Latex>, at may mass ito na <Latex>{"$1 \\, kg$"}</Latex>, ano ang maximum height nito?
+								</div>
+							}
+							cardTitle={"Practice Problem 1"}
+							answer={<Latex>{"$0.0166 \\, \\dfrac{m}{s}$"}</Latex>}
+							solution={
+								<div>
+									<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/s6W_itvXXR0?si=pCOCn-lTNHP4DP91" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								</div>
+							}
+						/>}
+					/>
 					<LessonSection>
 						<h2>Challenge Problems!</h2>
 						<br />
