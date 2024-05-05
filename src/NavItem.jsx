@@ -17,7 +17,7 @@ export default function NavItem(props) {
       <a className="nav-item-text" onClick={() => {
         setClicked(!clicked);
         // if (!renderText) {
-        console.log("switching!");
+        // console.log("switching!");
         props.setCurScreen(props.id);
         // }
       }}>

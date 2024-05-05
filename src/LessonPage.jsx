@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import StandardHeader from "./StandardHeader";
 
 {
@@ -6,8 +6,17 @@ import StandardHeader from "./StandardHeader";
 }
 
 export default function LessonPage(props) {
-	const [currentLessonSection, setCurrentLessonSection] = useState("0"); // first page
 	const [currentSections, setCurrentSections] = useState([0, 0]);
+	const [currentLessonSection, setCurrentLessonSection] = useState(currentSections[props.id]); // first page
+
+	useEffect(() => {
+		// console.log("FROM USE EFFECT, PROPS.ID = " + props.id);
+		setCurrentLessonSection(currentSections[props.id]);
+	}, [props.id]);
+
+	// console.log("CURRENT ID: " + props.id);
+	// console.log("CURRENT SECTION: " + currentLessonSection);
+	// console.log("SUPPOSED TO BE: " + currentSections[props.id]);
 	// let lessons = props.children;
 	let chl = props.children;
 	let lessons = [];
@@ -16,8 +25,8 @@ export default function LessonPage(props) {
 			lessons.push(chl[i]);
 		}
 	}
-	console.log(lessons);
-	console.log("current id " + currentSections[props.id]);
+	// console.log(lessons);
+	// console.log("current id " + currentSections[props.id]);
 	const handleClick = (event) => {
 		console.log(event.target.id);
 		setCurrentLessonSection(event.target.id);
@@ -25,6 +34,7 @@ export default function LessonPage(props) {
 		console.log(currentSections)
 	};
 	let ok = 0;
+	// console.log(currentSections)
 	return (
 		<>
 			{/* <div className="lesson-dot-navigation">
@@ -45,13 +55,13 @@ export default function LessonPage(props) {
 				{lessons[currentSections[props.id]]}
 			</main>
 			<div className="prev-next">
-				<button disabled={parseInt(currentLessonSection) === 0} type="button" onClick={() => {
-					let newId = parseInt(currentLessonSection) - 1;
+				<button disabled={currentSections[props.id] === 0} type="button" onClick={() => {
+					let newId = currentSections[props.id] - 1;
 					setCurrentLessonSection(newId);
 					currentSections[props.id] = newId;
 				}}>&laquo; Previous</button>
-				<button disabled={parseInt(currentLessonSection) + 1 >= lessons.length} type="button" onClick={() => {
-					let newId = parseInt(currentLessonSection) + 1;
+				<button disabled={currentSections[props.id] + 1 >= lessons.length} type="button" onClick={() => {
+					let newId = currentSections[props.id] + 1;
 					setCurrentLessonSection(newId);
 					currentSections[props.id] = newId;
 				}}>Next &raquo;</button>
