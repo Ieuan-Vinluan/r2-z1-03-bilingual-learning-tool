@@ -48,7 +48,7 @@ function App() {
 				<LessonPage setCurScreen={setCurScreen} id={0}>
 					<LessonSection>
 						<h1>Lesson 1: Uniformly Accelerated Motion</h1>
-						<br />
+						<hr />
 						<p>
 							Bago tayo magsimula, panoorin muna natin ang short
 							video na ito.
@@ -70,6 +70,8 @@ function App() {
 						<br />
 					</LessonSection>
 					<LessonSection>
+						<h2>Short Activity</h2>
+						<hr />
 						<p>
 							Pindutin ang{" "}
 							<a
@@ -136,11 +138,10 @@ function App() {
 							</li>
 						</ul>
 					</LessonSection>
-					{/* so users cannot access the rest of the page without doing the tasks */}
-
-
 					{canProceed ? (
 						<LessonSection>
+							<h2>Continuation</h2>
+							<hr />
 							<p className="greenText">Maaari nang magpatuloy!</p> <br />
 							<p>Heto ang iyong ginawa kanina.</p>
 							<br />
@@ -172,17 +173,17 @@ function App() {
 								Ang paggalaw o motion ng tao sa simulation ay may kinalaman sa isang larangan ng Physics na tinatawag na mechanics. Sa ilalim ng larangan ng mechanics ay mayroon itong dalawang bahagi, kinematics at dynamics. Ngunit para sa lesson na ito, tututukan natin ang kinematics.
 							</p>
 							<br />
-							<h2>Kinematics</h2>
-							<br />
+							{/* <h3>Kinematics</h3>
+							<hr />
 							<div className="box">
 								<h3 className="box-title">Definition of Kinematics</h3>
 								<p>
 									Ang kinematics ay isang parte ng mechanics na nagpapaliwanag sa motion ng mga bagay na hindi kinokonsidera ang mga forces na kumikilos dito.
 								</p>
 							</div>
-							<br />
+							<br /> */}
 							<h3>Position</h3>
-							<br />
+							<hr />
 							<p>
 								Sa pagpapaliwanag ng motion, kailangan natin ipakita ang position ng isang bagay. Gawin nating halimbawa ang simulation na ating ginamit kanina, makikita natin ang pagkakaiba ng position ng tao kapag siya ay nasa gitna at sa kanang pader. Sabihin natin nasa gitna ang initial position ng tao, at ang kanang pader ay ang final position ng tao.
 							</p>
@@ -273,7 +274,7 @@ function App() {
 					{canProceed ? (
 						<LessonSection>
 							<h3>Velocity</h3>
-							<br />
+							<hr />
 							<p>
 								Sa simulation, paano natin malalaman kung gaano kabilis naglalakad yung tao papunta sa pader? Ito ngayon ang tinatawag natin na <b>speed</b> at <b>velocty</b>.
 							</p>
@@ -381,7 +382,7 @@ function App() {
 					{canProceed ? (
 						<LessonSection>
 							<h3>Acceleration</h3>
-							<br />
+							<hr />
 							<p>
 								Sa simulation, maaari na natin malaman ang bilis ng paglalakad ng tao. Ngunit, hindi naman palagi pare-pareho ang bilis ng tao sa iba’t ibang oras. Minsan ito’y bumibilis, bumabagal, o nakahinto lamang. Ang pagbilis o pagbagal ng tao o bagay ay tinatawag natin na acceleration.
 							</p>
@@ -605,7 +606,7 @@ function App() {
 				<LessonPage setCurScreen={setCurScreen} id={1}>
 					<LessonSection>
 						<h1>Lesson 2: Free Fall</h1>
-						<br />
+						<hr />
 						<p>
 							Ngayon na tinalakay na natin ang kinematics in one-dimension, tatalakayin naman natin ang isang special case nito na tinatawag na free fall. Sa simula ng modyul, nakita natin na nalalaglag ng dahan-dahan ang dahon at iyon ay isang halimbawa ng free fall. Nakikita natin ang free fall sa ating araw-araw na pamumuhay tulad ng patak ng ulan o pagbitaw natin sa bagay na ating hinahawakan.
 						</p>
@@ -619,7 +620,7 @@ function App() {
 					</LessonSection>
 					<LessonSection>
 						<h2>Gravitational Acceleration</h2>
-						<br />
+						<hr />
 						<p>
 							Ang acceleration ng isang bagay dahil sa force ng gravity ay tinatawag natin na gravitational acceleration. Ang magnitude nito ay tinatawag natin sa simbolong <Latex>{"$g$"}</Latex> na may value na: <Latex>{"$$g=9.8 \\, m/s^2$$"}</Latex> Ang magnitude na ito ay hindi nagbabago at hindi nakadepende sa bigat ng isang bagay na nakakaranas ng free fall. Ang direction ng gravitational acceleration ay pababa kaya’t ang sign na ginagamit dito ay negatibo.
 						</p>
@@ -628,7 +629,7 @@ function App() {
 					</LessonSection>
 					<LessonSection>
 						<h2>Velocity</h2>
-						<br />
+						<hr />
 						<p>
 							Isipin natin na may hawak kayong bola at nabitawan niyo ito sa ere. Sa pinagmulan na position ng bola, hindi ito gumagalaw kaya’t ang velocity nito ay zero. Pagkatapos nating bitawan ang bola, ito ay nahulog hangga’t mapunta sa lapag dahil sa gravitational acceleration mula sa gravity. Dahil ang velocity at acceleration ng bola ay parehas pababa, ang velocity ng bola ay pataas ng pataas sa negatibong direction. Kung magiging espisipiko, ang magnitude ng velocity ng bola ay tumataas ng <Latex>{"$9.8 \\, m/s$"}</Latex>, kada segundo. Ito ang ating gravitational acceleration! Kaya kung ang height ng bola ay mas nahulog sa mas mataas na position, mas matagal ang free fall ng bola papunta sa lapag at mas malaki ang velocity nito kapag mas malapit na ito sa lapag.
 						</p>
@@ -643,8 +644,10 @@ function App() {
 							Sa huli, dahil hindi nagbabago ang gravitational acceleration sa pagtaas at pagbaba ng bola, ang pagbagal at pagbilis ng bola midair ay parehas. Kaya pag sinalo natin ang bola sa parehas na position kung saan natin tinapon ang bola, ang velocity ng bola sa oras na sinalo natin ay pareho sa velocity ng bola na ating tinapon.
 						</p>
 						<br />
+					</LessonSection>
+					<LessonSection>
 						<h2>Displacement and Time of Flight</h2>
-						<br />
+						<hr />
 						<p>
 							Base sa ating mga tinalakay natin kanina, ang magiging displacement ng isang bagay ay positibo kapag ito’y pataas, negatibo kung ito’y pababa, at zero kung bumalik sa pinagmulan na position ang isang bagay tulad ng pagtapon at pagsalo ng bola na ating tinalakay.
 						</p>
@@ -662,7 +665,7 @@ function App() {
 							cardTitle={"Example One"}
 							problem={
 								<div>
-									Si Carlo ay may hawak na feather sa kanyang kaliwang kamay at metal ball naman sa kanyang kanang kamay. Pagkatapos ay sabay niyang binitawan ang dalawang bagay na ito sa kanyang kamay. Ano ang mauuna makakarating sa lupa? (Wag natin intindihin ang air resistance)
+									Si Carlo ay may hawak na feather sa kanyang kaliwang kamay at metal ball naman sa kanyang kanang kamay. Pagkatapos ay sabay niyang binitawan ang dalawang bagay na ito sa kanyang kamay. Ano ang mauuna makakarating sa lupa? (Huwag intindihin ang air resistance)
 								</div>
 							}
 							solution={
@@ -674,7 +677,7 @@ function App() {
 					</LessonSection>
 					<LessonSection>
 						<h2>Kinematic Equations in Free Fall</h2>
-						<br />
+						<hr />
 						<p>
 							Ang kinematic equations ay ang mga equations na nag-uugnay sa 5 kinematic variables: displacement <Latex>{"$(\\Delta x)$"}</Latex>, time interval <Latex>{"$(\\Delta t)$"}</Latex>, initial velocity <Latex>{"$(v_0)$"}</Latex>, final velocity <Latex>{"$(v_f)$"}</Latex>, at constant acceleration <Latex>{"$(a)$"}</Latex>.
 						</p>
@@ -744,7 +747,7 @@ function App() {
 					</LessonSection>
 					<LessonSection>
 						<h2>Summary of Equations</h2>
-						<br />
+						<hr />
 						<p>
 							Sa kabuuan, ang mga equations natin sa free fall ay ang mga sumusunod:
 						</p>
@@ -835,7 +838,7 @@ function App() {
 						<img src="./media/confirmatory.gif" alt="" className="confirmatory" />
 						<br />
 						<p>
-							Ayon sa video, tama ba ang iyong sagot? Kung hindi, bakit kaya? Ano ang pwedeng paliwanag para rito? Pagnilayan!
+							Ayon sa video, tama ba ang iyong sagot? Kung hindi, bakit kaya? Ano ang pwedeng paliwanag para rito? Pagnilayan.
 						</p>
 					</LessonSection>
 				</LessonPage>

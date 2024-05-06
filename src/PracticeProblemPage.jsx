@@ -5,7 +5,7 @@ export default function PracticeProblemPage({ challenge, practiceProblem }) {
     return (
         <LessonSection>
             <h2>{challenge ? "Challenge Problems!" : "Practice Problems"}</h2>
-            <br />
+            <hr />
             <div className="prac-problems-container">
                 {practiceProblem}
             </div>

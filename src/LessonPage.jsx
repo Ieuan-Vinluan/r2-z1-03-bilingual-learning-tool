@@ -59,11 +59,13 @@ export default function LessonPage(props) {
 					let newId = currentSections[props.id] - 1;
 					setCurrentLessonSection(newId);
 					currentSections[props.id] = newId;
+					window.scrollTo(0, 0);
 				}}>&laquo; Previous</button>
 				<button disabled={currentSections[props.id] + 1 >= lessons.length} type="button" onClick={() => {
 					let newId = currentSections[props.id] + 1;
 					setCurrentLessonSection(newId);
 					currentSections[props.id] = newId;
+					window.scrollTo(0, 0);
 				}}>Next &raquo;</button>
 			</div>
 		</>
