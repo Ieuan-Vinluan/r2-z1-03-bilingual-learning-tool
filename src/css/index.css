@@ -58,18 +58,21 @@
 }
 
 .box {
-	width: 80%;
+	width: 60%;
 	margin: 35px auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	border: 1px solid black;
-	background: #e6f0e7;
+	border: 1px solid #999;
+	border-radius: 15px;
+	overflow: hidden;
+	/* background: #e6f0e7; */
+	background: #f7f7f7;
 	color: black;
 }
 
 .box h3 {
-	background: #006000;
+	background: rgb(56, 123, 201);
 	color: white;
 	padding: 0.5em;
 }
@@ -339,8 +342,8 @@ main .homepage-subtitle {
 .main-lesson-page {
 	color: black;
 	font-family: 'Poppins', sans-serif;
-	font-size: 1.05rem;
-	line-height: 1.5rem;
+	font-size: 0.95rem;
+	line-height: 1.6em;
 }
 
 .main-lesson-page h1,
@@ -411,7 +414,9 @@ h3 {
 
 .prac-problems-container>div {
 	border: 1px solid black;
-	background: #e9e9f1;
+	border-radius: 15px;
+	overflow: hidden;
+	background: #f7f7f7;
 }
 
 .prac-problems {
@@ -436,13 +441,16 @@ h3 {
 /* .prac-problems p {} */
 
 .flashcard {
-	border: 1px solid black;
+	border: 1px solid #999;
+	border-radius: 15px;
+	overflow: hidden;
 	width: 60%;
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
 	perspective: 1000px;
 	cursor: pointer;
+	background: #f7f7f7;
 }
 
 .not-picked {
@@ -481,6 +489,7 @@ h3 {
 	display: grid !important;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(3, 1fr);
+	gap: 1em;
 	justify-content: center;
 	align-items: center;
 }
@@ -494,6 +503,7 @@ h3 {
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
+	margin: 10px 0;
 }
 
 .lesson-dot-navigation {
@@ -654,25 +664,33 @@ h3 {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(3, 1fr);
-	border: 1px solid black;
+	border: 1px solid #aaa;
+	border-radius: 15px;
+	overflow: hidden;
 }
 
 .lesson-one-table .center-horizontal {
-	background: var(--main-bg);
+	/* background: var(--main-bg); */
+	border-bottom: 1px solid #aaa;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: white;
+	color: black;
 }
 
 .lesson-one-table p {
 	width: 100%;
 	text-align: center;
-	border: 1px solid black;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 1em 1.5em;
+	padding: .25em;
+	border: 1px solid #aaa;
+}
+.lesson-one-table p:nth-of-type(1),
+.lesson-one-table p:nth-of-type(2) {
+	background: var(--main-bg);
+	color: white;
 }
 
 .confirmatory {

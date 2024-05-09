@@ -10,7 +10,7 @@ export default function Flashcard({ cardTitle, problem, solution, current, answe
                 <p className={"answer-alert"}>Click to see answer</p>
             </div>
             <div className={"card-back" + (side == 1 ? "" : " not-picked")}>
-                <h3>Sagot</h3>
+                <h3 className="flashcard-title">Sagot</h3>
                 {solution}
                 {answer != null ? <p>Samakatuwid, ang sagot ay {answer}.</p> : null}
                 <p className={"answer-alert"}>Click to see problem</p>

@@ -1,6 +1,6 @@
 import React, { useState, useId } from 'react'
 
-export default function PracticeProblem({ cardTitle, problem, solution, current, answer }) {
+export default function PracticeProblem({ challengeProb, cardTitle, problem, solution, current, answer }) {
     const [side, setSide] = useState(current);
     return (
         <div className={"prac-problems" + (answer != null ? "" : " no-back-side")} onClick={() => {
@@ -9,8 +9,10 @@ export default function PracticeProblem({ cardTitle, problem, solution, current,
         }>
             <div className={"prac-problems-front" + (side == 0 ? "" : " not-picked")}>
                 <h3 className="card-title">{cardTitle}</h3>
-                {problem}
-                {/* <p className={"answer-alert"}>Click to see answer</p> */}
+                <div className="problem-statement">
+                    {problem}
+                </div>
+                {answer ? <p className={"answer-alert"}>Click to see answer</p> : null}
             </div>
             <div className={"prac-problems-back" + (side == 1 ? "" : " not-picked")}>
                 <h3 className="card-title">Sagot</h3>
