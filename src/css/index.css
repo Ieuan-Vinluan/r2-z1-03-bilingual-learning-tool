@@ -346,6 +346,11 @@ main .homepage-subtitle {
 	line-height: 1.6em;
 }
 
+.time-limit {
+	color: rgb(155, 155, 155);
+	text-align: right;
+}
+
 .main-lesson-page h1,
 h2,
 h3 {

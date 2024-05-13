@@ -49,6 +49,8 @@ function App() {
 					<LessonSection>
 						<h1>Lesson 1: Uniformly Accelerated Motion</h1>
 						<hr />
+						<p className="time-limit">Recommended time for this page: 1 minute</p>
+						<br />
 						<p>
 							Bago tayo magsimula, panoorin muna natin ang short
 							video na ito.
@@ -72,6 +74,8 @@ function App() {
 					<LessonSection>
 						<h2>Short Activity</h2>
 						<hr />
+						<p className="time-limit">Recommended time for this page: 2 minutes</p>
+						<br />
 						<p>
 							Pindutin ang{" "}
 							<a
@@ -91,7 +95,8 @@ function App() {
 								frameBorder="0"
 							></iframe>
 						</div>
-						<p>Pagkatapos natin buksan ang PHET simulation, gawin ang lahat ng mga sumusunod. I-tick ang mga kahon pagkatapos makumpleto ang mga gawain.</p>
+						<br />
+						<p>Pagkatapos natin buksan ang PHET simulation, gawin ang lahat ng mga sumusunod. I-tick ang mga kahon pagkatapos makumpleto ang mga gawain; kung hindi naka-tick ang lahat ng kahon, hindi maa-access ang iba pang pages.</p> <br />
 						<ul className="task-list">
 							<li>
 								<Checkbox
@@ -142,6 +147,8 @@ function App() {
 						<LessonSection>
 							<h2>Continuation</h2>
 							<hr />
+							<p className="time-limit">Recommended time for this page: 3 minutes</p>
+							<br />
 							<p className="greenText">Maaari nang magpatuloy!</p> <br />
 							<p>Heto ang iyong ginawa kanina.</p>
 							<br />
@@ -272,6 +279,8 @@ function App() {
 						<LessonSection>
 							<h3>Velocity</h3>
 							<hr />
+							<p className="time-limit">Recommended time for this page: 3 minutes</p>
+							<br />
 							<p>
 								Sa simulation, paano natin malalaman kung gaano kabilis naglalakad yung tao papunta sa pader? Ito ngayon ang tinatawag natin na <strong>speed</strong> at <strong>velocity</strong>.
 							</p>
@@ -378,6 +387,8 @@ function App() {
 						<LessonSection>
 							<h3>Acceleration</h3>
 							<hr />
+							<p className="time-limit">Recommended time for this page: 3 minutes</p>
+							<br />
 							<p>
 								Sa simulation, maaari na natin malaman ang bilis ng paglalakad ng tao. Ngunit, hindi naman palagi pare-pareho ang bilis ng tao sa iba’t ibang oras. Minsan ito’y bumibilis, bumabagal, o nakahinto lamang. Ang pagbilis o pagbagal ng tao o bagay ay tinatawag natin na <strong>acceleration</strong>.
 							</p>
@@ -618,6 +629,8 @@ function App() {
 					<LessonSection>
 						<h1>Lesson 2: Free Fall</h1>
 						<hr />
+						<p className="time-limit">Recommended time for this page: 1 minute</p>
+						<br />
 						<p>
 							Ngayon na tinalakay na natin ang kinematics in one-dimension, tatalakayin naman natin ang isang special case nito na tinatawag na <strong>free fall</strong>. Sa simula ng modyul, nakita natin na nalalaglag ng dahan-dahan ang dahon at iyon ay isang halimbawa ng free fall. Nakikita natin ang free fall sa ating araw-araw na pamumuhay tulad ng patak ng ulan o pagbitaw natin sa bagay na ating hinahawakan.
 						</p>
@@ -632,6 +645,8 @@ function App() {
 					<LessonSection>
 						<h2>Gravitational Acceleration</h2>
 						<hr />
+						<p className="time-limit">Recommended time for this page: 1 minute</p>
+						<br />
 						<p>
 							Ang acceleration ng isang bagay dahil sa force ng gravity ay tinatawag natin na <strong>gravitational acceleration</strong>. Ginagamit ang simbolong <Latex>{"$g$"}</Latex> para rito, at ito ay may value na: <Latex>{"$$g=9.8 \\, m/s^2$$"}</Latex> Ang magnitude na ito ay <strong>hindi nagbabago</strong> at <strong>hindi nakadepende sa bigat ng isang bagay</strong> na nakakaranas ng free fall. Ang direction ng gravitational acceleration ay <strong>pababa</strong> kaya’t ang sign na ginagamit dito ay negatibo (Perez, 2020).
 						</p>
@@ -641,6 +656,8 @@ function App() {
 					<LessonSection>
 						<h2>Velocity</h2>
 						<hr />
+						<p className="time-limit">Recommended time for this page: 2 minutes</p>
+						<br />
 						<p>
 							Isipin natin na may hawak kayong bola at nabitawan niyo ito sa ere. Sa pinagmulan na position ng bola, hindi ito gumagalaw kaya’t ang velocity nito ay zero. Pagkatapos nating bitawan ang bola, ito ay nahuhulog hanggang matamaan nito ang lupa dahil sa gravitational acceleration mula sa gravity. Dahil ang velocity at acceleration ng bola ay parehas pababa, ang velocity ng bola ay pataas ng pataas sa negatibong direction. Kung magiging espisipiko, ang magnitude ng velocity ng bola ay tumataas ng <Latex>{"$9.8 \\, m/s$"}</Latex>, KADA segundo. Ito ang ating gravitational acceleration! Kaya kung ang height ng bola ay mas nahulog sa mas mataas na position, mas matagal ang free fall ng bola papunta sa lapag at mas malaki ang velocity nito kapag mas malapit na ito sa lapag.
 						</p>
@@ -659,6 +676,8 @@ function App() {
 					<LessonSection>
 						<h2>Displacement and Time of Flight</h2>
 						<hr />
+						<p className="time-limit">Recommended time for this page: 3 minutes</p>
+						<br />
 						<p>
 							Base sa ating mga tinalakay kanina, ang displacement ng isang bagay ay positibo kung ito’y <strong>nasa taas ng initial height</strong> nito, negatibo kung ito’y <strong>nasa baba ng initial height</strong> nito, at zero kung <strong>bumalik ang bagay sa initial height nito</strong> (halimbawa: ang pagtapon at pagsalo ng bola).
 						</p>
@@ -689,6 +708,8 @@ function App() {
 					<LessonSection>
 						<h2>Kinematic Equations in Free Fall</h2>
 						<hr />
+						<p className="time-limit">Recommended time for this page: 3 minutes</p>
+						<br />
 						<p>
 							Ang kinematic equations ay ang mga equations na nag-uugnay sa 5 kinematic variables: displacement <Latex>{"$(\\Delta y)$"}</Latex>, time interval <Latex>{"$(\\Delta t)$"}</Latex>, initial velocity <Latex>{"$(v_0)$"}</Latex>, final velocity <Latex>{"$(v_f)$"}</Latex>, at constant acceleration <Latex>{"$(a)$"}</Latex>.
 						</p>
@@ -759,6 +780,8 @@ function App() {
 					<LessonSection>
 						<h2>Summary of Equations</h2>
 						<hr />
+						<p className="time-limit">Recommended time for this page: 1 minute</p>
+						<br />
 						<p>
 							Sa kabuuan, ang mga equations natin sa free fall ay ang mga sumusunod:
 						</p>
