@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 *,
 *::before,
@@ -165,7 +166,7 @@ body {
 
 .header-text p {
 	color: #5f5c5c;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Nunito Sans', sans-serif;
 	font-size: 1.25rem;
 }
 
@@ -215,7 +216,7 @@ body {
 .nav-item-text {
 	transition: background-color 250ms linear, color 250ms linear;
 	font-size: 0.7rem;
-	height: 100%;
+	/* height: 100%; */
 	width: 100%;
 	padding: 1em 2em;
 	/* border-radius: 50rem; */
@@ -224,7 +225,7 @@ body {
 	text-align: center;
 	justify-content: space-evenly;
 	align-items: center;
-	font-family: "Poppins", sans-serif;
+	font-family: "Nunito Sans", sans-serif;
 	text-transform: uppercase;
 	/* font-weight: bold; */
 }
@@ -247,7 +248,7 @@ body {
 }
 
 .dropdown-menu-item {
-	font-family: "Poppins", sans-serif;
+	font-family: "Nunito Sans", sans-serif;
 	display: flex;
 	flex-direction: column;
 }
@@ -263,7 +264,7 @@ main {
 }
 
 main.main-home-page {
-	height: 35%;
+	height: 42%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -275,7 +276,7 @@ main .homepage-subtitle {
 	font-size: 2.5rem;
 	text-align: center;
 	font-weight: bold;
-	font-family: "Poppins", sans-serif;
+	font-family: "Nunito Sans", sans-serif;
 }
 
 .content-container {
@@ -330,7 +331,7 @@ main .homepage-subtitle {
 } */
 
 .clickable-dropdown-header {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 700;
 	text-align: center;
 }
@@ -341,14 +342,21 @@ main .homepage-subtitle {
 
 .main-lesson-page {
 	color: black;
-	font-family: 'Poppins', sans-serif;
-	font-size: 0.95rem;
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 1.15rem;
+	min-height: 1000px;
 	line-height: 1.6em;
+	width: 85%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .time-limit {
 	color: rgb(155, 155, 155);
-	text-align: right;
+	font-size: 1.25rem;
+	text-align: center;
+	font-weight: bold;
 }
 
 .main-lesson-page h1,
@@ -546,7 +554,7 @@ h3 {
 
 .prev-next {
 	display: flex;
-	padding: 1em 2em;
+	padding: 1em 0 2em;
 	width: 100%;
 	position: relative;
 	justify-content: space-between;
@@ -692,6 +700,7 @@ h3 {
 	padding: .25em;
 	border: 1px solid #aaa;
 }
+
 .lesson-one-table p:nth-of-type(1),
 .lesson-one-table p:nth-of-type(2) {
 	background: var(--main-bg);
@@ -706,14 +715,48 @@ h3 {
 }
 
 footer {
-	background: black;
-	font-family: "Poppins", sans-serif;
+	background: #111146;
+	padding: 2em 4em;
 	width: 100%;
-	height: 10%;
+	display: grid;
+	grid-template-columns: 40% 30% 30%;
+	row-gap: 2em;
+	line-height: 1.3em;
+}
+
+footer * {
+	font-family: 'Nunito Sans';
+}
+
+footer .github-repo {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	align-items: center;
+	gap: 10px;
+}
+
+footer button {
+	background: none;
+	border: none;
+	color: white;
+	font-size: 1rem;
+}
+
+footer button:hover {
+	cursor: pointer;
+}
+
+footer h3 {
+	font-size: 1.2rem;
+	letter-spacing: 1.5px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+footer div.misc {
+	width: 100%;
+	grid-column: 1 / -1;
+}
+
+footer hr {
+	color: white;
 }
 
 footer a {

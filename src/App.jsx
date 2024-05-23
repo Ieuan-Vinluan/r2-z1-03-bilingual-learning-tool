@@ -12,8 +12,7 @@ import GravAccelDiagram from "./media/gravitational-acceleration-diagram.png";
 import FreeFallDiagram from "./media/freefall-diagram.png";
 import Flashcard from "./Flashcard";
 import PracticeProblem from "./PracticeProblem";
-import PracticeProblemPage from "./PracticeProblemPage";
-
+import StandardFooter from "./StandardFooter";
 
 function App() {
 	const [curScreen, setCurScreen] = useState("home");
@@ -45,11 +44,11 @@ function App() {
 		} else if (curScreen == "lesson1") {
 			document.title = "Lesson 1";
 			return (
-				<LessonPage setCurScreen={setCurScreen} id={0}>
+				<LessonPage lastScreen={1} canProceed={canProceed} needContinue={true} setCurScreen={setCurScreen} id={0}>
 					<LessonSection>
 						<h1>Lesson 1: Uniformly Accelerated Motion</h1>
 						<hr />
-						<p className="time-limit">Recommended time for this page: 1 minute</p>
+						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 1 minuto</p>
 						<br />
 						<p>
 							Bago tayo magsimula, panoorin muna natin ang short
@@ -67,14 +66,14 @@ function App() {
 						</div>
 						<p>
 							Sa short video na ito, pinakita ang pagbagsak ng dahon sa tubig. Batay sa iyong obserbasyon, ano ang napansin niyo sa pagbagsak ng dahon at bakit ganoon ang pagbagsak ng dahon sa iyong palagay? <br />
-							<br /> Sa ating mundo, araw-araw tayong nakakakita ng motion sa ating paligid tulad ng paglakad ng tao at paggalaw ng mga ibang bagay. Ang motion na ito ay maaaring maging mabilis, mabagal, nakahinto, pabilis nang pabilis, at iba pa. Kaya’t para mailarawan at mapagkaiba natin ang iba’t ibang motion, syempre gagamit tayo ng <strong>Physics</strong>.
+							<br /> Sa ating mundo, araw-araw tayong nakakakita ng <i>motion</i> sa ating paligid tulad ng paglakad ng tao at paggalaw ng mga ibang bagay. Ang <i>motion</i> na ito ay maaaring maging mabilis, mabagal, nakahinto, pabilis nang pabilis, at iba pa. Kaya’t para mailarawan at mapagkaiba natin ang iba’t ibang <i>motion</i>, syempre gagamit tayo ng <strong>Physics</strong>.
 						</p>
 						<br />
 					</LessonSection>
 					<LessonSection>
 						<h2>Short Activity</h2>
 						<hr />
-						<p className="time-limit">Recommended time for this page: 2 minutes</p>
+						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 2-4 minuto</p>
 						<br />
 						<p>
 							Pindutin ang{" "}
@@ -82,9 +81,9 @@ function App() {
 								className="hyperlink"
 								href="https://phet.colorado.edu/sims/cheerpj/moving-man/latest/moving-man.html?simulation=moving-man"
 							>
-								link
+								<i>link</i>
 							</a>{" "}
-							na ito o gamitin ang PHET simulation sa ibaba para
+							na ito o gamitin ang <i>PHET simulation</i> sa ibaba para
 							pagalawin ang tao.
 						</p>
 						<div className="iframe-container">
@@ -96,7 +95,7 @@ function App() {
 							></iframe>
 						</div>
 						<br />
-						<p>Pagkatapos natin buksan ang PHET simulation, gawin ang lahat ng mga sumusunod. I-tick ang mga kahon pagkatapos makumpleto ang mga gawain; kung hindi naka-tick ang lahat ng kahon, hindi maa-access ang iba pang pages.</p> <br />
+						<p>Pagkatapos natin buksan ang <i>PHET simulation,</i> gawin ang lahat ng mga sumusunod. I-tick ang mga kahon pagkatapos makumpleto ang mga gawain; kung hindi naka-tick ang lahat ng kahon, hindi maa-access ang iba pang <i>pages</i>.</p> <br />
 						<ul className="task-list">
 							<li>
 								<Checkbox
@@ -116,7 +115,7 @@ function App() {
 								/>
 								<p>
 									Gawing <Latex>{"$2 \\, m/s$"}</Latex> ang velocity ng tao at pindutin
-									ang play button
+									ang <i>play button</i>
 								</p>
 							</li>
 							<li>
@@ -126,7 +125,7 @@ function App() {
 									finishedTasks={finishedTasks}
 								/>
 								<p>
-									Ireset ang simulation at lagyan naman ng <Latex>{"$4 \\, m/s$"}</Latex> ang velocity ang tao at pindutin ang play button
+									Ireset ang <i>simulation</i> at lagyan naman ng <Latex>{"$4 \\, m/s$"}</Latex> ang velocity ang tao at pindutin ang <i>play button</i>
 								</p>
 							</li>
 							<li>
@@ -136,8 +135,7 @@ function App() {
 									finishedTasks={finishedTasks}
 								/>
 								<p>
-									Ireset ang simulation muli at lagyan ng <Latex>{"$1 \\, m/s^2$"}</Latex> ang acceleration ng tao at pindutin ang play
-									button. Pansinin ang mangyayari sa velocity ng
+									Ireset ulit ang <i>simulation</i>, lagyan ng <Latex>{"$1 \\, m/s^2$"}</Latex> ang acceleration ng tao, at pindutin ang <i>play button</i>. Pansinin ang mangyayari sa velocity ng
 									tao
 								</p>
 							</li>
@@ -147,7 +145,7 @@ function App() {
 						<LessonSection>
 							<h2>Continuation</h2>
 							<hr />
-							<p className="time-limit">Recommended time for this page: 3 minutes</p>
+							<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 3 minuto</p>
 							<br />
 							<p className="greenText">Maaari nang magpatuloy!</p> <br />
 							<p>Heto ang iyong ginawa kanina.</p>
@@ -180,15 +178,6 @@ function App() {
 								Ang paggalaw o motion ng tao sa simulation ay may kinalaman sa isang larangan ng Physics na tinatawag na mechanics. Sa ilalim ng larangan ng mechanics ay mayroon itong dalawang bahagi, kinematics at dynamics. Ngunit para sa lesson na ito, tututukan natin ang kinematics.
 							</p>
 							<br />
-							{/* <h3>Kinematics</h3>
-							<hr />
-							<div className="box">
-								<h3 className="box-title">Definition of Kinematics</h3>
-								<p>
-									Ang kinematics ay isang parte ng mechanics na nagpapaliwanag sa motion ng mga bagay na hindi kinokonsidera ang mga forces na kumikilos dito.
-								</p>
-							</div>
-							<br /> */}
 							<h3>Position</h3>
 							<hr />
 							<p>
@@ -271,15 +260,17 @@ function App() {
 							/>
 						</LessonSection>
 					) : (
-						<p className="redText">
-							Gawin muna ang LAHAT ng mga task.
-						</p>
+						<>
+							<p className="redText">
+								Gawin muna ang LAHAT ng mga task.
+							</p>
+						</>
 					)}
 					{canProceed ? (
 						<LessonSection>
 							<h3>Velocity</h3>
 							<hr />
-							<p className="time-limit">Recommended time for this page: 3 minutes</p>
+							<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 3 minuto</p>
 							<br />
 							<p>
 								Sa simulation, paano natin malalaman kung gaano kabilis naglalakad yung tao papunta sa pader? Ito ngayon ang tinatawag natin na <strong>speed</strong> at <strong>velocity</strong>.
@@ -311,21 +302,6 @@ function App() {
 							</p>
 							<br />
 							<p>Dahil dito, ang equation ng velocity para sa one-dimensional motion ay:</p>
-							{/* <div className="box">
-								<h3 className="box-title">Velocity Formula</h3>
-								<p className="center-horizontal">
-									<Latex>
-										{
-											"$\\vec{v} = \\dfrac{\\Delta \\vec{x}}{t}$"
-										}
-									</Latex>, where
-									<Latex>{"$\\, \\vec{v}$"}</Latex> - velocity,{" "}
-									<Latex>{"$\\vec{\\Delta x}$"}</Latex> -
-									displacement, <Latex>{"$t$"}</Latex> - time
-								</p>
-							</div>
-							<br />
-							<p>Para sa one-dimensional motion:</p> */}
 							<div className="box">
 								<h3 className="box-title">Velocity Formula</h3>
 								<p className="center-horizontal">
@@ -387,7 +363,7 @@ function App() {
 						<LessonSection>
 							<h3>Acceleration</h3>
 							<hr />
-							<p className="time-limit">Recommended time for this page: 3 minutes</p>
+							<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 3 minuto</p>
 							<br />
 							<p>
 								Sa simulation, maaari na natin malaman ang bilis ng paglalakad ng tao. Ngunit, hindi naman palagi pare-pareho ang bilis ng tao sa iba’t ibang oras. Minsan ito’y bumibilis, bumabagal, o nakahinto lamang. Ang pagbilis o pagbagal ng tao o bagay ay tinatawag natin na <strong>acceleration</strong>.
@@ -474,53 +450,60 @@ function App() {
 						</p>
 					)}
 					{canProceed ? (
-						<PracticeProblemPage
-							challenge={false}
-							practiceProblem={<PracticeProblem
-								current={0}
-								problem={
-									<>
-										Mayroong Jollibee na nakaposition ng <Latex>{"$60 \\, m$"}</Latex> galing sa bahay ni Bong. Kung kailangan niya makarating sa loob ng <Latex>{"$1 \\text{ hr}$"}</Latex> gaano kabilis dapat siya maglakad in meters per second?
-									</>
-								}
-								cardTitle={"Problem 1"}
-								answer={<Latex>{"$0.0166 \\, m/s$"}</Latex>}
-								solution={
-									<div>
-										<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/kCpR4o05DWM?si=EIUT7h4BZ_y52Ssi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-									</div>
-								}
-							/>}
-						/>
+						<LessonSection>
+							<h2>Practice Problems</h2>
+							<hr />
+							<div className="prac-problems-container">
+								<PracticeProblem
+									current={0}
+									problem={
+										<>
+											Mayroong Jollibee na nakaposition ng <Latex>{"$60 \\, m$"}</Latex> galing sa bahay ni Bong. Kung kailangan niya makarating sa loob ng <Latex>{"$1 \\text{ hr}$"}</Latex> gaano kabilis dapat siya maglakad in meters per second?
+										</>
+									}
+									cardTitle={"Practice Problem 1"}
+									answer={<Latex>{"$0.0166 \\, m/s$"}</Latex>}
+									solution={
+										<div>
+											<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/kCpR4o05DWM?si=EIUT7h4BZ_y52Ssi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+										</div>
+									}
+								/>
+							</div>
+						</LessonSection>
 					) : (
 						null
 					)}
 					{canProceed ? (
-						<PracticeProblemPage
-							challenge={false}
-							practiceProblem={<PracticeProblem
-								current={0}
-								problem={
-									<div>
-										Si Ian ay nagsimula sa isang parke tapos naglalakad siya nang <Latex>{"$30 \\, m$"}</Latex> east  papunta sa supermarket, tapos siya ay naglakad nang <Latex>{"$50 \\, m$"}</Latex> north para puntahan ang paaralan, tapos naglakad siya nang <Latex>{"$30 \\, m$"}</Latex> west papunta sa kanyang bahay. Kung ginawa niya ito lahat sa loob ng <Latex>{"$10 \\text{ min}$"}</Latex>. Ano ang (1) distance, (2) displacement, (3) average speed, at (4) average velocity?
-									</div>
-								}
-								cardTitle={"Problem 2"}
-								answer={<Latex>{"$110 \\, m$, $50 \\, m$, $0.183 \\, m/s$, at $0.0833 \\, m/s$"}</Latex>}
-								solution={
-									<div>
-										<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/k2sxwAGzlxc?si=0K5aUC97H13FwCTp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-									</div>
-								}
-							/>}
-						/>
+						<LessonSection>
+							<h2>Practice Problems</h2>
+							<hr />
+							<div className="prac-problems-container">
+								<PracticeProblem
+									current={0}
+									problem={
+										<div>
+											Si Ian ay nagsimula sa isang parke tapos naglalakad siya nang <Latex>{"$30 \\, m$"}</Latex> east  papunta sa supermarket, tapos siya ay naglakad nang <Latex>{"$50 \\, m$"}</Latex> north para puntahan ang paaralan, tapos naglakad siya nang <Latex>{"$30 \\, m$"}</Latex> west papunta sa kanyang bahay. Kung ginawa niya ito lahat sa loob ng <Latex>{"$10 \\text{ min}$"}</Latex>. Ano ang (1) distance, (2) displacement, (3) average speed, at (4) average velocity?
+										</div>
+									}
+									cardTitle={"Practice Problem 2"}
+									answer={<Latex>{"$110 \\, m$, $50 \\, m$, $0.183 \\, m/s$, at $0.0833 \\, m/s$"}</Latex>}
+									solution={
+										<div>
+											<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/k2sxwAGzlxc?si=0K5aUC97H13FwCTp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+										</div>
+									}
+								/>
+							</div>
+						</LessonSection>
 					) : (
 						null
 					)}
 					{canProceed ? (
-						<PracticeProblemPage
-							challenge={0}
-							practiceProblem={
+						<LessonSection>
+							<h2>Practice Problems</h2>
+							<hr />
+							<div className="prac-problems-container">
 								<PracticeProblem
 									current={0}
 									problem={
@@ -528,7 +511,7 @@ function App() {
 											Si Juan ay naglalaro ng baseball, ang bola ay may velocity <Latex>{"$30 \\, m/s$"}</Latex> pagkatapon niya papunta sa kaliwa. Kung ang bola ay may deceleration na <Latex>{"$3 \\, m/s^2$"}</Latex> ilang segundo bago natigil ang paggalaw ng bola?
 										</div>
 									}
-									cardTitle={"Problem 3"}
+									cardTitle={"Practice Problem 3"}
 									answer={<Latex>{"$10 \\, s$"}</Latex>}
 									solution={
 										<div>
@@ -536,30 +519,33 @@ function App() {
 										</div>
 									}
 								/>
-							}
-						/>
+							</div>
+						</LessonSection>
 					) : (
 						null
 					)}
 					{canProceed ? (
-						<PracticeProblemPage
-							challenge={0}
-							practiceProblem={<PracticeProblem
-								current={0}
-								problem={
-									<div>
-										Mayroong pulis na bumaril sa isang target. Ang bala ay mayroong final velocity na <Latex>{"$40 \\, m/s$"}</Latex>, kung ito ay nagdedecelerate sa rate na <Latex>{"$40 \\, m/s^2$"}</Latex> ano ang position nito pagkatapos ng <Latex>{"$4 \\, s$"}</Latex>?
-									</div>
-								}
-								cardTitle={"Problem 4"}
-								answer={<Latex>{"$480 \\, m$"}</Latex>}
-								solution={
-									<div>
-										<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/cR929k_iAo0?si=674caBbkmi6kH0yF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-									</div>
-								}
-							/>}
-						/>
+						<LessonSection>
+							<h2>Practice Problems</h2>
+							<hr />
+							<div className="prac-problems-container">
+								<PracticeProblem
+									current={0}
+									problem={
+										<div>
+											Mayroong pulis na bumaril sa isang target. Ang bala ay mayroong final velocity na <Latex>{"$40 \\, m/s$"}</Latex>, kung ito ay nagdedecelerate sa rate na <Latex>{"$40 \\, m/s^2$"}</Latex> ano ang position nito pagkatapos ng <Latex>{"$4 \\, s$"}</Latex>?
+										</div>
+									}
+									cardTitle={"Practice Problem 4"}
+									answer={<Latex>{"$480 \\, m$"}</Latex>}
+									solution={
+										<div>
+											<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/cR929k_iAo0?si=674caBbkmi6kH0yF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+										</div>
+									}
+								/>
+							</div>
+						</LessonSection>
 					) : (
 						null
 					)}
@@ -603,7 +589,7 @@ function App() {
 					)}
 					{canProceed ? (
 						<LessonSection>
-							<h2>Sources</h2>
+							<h2>Mga Sanggunian</h2>
 							<hr />
 							<p>
 								Lubrica, Q, Y, B. (2020). <i>Kinematic Quantities</i> [Module]. Moodle. https://khub.mc.pshs.edu.ph/
@@ -629,7 +615,7 @@ function App() {
 					<LessonSection>
 						<h1>Lesson 2: Free Fall</h1>
 						<hr />
-						<p className="time-limit">Recommended time for this page: 1 minute</p>
+						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 1 minuto</p>
 						<br />
 						<p>
 							Ngayon na tinalakay na natin ang kinematics in one-dimension, tatalakayin naman natin ang isang special case nito na tinatawag na <strong>free fall</strong>. Sa simula ng modyul, nakita natin na nalalaglag ng dahan-dahan ang dahon at iyon ay isang halimbawa ng free fall. Nakikita natin ang free fall sa ating araw-araw na pamumuhay tulad ng patak ng ulan o pagbitaw natin sa bagay na ating hinahawakan.
@@ -645,7 +631,7 @@ function App() {
 					<LessonSection>
 						<h2>Gravitational Acceleration</h2>
 						<hr />
-						<p className="time-limit">Recommended time for this page: 1 minute</p>
+						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 1 minuto</p>
 						<br />
 						<p>
 							Ang acceleration ng isang bagay dahil sa force ng gravity ay tinatawag natin na <strong>gravitational acceleration</strong>. Ginagamit ang simbolong <Latex>{"$g$"}</Latex> para rito, at ito ay may value na: <Latex>{"$$g=9.8 \\, m/s^2$$"}</Latex> Ang magnitude na ito ay <strong>hindi nagbabago</strong> at <strong>hindi nakadepende sa bigat ng isang bagay</strong> na nakakaranas ng free fall. Ang direction ng gravitational acceleration ay <strong>pababa</strong> kaya’t ang sign na ginagamit dito ay negatibo (Perez, 2020).
@@ -656,7 +642,7 @@ function App() {
 					<LessonSection>
 						<h2>Velocity</h2>
 						<hr />
-						<p className="time-limit">Recommended time for this page: 2 minutes</p>
+						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 2 minuto</p>
 						<br />
 						<p>
 							Isipin natin na may hawak kayong bola at nabitawan niyo ito sa ere. Sa pinagmulan na position ng bola, hindi ito gumagalaw kaya’t ang velocity nito ay zero. Pagkatapos nating bitawan ang bola, ito ay nahuhulog hanggang matamaan nito ang lupa dahil sa gravitational acceleration mula sa gravity. Dahil ang velocity at acceleration ng bola ay parehas pababa, ang velocity ng bola ay pataas ng pataas sa negatibong direction. Kung magiging espisipiko, ang magnitude ng velocity ng bola ay tumataas ng <Latex>{"$9.8 \\, m/s$"}</Latex>, KADA segundo. Ito ang ating gravitational acceleration! Kaya kung ang height ng bola ay mas nahulog sa mas mataas na position, mas matagal ang free fall ng bola papunta sa lapag at mas malaki ang velocity nito kapag mas malapit na ito sa lapag.
@@ -676,7 +662,7 @@ function App() {
 					<LessonSection>
 						<h2>Displacement and Time of Flight</h2>
 						<hr />
-						<p className="time-limit">Recommended time for this page: 3 minutes</p>
+						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 3 minuto</p>
 						<br />
 						<p>
 							Base sa ating mga tinalakay kanina, ang displacement ng isang bagay ay positibo kung ito’y <strong>nasa taas ng initial height</strong> nito, negatibo kung ito’y <strong>nasa baba ng initial height</strong> nito, at zero kung <strong>bumalik ang bagay sa initial height nito</strong> (halimbawa: ang pagtapon at pagsalo ng bola).
@@ -708,7 +694,7 @@ function App() {
 					<LessonSection>
 						<h2>Kinematic Equations in Free Fall</h2>
 						<hr />
-						<p className="time-limit">Recommended time for this page: 3 minutes</p>
+						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 3 minuto</p>
 						<br />
 						<p>
 							Ang kinematic equations ay ang mga equations na nag-uugnay sa 5 kinematic variables: displacement <Latex>{"$(\\Delta y)$"}</Latex>, time interval <Latex>{"$(\\Delta t)$"}</Latex>, initial velocity <Latex>{"$(v_0)$"}</Latex>, final velocity <Latex>{"$(v_f)$"}</Latex>, at constant acceleration <Latex>{"$(a)$"}</Latex>.
@@ -780,7 +766,7 @@ function App() {
 					<LessonSection>
 						<h2>Summary of Equations</h2>
 						<hr />
-						<p className="time-limit">Recommended time for this page: 1 minute</p>
+						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 1 minuto</p>
 						<br />
 						<p>
 							Sa kabuuan, ang mga equations natin sa free fall ay ang mga sumusunod:
@@ -825,24 +811,27 @@ function App() {
 							}
 						/>
 					</LessonSection>
-					<PracticeProblemPage
-						challenge={0}
-						practiceProblem={<PracticeProblem
-							current={0}
-							problem={
-								<div>
-									Nagpalipad ang mga estudyante ng bottle rocket pataas. Kung ito ay may initial velocity na <Latex>{"$30 \\, m/s$"}</Latex>, at may mass ito na <Latex>{"$1 \\, kg$"}</Latex>, ano ang maximum height nito?
-								</div>
-							}
-							cardTitle={"Practice Problem 1"}
-							answer={<Latex>{"$0.0166 \\, \\dfrac{m}{s}$"}</Latex>}
-							solution={
-								<div>
-									<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/s6W_itvXXR0?si=pCOCn-lTNHP4DP91" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-								</div>
-							}
-						/>}
-					/>
+					<LessonSection>
+						<h2>Practice Problems</h2>
+						<hr />
+						<div className="prac-problems-container">
+							<PracticeProblem
+								current={0}
+								problem={
+									<div>
+										Nagpalipad ang mga estudyante ng bottle rocket pataas. Kung ito ay may initial velocity na <Latex>{"$30 \\, m/s$"}</Latex>, at may mass ito na <Latex>{"$1 \\, kg$"}</Latex>, ano ang maximum height nito?
+									</div>
+								}
+								cardTitle={"Practice Problem 1"}
+								answer={<Latex>{"$0.0166 \\, \\dfrac{m}{s}$"}</Latex>}
+								solution={
+									<div>
+										<iframe className="video-center-horizontal" width="560" height="315" src="https://www.youtube.com/embed/s6W_itvXXR0?si=pCOCn-lTNHP4DP91" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
+								}
+							/>
+						</div>
+					</LessonSection>
 					<LessonSection>
 						<h2>Challenge Problems!</h2>
 						<hr />
@@ -876,7 +865,7 @@ function App() {
 						</p>
 					</LessonSection>
 					<LessonSection>
-						<h2>Sources</h2>
+						<h2>Mga Sanggunian</h2>
 						<hr />
 						<p>
 							<i>Illustration - to fall (tomber).gif</i>. (2009). https://commons.wikimedia.org/wiki/File:Illustration_-_to_fall_(tomber).gif
@@ -904,17 +893,9 @@ function App() {
 		<>
 			<StandardHeader curScreen={curScreen} setCurScreen={setCurScreen} />
 			{goTo()}
-			{/* <StandardFooter /> */}
+			<StandardFooter curScreen={curScreen} setCurScreen={setCurScreen} />
 		</>
 	);
-}
-
-
-{
-	/* TODO add images and other media */
-}
-{
-	/* TODO add footer */
 }
 
 

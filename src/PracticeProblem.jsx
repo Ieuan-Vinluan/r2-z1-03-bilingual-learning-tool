@@ -1,7 +1,10 @@
-import React, { useState, useId } from 'react'
+import React, { useState, useId, useEffect } from 'react'
 
 export default function PracticeProblem({ challengeProb, cardTitle, problem, solution, current, answer }) {
     const [side, setSide] = useState(current);
+    useEffect(() => {
+        setSide(0); // set to front page whenever problem is changed
+    }, [problem])
     return (
         <div className={"prac-problems" + (answer != null ? "" : " no-back-side")} onClick={() => {
             if (answer != null) setSide(1 - side);

@@ -30,8 +30,6 @@ export default function HomeScreen({ setCurScreen }) {
 						description=""
 						icon={<FontAwesomeIcon icon={faGauge} size="2x" />}
 					></ClickableDropdown>
-					{/* <ClickableDropdown headerText="Motion Graphs" id='lesson2' setCurScreen={setCurScreen} description="" icon={<FontAwesomeIcon icon={faArrowsSpin} size="2x" />}>
-              </ClickableDropdown> */}
 					<ClickableDropdown
 						headerText="Free Fall"
 						id="lesson3"
