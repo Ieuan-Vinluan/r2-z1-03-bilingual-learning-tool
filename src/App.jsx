@@ -44,9 +44,9 @@ function App() {
 		} else if (curScreen == "lesson1") {
 			document.title = "Lesson 1";
 			return (
-				<LessonPage lastScreen={1} canProceed={canProceed} needContinue={true} setCurScreen={setCurScreen} id={0}>
+				<LessonPage nonLessonPages={[6, 7, 8, 9, 10]} lastScreen={1} canProceed={canProceed} needContinue={true} setCurScreen={setCurScreen} id={0}>
 					<LessonSection>
-						<h1>Lesson 1: Uniformly Accelerated Motion</h1>
+						<h1>Aralin 1: Uniformly Accelerated Motion</h1>
 						<hr />
 						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 1 minuto</p>
 						<br />
@@ -71,7 +71,7 @@ function App() {
 						<br />
 					</LessonSection>
 					<LessonSection>
-						<h2>Short Activity</h2>
+						<h2>Maikling Gawain</h2>
 						<hr />
 						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 2-4 minuto</p>
 						<br />
@@ -143,9 +143,9 @@ function App() {
 					</LessonSection>
 					{canProceed ? (
 						<LessonSection>
-							<h2>Continuation</h2>
+							<h2>Pagpapatuloy</h2>
 							<hr />
-							<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 3 minuto</p>
+							<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 1 minuto</p>
 							<br />
 							<p className="greenText">Maaari nang magpatuloy!</p> <br />
 							<p>Heto ang iyong ginawa kanina.</p>
@@ -178,8 +178,20 @@ function App() {
 								Ang paggalaw o motion ng tao sa simulation ay may kinalaman sa isang larangan ng Physics na tinatawag na mechanics. Sa ilalim ng larangan ng mechanics ay mayroon itong dalawang bahagi, kinematics at dynamics. Ngunit para sa lesson na ito, tututukan natin ang kinematics.
 							</p>
 							<br />
-							<h3>Position</h3>
+						</LessonSection>
+					) : (
+						<>
+							<p className="redText">
+								Gawin muna ang LAHAT ng mga task.
+							</p>
+						</>
+					)}
+					{canProceed ? (
+						<LessonSection>
+							<h2>Posisyon (<i>Position</i>)</h2>
 							<hr />
+							<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 2 minuto</p>
+							<br />
 							<p>
 								Sa pagpapaliwanag ng motion, kailangan natin ipakita ang position ng isang bagay. Gawin nating halimbawa ang simulation na ating ginamit kanina, makikita natin ang pagkakaiba ng position ng tao kapag siya ay nasa gitna at sa kanang pader. Sabihin natin nasa gitna ang initial position ng tao, at ang kanang pader ay ang final position ng tao.
 							</p>
@@ -191,7 +203,7 @@ function App() {
 							</p>
 							<br />
 							<Flashcard
-								cardTitle="Example One"
+								cardTitle="Halimbawa 1"
 								current={0}
 								answer={<Latex>{"$3 \\, m$"}</Latex>}
 								problem={
@@ -217,7 +229,7 @@ function App() {
 								one-dimensional motion:
 							</p>
 							<div className="box">
-								<h3 className="box-title">Displacement Formula</h3>
+								<h3 className="box-title">Pormula ng <i>Displacement</i></h3>
 								<p className="center-horizontal">
 									<Latex>{"$\\Delta x = x_{f} - x_{0}$"}</Latex>, where:
 									<Latex>{"$\\, \\Delta x$"}</Latex> - displacement,{" "}
@@ -239,7 +251,7 @@ function App() {
 							</p>
 							<br />
 							<Flashcard
-								cardTitle={"Example Two"}
+								cardTitle={"Halimbawa 2"}
 								answer={<Latex>{"distance: $6 \\, m$ east, at dislacement: $2 \\, m$ east"}</Latex>}
 								current={0}
 								problem={
@@ -260,15 +272,11 @@ function App() {
 							/>
 						</LessonSection>
 					) : (
-						<>
-							<p className="redText">
-								Gawin muna ang LAHAT ng mga task.
-							</p>
-						</>
+						null
 					)}
 					{canProceed ? (
 						<LessonSection>
-							<h3>Velocity</h3>
+							<h3>Bilis at Belosidad (<i>Speed</i> and <i>Velocity</i>)</h3>
 							<hr />
 							<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 3 minuto</p>
 							<br />
@@ -288,7 +296,7 @@ function App() {
 							<p>Dahil dito, ang equation ng speed ay:</p>
 							<br />
 							<div className="box">
-								<h3 className="box-title">Speed Formula</h3>
+								<h3 className="box-title">Pormula ng <i>Speed</i></h3>
 								<p className="center-horizontal">
 									<Latex>{"$v = \\dfrac{d}{t}$"}</Latex>, where
 									<Latex>{"$\\,v$"}</Latex> - speed,{" "}
@@ -303,7 +311,7 @@ function App() {
 							<br />
 							<p>Dahil dito, ang equation ng velocity para sa one-dimensional motion ay:</p>
 							<div className="box">
-								<h3 className="box-title">Velocity Formula</h3>
+								<h3 className="box-title">Pormula ng <i>Velocity</i></h3>
 								<p className="center-horizontal">
 									<Latex>
 										{
@@ -321,7 +329,7 @@ function App() {
 							<br />
 							<Flashcard
 								current={0}
-								cardTitle={"Example Three"}
+								cardTitle={"Halimbawa 3"}
 								answer={
 									<Latex>{"$0.8 \\, m/s$ pakanan"}</Latex>
 								}
@@ -361,7 +369,7 @@ function App() {
 					)}
 					{canProceed ? (
 						<LessonSection>
-							<h3>Acceleration</h3>
+							<h3>Pagbilis (<i>Acceleration</i>)</h3>
 							<hr />
 							<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 3 minuto</p>
 							<br />
@@ -401,7 +409,7 @@ function App() {
 								acceleration ay:
 							</p>
 							<div className="box">
-								<h3 className="box-title">Acceleration Formula</h3>
+								<h3 className="box-title">Pormula ng <i>Acceleration</i></h3>
 								<p className="center-horizontal">
 									<Latex>
 										{
@@ -423,7 +431,7 @@ function App() {
 							</p>
 							<br />
 							<Flashcard
-								cardTitle={"Example Four"}
+								cardTitle={"Halimbawa 4"}
 								current={0}
 								answer={<Latex>{"$2.67 \\, m/s^2$"}</Latex>}
 								problem={
@@ -451,7 +459,7 @@ function App() {
 					)}
 					{canProceed ? (
 						<LessonSection>
-							<h2>Practice Problems</h2>
+							<h2>Pagsasanay</h2>
 							<hr />
 							<div className="prac-problems-container">
 								<PracticeProblem
@@ -461,7 +469,7 @@ function App() {
 											Mayroong Jollibee na nakaposition ng <Latex>{"$60 \\, m$"}</Latex> galing sa bahay ni Bong. Kung kailangan niya makarating sa loob ng <Latex>{"$1 \\text{ hr}$"}</Latex> gaano kabilis dapat siya maglakad in meters per second?
 										</>
 									}
-									cardTitle={"Practice Problem 1"}
+									cardTitle={"Pagsasanay 1"}
 									answer={<Latex>{"$0.0166 \\, m/s$"}</Latex>}
 									solution={
 										<div>
@@ -476,7 +484,7 @@ function App() {
 					)}
 					{canProceed ? (
 						<LessonSection>
-							<h2>Practice Problems</h2>
+							<h2>Pagsasanay</h2>
 							<hr />
 							<div className="prac-problems-container">
 								<PracticeProblem
@@ -486,7 +494,7 @@ function App() {
 											Si Ian ay nagsimula sa isang parke tapos naglalakad siya nang <Latex>{"$30 \\, m$"}</Latex> east  papunta sa supermarket, tapos siya ay naglakad nang <Latex>{"$50 \\, m$"}</Latex> north para puntahan ang paaralan, tapos naglakad siya nang <Latex>{"$30 \\, m$"}</Latex> west papunta sa kanyang bahay. Kung ginawa niya ito lahat sa loob ng <Latex>{"$10 \\text{ min}$"}</Latex>. Ano ang (1) distance, (2) displacement, (3) average speed, at (4) average velocity?
 										</div>
 									}
-									cardTitle={"Practice Problem 2"}
+									cardTitle={"Pagsasanay 2"}
 									answer={<Latex>{"$110 \\, m$, $50 \\, m$, $0.183 \\, m/s$, at $0.0833 \\, m/s$"}</Latex>}
 									solution={
 										<div>
@@ -501,7 +509,7 @@ function App() {
 					)}
 					{canProceed ? (
 						<LessonSection>
-							<h2>Practice Problems</h2>
+							<h2>Pagsasanay</h2>
 							<hr />
 							<div className="prac-problems-container">
 								<PracticeProblem
@@ -511,7 +519,7 @@ function App() {
 											Si Juan ay naglalaro ng baseball, ang bola ay may velocity <Latex>{"$30 \\, m/s$"}</Latex> pagkatapon niya papunta sa kaliwa. Kung ang bola ay may deceleration na <Latex>{"$3 \\, m/s^2$"}</Latex> ilang segundo bago natigil ang paggalaw ng bola?
 										</div>
 									}
-									cardTitle={"Practice Problem 3"}
+									cardTitle={"Pagsasanay 3"}
 									answer={<Latex>{"$10 \\, s$"}</Latex>}
 									solution={
 										<div>
@@ -526,7 +534,7 @@ function App() {
 					)}
 					{canProceed ? (
 						<LessonSection>
-							<h2>Practice Problems</h2>
+							<h2>Pagsasanay</h2>
 							<hr />
 							<div className="prac-problems-container">
 								<PracticeProblem
@@ -536,7 +544,7 @@ function App() {
 											Mayroong pulis na bumaril sa isang target. Ang bala ay mayroong final velocity na <Latex>{"$40 \\, m/s$"}</Latex>, kung ito ay nagdedecelerate sa rate na <Latex>{"$40 \\, m/s^2$"}</Latex> ano ang position nito pagkatapos ng <Latex>{"$4 \\, s$"}</Latex>?
 										</div>
 									}
-									cardTitle={"Practice Problem 4"}
+									cardTitle={"Pagsasanay 4"}
 									answer={<Latex>{"$480 \\, m$"}</Latex>}
 									solution={
 										<div>
@@ -551,7 +559,7 @@ function App() {
 					)}
 					{canProceed ? (
 						<LessonSection>
-							<h2>Challenge Problems!</h2>
+							<h2>Mga Mahihirap na Pagsasanay</h2>
 							<hr />
 							<div className="prac-problems-container">
 								<PracticeProblem
@@ -561,7 +569,7 @@ function App() {
 											Si Bella ay naglalakbay ng mga lugar sa Pilipinas. Siya ay sumakay ng eroplano galing Manila para pumunta sa Cebu. Ang Cebu ay may distance na <Latex>{"$600 \\, km$"}</Latex> sa timog (south) ng Manila. Pero bago pumunta ang eroplano sa Cebu, dumaan muna ito sa Pampanga na may <Latex>{"$100 \\, km$"}</Latex> layo sa hilaga (north) ng Manila. Sa buong lakbay ni Bella, sagutin ang mga tanong. Ano ang distance ng nilipad ng eroplano? Ano ang average speed ng eroplano? Ano ang average velocity ng eroplano?
 										</div>
 									}
-									cardTitle={"Challenge Problem 1"}
+									cardTitle={"Pagsasanay 1"}
 									answer={null}
 									solution={
 										null
@@ -576,7 +584,7 @@ function App() {
 											Ano ang average acceleration ni John from <Latex>{"$t=0$"}</Latex> hanggang nagkaroon siya ng <Latex>{"$60.00 \\, m/s$"}</Latex> na velocity?
 										</div>
 									}
-									cardTitle={"Challenge Problem 2"}
+									cardTitle={"Pagsasanay 2"}
 									answer={null}
 									solution={
 										null
@@ -611,9 +619,9 @@ function App() {
 		} else {
 			document.title = "Lesson 2";
 			return (
-				<LessonPage setCurScreen={setCurScreen} id={1}>
+				<LessonPage nonLessonPages={[6, 7]} setCurScreen={setCurScreen} id={1}>
 					<LessonSection>
-						<h1>Lesson 2: Free Fall</h1>
+						<h1>Aralin 2: Free Fall</h1>
 						<hr />
 						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 1 minuto</p>
 						<br />
@@ -629,7 +637,7 @@ function App() {
 						<br />
 					</LessonSection>
 					<LessonSection>
-						<h2>Gravitational Acceleration</h2>
+						<h2>Pagbilis dahil sa Grabidad (<i>Gravitational Acceleration</i>)</h2>
 						<hr />
 						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 1 minuto</p>
 						<br />
@@ -640,7 +648,7 @@ function App() {
 						<img src={GravAccelDiagram} alt="" className="lesson-two-grav-accel center-horizontal-image" />
 					</LessonSection>
 					<LessonSection>
-						<h2>Velocity</h2>
+						<h2>Belosidad (<i>Velocity</i>)</h2>
 						<hr />
 						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 2 minuto</p>
 						<br />
@@ -660,7 +668,7 @@ function App() {
 						<br />
 					</LessonSection>
 					<LessonSection>
-						<h2>Displacement and Time of Flight</h2>
+						<h2><i>Displacement</i> at Haba ng Paglipad (<i>Time of Flight</i>)</h2>
 						<hr />
 						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 3 minuto</p>
 						<br />
@@ -678,7 +686,7 @@ function App() {
 						<br />
 						<Flashcard
 							current={0}
-							cardTitle={"Example One"}
+							cardTitle={"Halimbawa 1"}
 							problem={
 								<div>
 									Si Carlo ay may hawak na feather sa kanyang kaliwang kamay at metal ball naman sa kanyang kanang kamay. Pagkatapos ay sabay niyang binitawan ang dalawang bagay na ito sa kanyang kamay. Ano ang mauuna makakarating sa lupa? (Huwag intindihin ang air resistance)
@@ -692,7 +700,7 @@ function App() {
 						/>
 					</LessonSection>
 					<LessonSection>
-						<h2>Kinematic Equations in Free Fall</h2>
+						<h2>Mga Pormula sa <i>Free Fall</i></h2>
 						<hr />
 						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 3 minuto</p>
 						<br />
@@ -714,7 +722,7 @@ function App() {
 							Ito ang ating equation relating final velocity, initial velocity, at time!
 						</p>
 						<div className="box">
-							<h3 className="box-title">Important Equation!</h3>
+							<h3 className="box-title">Mahalagang Pormula</h3>
 							<p className="center-horizontal">
 								<Latex>{"$v=v_0-gt$"}</Latex>
 							</p>
@@ -735,7 +743,7 @@ function App() {
 							Ito ang ating equation relating displacement at initial velocity!
 						</p>
 						<div className="box">
-							<h3 className="box-title">Important Equation!</h3>
+							<h3 className="box-title">Mahalagang Pormula</h3>
 							<p className="center-horizontal">
 								<Latex>{"$\\Delta y = v_0t - \\dfrac{1}{2}gt^2$"}</Latex>
 							</p>
@@ -756,7 +764,7 @@ function App() {
 							Ito naman ang ating equation relating initial velocity, final velocity, at displacement!
 						</p>
 						<div className="box">
-							<h3 className="box-title">Important Equation!</h3>
+							<h3 className="box-title">Mahalagang Pormula</h3>
 							<p className="center-horizontal">
 								<Latex>{"$v^2=v_0^2-2g\\Delta y$"}</Latex>
 							</p>
@@ -764,7 +772,7 @@ function App() {
 						<br />
 					</LessonSection>
 					<LessonSection>
-						<h2>Summary of Equations</h2>
+						<h2>Buod ng mga Pormula</h2>
 						<hr />
 						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 1 minuto</p>
 						<br />
@@ -773,7 +781,7 @@ function App() {
 						</p>
 						<br />
 						<div className="box">
-							<h3 className="box-title">Important Equations</h3>
+							<h3 className="box-title">Mahalagang Pormula</h3>
 							<div className="lesson-two-equations">
 								<Latex>{"$$v = v_0 - gt$$"}</Latex>
 								<Latex>{"$$\\Delta y = \\dfrac{(v + v_0)t}{2}$$"}</Latex>
@@ -788,7 +796,7 @@ function App() {
 						<br />
 						<Flashcard
 							current={0}
-							cardTitle={"Example Two"}
+							cardTitle={"Halimbawa 2"}
 							problem={
 								<div>
 									Si Caleb ay naghulog ng basketball. Nakararanas ang basketball ng free fall na tumagal ng <Latex>{"$2.5 \\, s$"}</Latex> sa ere. Ano ang velocity ng basketball nang ito’y tumama sa lupa?
@@ -812,7 +820,7 @@ function App() {
 						/>
 					</LessonSection>
 					<LessonSection>
-						<h2>Practice Problems</h2>
+						<h2>Pagsasanay</h2>
 						<hr />
 						<div className="prac-problems-container">
 							<PracticeProblem
@@ -822,7 +830,7 @@ function App() {
 										Nagpalipad ang mga estudyante ng bottle rocket pataas. Kung ito ay may initial velocity na <Latex>{"$30 \\, m/s$"}</Latex>, at may mass ito na <Latex>{"$1 \\, kg$"}</Latex>, ano ang maximum height nito?
 									</div>
 								}
-								cardTitle={"Practice Problem 1"}
+								cardTitle={"Pagsasanay 1"}
 								answer={<Latex>{"$0.0166 \\, \\dfrac{m}{s}$"}</Latex>}
 								solution={
 									<div>
@@ -833,7 +841,7 @@ function App() {
 						</div>
 					</LessonSection>
 					<LessonSection>
-						<h2>Challenge Problems!</h2>
+						<h2>Mga Mahihirap na Pagsasanay</h2>
 						<hr />
 						<div className="prac-problems-container">
 							<PracticeProblem
@@ -843,7 +851,7 @@ function App() {
 										Si Rocky ay nagtapon ng ping pong ball pataas at noong pabagsak na an ping pong ball, pumasok ito sa isang plastic cup na nakapatong sa lamesa. Ang kamay ni Rocky noong hinagis niya ang ping pong ball ay <Latex>{"$50 \\, m$"}</Latex> above sa plastic cup.  Kung ang velocity ng ping pong ball ay <Latex>{"$60 \\, m/s$"}</Latex> noong ito’y lumapag sa plastic cup, ano ang initial velocity ng ping pong ball nung tinapon ito ni Rocky?
 									</div>
 								}
-								cardTitle={"Challenge Problem 1"}
+								cardTitle={"Pagsasanay 1"}
 								answer={null}
 								solution={
 									null
@@ -852,7 +860,7 @@ function App() {
 						</div>
 					</LessonSection>
 					<LessonSection>
-						<h2>Confirmatory Experiment</h2>
+						<h2>Eksperimento</h2>
 						<hr />
 						<p>
 							Panoorin ang paghulog ng eraser sa baba. Kung hinulog ang eraser mula sa taas na <Latex>{"$3 \\, m$"}</Latex>, gaano katagal ito mahuhulog hanggang marating ito ang lupa?

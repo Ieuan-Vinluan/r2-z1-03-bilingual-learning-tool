@@ -28,25 +28,24 @@ export default function LessonPage(props) {
 		console.log(currentSections)
 	};
 	let ok = 0;
-	console.log(lessons[currentSections[props.id]])
-	console.log(currentSections)
+	let navigationBtns = (<div className={"prev-next" + (currentSections[props.id] === 0 ? " prev-next-one" : "")}>
+		<button disabled={currentSections[props.id] === 0} className={currentSections[props.id] === 0 ? "hide" : ""} type="button" onClick={() => {
+			let newId = currentSections[props.id] - 1;
+			setCurrentLessonSection(newId);
+			currentSections[props.id] = newId;
+			window.scrollTo(0, 0);
+		}}>&laquo; Previous</button>
+		<button disabled={(currentSections[props.id] + 1 >= lessons.length || canGoNext())} className={currentSections[props.id] + 1 >= lessons.length ? "hide" : ""} type="button" onClick={() => {
+			let newId = currentSections[props.id] + 1;
+			setCurrentLessonSection(newId);
+			currentSections[props.id] = newId;
+			window.scrollTo(0, 0);
+		}}>Next &raquo;</button>
+	</div>);
 	let currentLessonChildren = lessons[currentSections[props.id]].props.children;
 	let newLessonChildren = [
 		...currentLessonChildren.slice(0, 2),
-		(<div className="prev-next">
-			<button disabled={currentSections[props.id] === 0} type="button" onClick={() => {
-				let newId = currentSections[props.id] - 1;
-				setCurrentLessonSection(newId);
-				currentSections[props.id] = newId;
-				window.scrollTo(0, 0);
-			}}>&laquo; Previous</button>
-			<button disabled={(currentSections[props.id] + 1 >= lessons.length || canGoNext())} type="button" onClick={() => {
-				let newId = currentSections[props.id] + 1;
-				setCurrentLessonSection(newId);
-				currentSections[props.id] = newId;
-				window.scrollTo(0, 0);
-			}}>Next &raquo;</button>
-		</div>),
+		navigationBtns,
 		...currentLessonChildren.slice(2)
 	]
 	console.log(newLessonChildren)
@@ -54,6 +53,7 @@ export default function LessonPage(props) {
 		<>
 			<main className="main-lesson-page">
 				{newLessonChildren}
+				{props.nonLessonPages.includes(currentSections[props.id]) || currentSections[props.id] === lessons.length - 1 ? null : navigationBtns}
 			</main>
 		</>
 	);

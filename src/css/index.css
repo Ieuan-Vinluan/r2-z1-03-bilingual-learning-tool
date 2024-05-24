@@ -107,6 +107,7 @@ a {
 html {
 	overflow-x: hidden;
 	margin-right: calc(100% - 100vw);
+	scroll-behavior: smooth;
 }
 
 body,
@@ -343,8 +344,8 @@ main .homepage-subtitle {
 .main-lesson-page {
 	color: black;
 	font-family: 'Nunito Sans', sans-serif;
-	font-size: 1.15rem;
-	min-height: 1000px;
+	font-size: 1.1rem;
+	min-height: 1050px;
 	line-height: 1.6em;
 	width: 85%;
 	position: relative;
@@ -425,16 +426,35 @@ h3 {
 	transform: translateX(-50%);
 }
 
-.prac-problems-container>div {
+.prac-problems {
+	cursor: pointer;
+	/* height: 420px; */
+}
+
+.prac-problems-front {
 	border: 1px solid black;
 	border-radius: 15px;
 	overflow: hidden;
 	background: #f7f7f7;
 }
 
-.prac-problems {
-	cursor: pointer;
-	/* height: 420px; */
+.prac-problems-back:not(.not-picked-prac) {
+	top: 100%;
+	margin-top: 30px;
+	opacity: 1;
+	transition: opacity 500ms linear;
+}
+
+.prac-problems-back {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	opacity: 0;
+	z-index: -1;
+	background: #f7f7f7;
+	border: 1px solid black;
+	border-radius: 15px;
+	overflow: hidden;
 }
 
 .prac-problems-front>*,
@@ -562,6 +582,10 @@ h3 {
 	transform: translateX(-50%);
 }
 
+.prev-next-one {
+	justify-content: right;
+}
+
 .prev-next button {
 	width: 10%;
 	padding: 1em 2em;
@@ -570,6 +594,10 @@ h3 {
 	border-radius: 9.6px;
 	border: none;
 	transition: background 150ms linear;
+}
+
+.hide {
+	display: none;
 }
 
 .prev-next button:hover {
@@ -722,6 +750,7 @@ footer {
 	grid-template-columns: 40% 30% 30%;
 	row-gap: 2em;
 	line-height: 1.3em;
+	font-size: 0.9rem;
 }
 
 footer * {
@@ -737,7 +766,7 @@ footer button {
 	background: none;
 	border: none;
 	color: white;
-	font-size: 1rem;
+	font-size: .9rem;
 }
 
 footer button:hover {
