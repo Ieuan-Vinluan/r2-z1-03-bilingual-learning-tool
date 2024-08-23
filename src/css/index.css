@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
+/* start of general styles */
+
 *,
 *::before,
 *::after {
@@ -23,7 +25,9 @@
 	--triangle-size: 15px;
 }
 
-/* style classes */
+/* end of general styles */
+
+/* start of style classes */
 
 .center-horizontal {
 	text-align: center;
@@ -31,6 +35,11 @@
 	position: relative;
 	right: 50%;
 	transform: translateX(50%);
+}
+
+.indent {
+	position: relative;
+	left: 3em;
 }
 
 .video-center-horizontal {
@@ -67,7 +76,6 @@
 	border: 1px solid #999;
 	border-radius: 15px;
 	overflow: hidden;
-	/* background: #e6f0e7; */
 	background: #f7f7f7;
 	color: black;
 }
@@ -82,22 +90,12 @@
 	padding: 0.5em;
 }
 
+/* end of style classes */
+
+/* start of general element styles */
+
 ul {
 	list-style: none;
-}
-
-main ul.task-list>li {
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-	/* border: 1px solid black; */
-	padding: 1em 2em;
-}
-
-main ul.task-list>li input {
-	accent-color: var(--nav-bar-initial);
-	height: 1.5rem;
-	width: 1.5rem;
 }
 
 a {
@@ -118,17 +116,38 @@ div#root {
 }
 
 body {
-	/* background: var(--main-bg); */
-	/* background: url("../media/homepage-background.jpg") no-repeat center center; */
-	/* background-attachment: fixed; */
-	/* SOURCE https://www.wallpaperflare.com/gradient-blue-pink-abstract-art-wallpaper-cvxen */
 	color: var(--text-color);
 }
 
+main {
+	padding: 1em 2em;
+}
+
+header {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+/* end of general element styles */
+
+main ul.task-list>li {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1em 2em;
+}
+
+main ul.task-list>li input {
+	accent-color: var(--nav-bar-initial);
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+/* start of header styles */
+
 .page-header {
 	height: 70%;
-	/* background: url("../media/basketball.jpg") no-repeat; */
-	/* SOURCE https://www.wallpaperflare.com/brown-basketball-ball-and-white-and-orange-basketball-hoop-ring-wallpaper-qwui/download */
 	background-position: 0 18%;
 	background-size: cover;
 	position: relative;
@@ -153,7 +172,6 @@ body {
 	font-family: "Archivo", sans-serif;
 	font-size: 3rem;
 	font-weight: 900;
-	/* text-align: center; */
 }
 
 .header-text {
@@ -174,6 +192,10 @@ body {
 .page-header img {
 	height: 100%;
 }
+
+/* end of header styles */
+
+/* start of navigation bar styles */
 
 .navbar {
 	height: var(--nav-bar-size);
@@ -208,19 +230,14 @@ body {
 }
 
 .nav-item:hover {
-	/* background-color: #fff;
-	color: black;
-	outline: var(--se-bg); */
 	cursor: pointer;
 }
 
 .nav-item-text {
 	transition: background-color 250ms linear, color 250ms linear;
 	font-size: 0.7rem;
-	/* height: 100%; */
 	width: 100%;
 	padding: 1em 2em;
-	/* border-radius: 50rem; */
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -228,11 +245,9 @@ body {
 	align-items: center;
 	font-family: "Nunito Sans", sans-serif;
 	text-transform: uppercase;
-	/* font-weight: bold; */
 }
 
 .nav-item-text:hover {
-	/* background-color: #fff; */
 	color: #2b016d;
 	outline: var(--se-bg);
 }
@@ -257,12 +272,11 @@ body {
 .dropdown-menu-item p {
 	padding: 0.5rem;
 	font-size: 80%;
-	/* border: 1px solid white; */
 }
 
-main {
-	padding: 1em 2em;
-}
+/* end of navigation bar styles */
+
+/* start of homepage styles */
 
 main.main-home-page {
 	height: 42%;
@@ -308,7 +322,6 @@ main .homepage-subtitle {
 }
 
 .clickable-dropdown-header-container {
-	/* outline: 1px solid white; */
 	height: 100%;
 	padding: 1em 2em;
 	display: grid;
@@ -316,20 +329,6 @@ main .homepage-subtitle {
 	justify-content: center;
 	align-items: center;
 }
-
-/* .arrow-right {
-	width: 0;
-	height: 0;
-	border-top: var(--triangle-size) solid transparent;
-	border-left: calc(2 * var(--triangle-size)) solid color-mix(in srgb, var(--clickable-dropdown-header-bg) 90%, white);
-	border-bottom: var(--triangle-size) solid transparent;
-	transition: border-left 500ms linear;
-}
-
-.arrow-right:hover {
-	border-left: calc(2 * var(--triangle-size)) solid white;
-	cursor: pointer;
-} */
 
 .clickable-dropdown-header {
 	font-family: 'Nunito Sans', sans-serif;
@@ -351,7 +350,12 @@ main .homepage-subtitle {
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
+	text-align: justify;
 }
+
+/* end of homepage styles */
+
+/* start of lesson page styles */
 
 .time-limit {
 	color: rgb(155, 155, 155);
@@ -383,6 +387,10 @@ h3 {
 	margin: 1.25em 0;
 }
 
+/* end of lesson page styles */
+
+/* start of lesson one image styles */
+
 .simulation-questions {
 	width: 100%;
 	display: flex;
@@ -393,9 +401,6 @@ h3 {
 
 .simulation-ss {
 	width: 40%;
-	/* position: relative; */
-	/* left: 50%; */
-	/* transform: translateX(-50%); */
 }
 
 .displacement-figures {
@@ -409,12 +414,14 @@ h3 {
 	width: 40%;
 }
 
+/* end of lesson one image styles */
+
+/* start of practice problems styles */
+
 .prac-problems-container {
 	display: grid;
 	width: 100%;
 	position: relative;
-	/* left: 50%;
-	transform: translateX(-50%); */
 	grid-template-columns: repeat(1, 1fr);
 	gap: 2em;
 }
@@ -428,7 +435,6 @@ h3 {
 
 .prac-problems {
 	cursor: pointer;
-	/* height: 420px; */
 }
 
 .prac-problems-front {
@@ -471,7 +477,9 @@ h3 {
 	color: white;
 }
 
-/* .prac-problems p {} */
+/* end of practice problems styles */
+
+/* start of flashcard styles */
 
 .flashcard {
 	border: 1px solid #999;
@@ -511,6 +519,10 @@ h3 {
 	text-align: right;
 }
 
+/* end of flashcard styles */
+
+/* start of lesson one flashcard misc styles */
+
 .lesson-one-gif-one {
 	width: 50%;
 	position: relative;
@@ -539,18 +551,74 @@ h3 {
 	margin: 10px 0;
 }
 
+.main-lesson-page .iframe-container {
+	width: 100%;
+	height: 100%;
+	padding: 1em 2em;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lesson-one-equation-one {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2rem;
+}
+
+.lesson-one-table {
+	margin: 1em;
+	position: relative;
+	width: 80%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	border: 1px solid #aaa;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.lesson-one-table .center-horizontal {
+	border-bottom: 1px solid #aaa;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: black;
+}
+
+.lesson-one-table p {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: .25em;
+	border: 1px solid #aaa;
+}
+
+.lesson-one-table p:nth-of-type(1),
+.lesson-one-table p:nth-of-type(2) {
+	background: var(--main-bg);
+	color: white;
+}
+
+/* end of lesson one flashcard misc styles */
+
+/* start of navigation dots styles */
+
 .lesson-dot-navigation {
 	position: relative;
 	display: flex;
-	/* justify-content: space-between; */
 	align-items: flex-end;
-	/* width: 100%; */
-	/* width: 25%; */
 	padding: 2em 2em 1em;
 	gap: 2em;
 	cursor: pointer;
 	border-radius: 25px;
-	/* changes for simplicity */
 	left: 50%;
 	transform: translateX(-50%);
 }
@@ -559,16 +627,12 @@ h3 {
 	position: relative;
 	width: 20px;
 	height: 20px;
-	/* background: var(--te-bg); */
 	border-radius: 50%;
 	background: var(--main-bg);
-	/* border: 1px solid var(--te-bg); */
 	transition: all 250ms linear;
 }
 
-
 .current-lesson {
-	/* filter: brightness(200%); */
 	background: var(--te-bg) !important;
 }
 
@@ -614,45 +678,14 @@ h3 {
 	cursor: default;
 }
 
-/* .lesson-dot-navigation-dot:nth-child(1)::before {
-	content: '';
-	position: absolute;
-	width: 100vw;
-	height: 10px;
-	top: 50%;
-	right: 18px;
-	transform: translateY(-50%);
-	background: white;
-	z-index: -1;
-}
-
-.lesson-dot-navigation-dot:nth-last-child(1)::after {
-	background: white;
-	;
-}
-
-.lesson-dot-navigation-dot::after {
-	content: '';
-	position: absolute;
-	width: 100vw;
-	height: 10px;
-	top: 50%;
-	left: 18px;
-	transform: translateY(-50%);
-	background: var(--main-bg);
-	z-index: -1;
-} */
-
-/* .part-of-bar,
-.part-of-bar::after {
-	background: var(--te-bg) !important;
-} */
-
 .lesson-dot-navigation .lesson-dot-navigation-dot:hover {
 	scale: 125%;
 	background: var(--te-bg);
-	/* filter: brightness(200%); */
 }
+
+/* end of navigation dots styles */
+
+/* start of lesson two misc styles */
 
 .lesson-two-grav-accel {
 	width: 30%;
@@ -673,74 +706,16 @@ h3 {
 	padding: 0.5em;
 }
 
-.indent {
-	position: relative;
-	left: 3em;
-}
-
-.main-lesson-page .iframe-container {
-	width: 100%;
-	height: 100%;
-	padding: 1em 2em;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.lesson-one-equation-one {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 1.2rem;
-}
-
-.lesson-one-table {
-	margin: 1em;
-	position: relative;
-	width: 80%;
-	left: 50%;
-	transform: translateX(-50%);
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	border: 1px solid #aaa;
-	border-radius: 15px;
-	overflow: hidden;
-}
-
-.lesson-one-table .center-horizontal {
-	/* background: var(--main-bg); */
-	border-bottom: 1px solid #aaa;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: black;
-}
-
-.lesson-one-table p {
-	width: 100%;
-	text-align: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: .25em;
-	border: 1px solid #aaa;
-}
-
-.lesson-one-table p:nth-of-type(1),
-.lesson-one-table p:nth-of-type(2) {
-	background: var(--main-bg);
-	color: white;
-}
-
 .confirmatory {
 	width: 25%;
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
 }
+
+/* end of lesson two misc styles */
+
+/* start of footer styles */
 
 footer {
 	background: #111146;
@@ -804,6 +779,10 @@ footer svg:hover {
 	background-color: white;
 	color: black;
 }
+
+/* end of footer styles */
+
+/* */
 
 @media only screen and (max-width: 1100px) {
 	.page-header {
@@ -872,7 +851,7 @@ footer svg:hover {
 	}
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
 
 	/* body {
         background: lightblue;
@@ -920,7 +899,7 @@ footer svg:hover {
 	}
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
 
 	/* body {
         background: lightgreen;
