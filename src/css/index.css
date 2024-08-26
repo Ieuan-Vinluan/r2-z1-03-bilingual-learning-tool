@@ -83,11 +83,11 @@
 .box h3 {
 	background: rgb(56, 123, 201);
 	color: white;
-	padding: 0.5em;
+	padding: 0.75em;
 }
 
-.box p {
-	padding: 0.5em;
+.box p, .box div {
+	padding: 0.75em;
 }
 
 /* end of style classes */
@@ -465,7 +465,7 @@ h3 {
 
 .prac-problems-front>*,
 .prac-problems-back>* {
-	padding: .5em;
+	padding: .75em;
 }
 
 .no-back-side {
@@ -500,7 +500,7 @@ h3 {
 
 .card-front>*,
 .card-back>* {
-	padding: .5em;
+	padding: .75em;
 }
 
 .card-front h3,
@@ -609,7 +609,7 @@ h3 {
 
 /* end of lesson one flashcard misc styles */
 
-/* start of navigation dots styles */
+/* start of navigation styles */
 
 .lesson-dot-navigation {
 	position: relative;
@@ -650,7 +650,7 @@ h3 {
 	justify-content: right;
 }
 
-.prev-next button {
+.prev-next button, .end-of-lesson-btn {
 	width: 10%;
 	padding: 1em 2em;
 	background: var(--main-bg);
@@ -664,12 +664,12 @@ h3 {
 	display: none;
 }
 
-.prev-next button:hover {
+.prev-next button:hover, .end-of-lesson-btn:hover {
 	cursor: pointer;
 	filter: brightness(125%);
 }
 
-.prev-next button:active {
+.prev-next button:active, .end-of-lesson-btn:active {
 	filter: brightness(125%);
 }
 
@@ -683,7 +683,14 @@ h3 {
 	background: var(--te-bg);
 }
 
-/* end of navigation dots styles */
+.end-of-lesson-btn-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 1em 0 2em;
+}
+
+/* end of navigation styles */
 
 /* start of lesson two misc styles */
 

@@ -44,7 +44,7 @@ function App() {
 		} else if (curScreen == "lesson1") {
 			document.title = "Lesson 1";
 			return (
-				<LessonPage nonLessonPages={[6, 7, 8, 9, 10]} lastScreen={1} canProceed={canProceed} needContinue={true} setCurScreen={setCurScreen} id={0}>
+				<LessonPage nonLessonPages={[6, 7, 8, 9, 10, 11]} lastScreen={1} canProceed={canProceed} needContinue={true} setCurScreen={setCurScreen} id={0}>
 					<LessonSection>
 						<h1>Aralin 1: Uniformly Accelerated Motion</h1>
 						<hr />
@@ -190,7 +190,7 @@ function App() {
 						<LessonSection>
 							<h2>Posisyon (<i>Position</i>)</h2>
 							<hr />
-							<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 2 minuto</p>
+							<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 3 minuto</p>
 							<br />
 							<p>
 								Sa pagpapaliwanag ng motion, kailangan natin ipakita ang position ng isang bagay. Gawin nating halimbawa ang simulation na ating ginamit kanina, makikita natin ang pagkakaiba ng position ng tao kapag siya ay nasa gitna at sa kanang pader. Sabihin natin nasa gitna ang initial position ng tao, at ang kanang pader ay ang final position ng tao.
@@ -278,7 +278,7 @@ function App() {
 						<LessonSection>
 							<h3>Bilis at Belosidad (<i>Speed</i> and <i>Velocity</i>)</h3>
 							<hr />
-							<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 3 minuto</p>
+							<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 4 minuto</p>
 							<br />
 							<p>
 								Sa simulation, paano natin malalaman kung gaano kabilis naglalakad yung tao papunta sa pader? Ito ngayon ang tinatawag natin na <strong>speed</strong> at <strong>velocity</strong>.
@@ -566,28 +566,48 @@ function App() {
 									current={0}
 									problem={
 										<div>
-											Si Bella ay naglalakbay ng mga lugar sa Pilipinas. Siya ay sumakay ng eroplano galing Manila para pumunta sa Cebu. Ang Cebu ay may distance na <Latex>{"$600 \\, km$"}</Latex> sa timog (south) ng Manila. Pero bago pumunta ang eroplano sa Cebu, dumaan muna ito sa Pampanga na may <Latex>{"$100 \\, km$"}</Latex> layo sa hilaga (north) ng Manila. Sa buong lakbay ni Bella, sagutin ang mga tanong. Ano ang distance ng nilipad ng eroplano? Ano ang average speed ng eroplano? Ano ang average velocity ng eroplano?
+											Si Bella ay naglalakbay ng mga lugar sa Pilipinas. Siya ay sumakay ng eroplano galing Manila para pumunta sa Cebu. Ang Cebu ay may distance na <Latex>{"$600 \\ \\textrm{km}$"}</Latex> sa timog (south) ng Manila. Pero bago pumunta ang eroplano sa Cebu, dumaan muna ito sa Pampanga na may <Latex>{"$100 \\ \\textrm{km}$"}</Latex> layo sa hilaga (north) ng Manila. Kung <Latex>{"$5 \\ \\textrm{hr}$"}</Latex> ang tagal ng buong lakbay ni Bella, sagutin ang mga tanong. Ano ang distance ng nilipad ng eroplano? Ano ang average speed ng eroplano? Ano ang average velocity ng eroplano?
 										</div>
 									}
 									cardTitle={"Pagsasanay 1"}
-									answer={null}
+									answer={<Latex>{"$700 \\ \\textrm{km}, \\ 140 \\ \\textrm{km/hr}, \\ 120 \\ \\textrm{km/hr}$"}</Latex>}
 									solution={
-										null
+										<div>
+											<p>Distance: <Latex>{"$d = 100 \\ \\textrm{km} + 600 \\ \\textrm{km} = 700 \\ \\textrm{km}$"}</Latex></p>
+											<br />
+											<p>Average speed: <Latex>{"$v = \\dfrac{d}{t} = \\dfrac{700 \\ \\textrm{km}}{5 \\ \\textrm{hr}} = 140 \\ \\textrm{km/hr}$"}</Latex></p>
+											<br />
+											<p>Average velocity: <Latex>{"$v = \\dfrac{\\Delta x}{t} = \\dfrac{600 \\ \\textrm{km}}{5 \\ \\textrm{hr}} = 120 \\ \\textrm{km/hr}$"}</Latex></p>
+										</div>
 									}
 								/>
+							</div>
+						</LessonSection>
+					) : (
+						null
+					)}
+					{canProceed ? (
+						<LessonSection>
+							<h2>Mga Mahihirap na Pagsasanay</h2>
+							<hr />
+							<div className="prac-problems-container">
 								<PracticeProblem
 									current={0}
 									problem={
 										<div>
-											At <Latex>{"$t=0$"}</Latex>, si John ay nagmamaneho ng kanyang kotse na may velocity na <Latex>{"$35.00 \\, m/s$"}</Latex>. Pagkatapos ng <Latex>{"$7.500 \\, s$"}</Latex>, may nadaanan na stoplight na may red light si John at tinigil niya ang kotse. Nakalipas ang <Latex>{"$30.00 \\, s$"}</Latex>, umilaw na ang green light sa stoplight, pinaandar muli ni John ang kanyang kotse at nagkaroon ito ng <Latex>{"$60.00 \\, m/s$"}</Latex> na velocity pagkalipas ng <Latex>{"$15.00 \\, s$"}</Latex> pagkatapos nito huminto.
+											Sa <Latex>{"$t=0$"}</Latex>, si John ay nagmamaneho ng kanyang kotse na may velocity na <Latex>{"$35.00 \\ \\textrm{m/s}$"}</Latex>. Pagkatapos ng <Latex>{"$7.500 \\ \\textrm{s}$"}</Latex>, may nadaanan na stoplight na may red light si John at tinigil niya ang kotse sa loob ng <Latex>{"$2.500 \\ \\textrm{s}$"}</Latex>. Nakalipas ang <Latex>{"$30.00 \\ \\textrm{s}$"}</Latex>, umilaw na ang green light sa stoplight, pinaandar muli ni John ang kanyang kotse at nagkaroon ito ng <Latex>{"$60.00 \\ \\textrm{m/s}$"}</Latex> na velocity pagkalipas ng <Latex>{"$10.00 \\ \\textrm{s}$"}</Latex> pagkatapos niya ito muling paandarin.
 											Ano ang average acceleration ni John from <Latex>{"$t=0$"}</Latex> hanggang huminto siya sa stoplight?
-											Ano ang average acceleration ni John from <Latex>{"$t=0$"}</Latex> hanggang nagkaroon siya ng <Latex>{"$60.00 \\, m/s$"}</Latex> na velocity?
+											Ano ang average acceleration ni John from <Latex>{"$t=0$"}</Latex> hanggang nagkaroon siya ng <Latex>{"$60.00 \\ \\textrm{m/s}$"}</Latex> na velocity?
 										</div>
 									}
 									cardTitle={"Pagsasanay 2"}
-									answer={null}
+									answer={<Latex>{"$-3.500 \\ \\textrm{m/s}, \\ 0.5000 \\ \\textrm{m/s}$"}</Latex>}
 									solution={
-										null
+										<div>
+											<p>Mula <Latex>{"$t = 0$"}</Latex> hanggang huminto si John sa stoplight: <Latex>{"$a = \\dfrac{v - v_0}{\\Delta t} = \\dfrac{0 \\ \\textrm{m/s} - 35.00 \\ \\textrm{m/s}}{10.000 \\ \\textrm{s}} = -3.500 \\ \\textrm{m/s}$"}</Latex></p>
+											<br />
+											<p>Mula <Latex>{"$t = 0$"}</Latex> hanggang naging <Latex>{"$60.00 \\ \\textrm{m/s}$"}</Latex> ang kanyang velocity: <Latex>{"$a = \\dfrac{v - v_0}{\\Delta t} = \\dfrac{60.00 \\ \\textrm{m/s} - 35.00 \\ \\textrm{m/s}}{50.00 \\ \\textrm{s}} = 0.5000 \\ \\textrm{m/s}$"}</Latex></p>
+										</div>
 									}
 								/>
 							</div>
@@ -610,6 +630,14 @@ function App() {
 							<p>
 								Scribbles and Ink Spots. (2013). <i>Falling Leaf Animation</i> [Video]. YouTube. https://www.youtube.com/watch?v=UWMBj-uD37Y
 							</p>
+							<div className="end-of-lesson-btn-container">
+								<button className={"end-of-lesson-btn"} type="button" onClick={() => {
+									setCurScreen('home');
+								}}>Back to homepage!</button>
+								<button className={"end-of-lesson-btn"} type="button" onClick={() => {
+									setCurScreen('lesson3');
+								}}>Next lesson!</button>
+							</div>
 						</LessonSection>
 					) : (
 						null
@@ -702,7 +730,7 @@ function App() {
 					<LessonSection>
 						<h2>Mga Pormula sa <i>Free Fall</i></h2>
 						<hr />
-						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 3 minuto</p>
+						<p className="time-limit">Inirerekomendang oras para sa bahaging ito: 5 minuto</p>
 						<br />
 						<p>
 							Ang kinematic equations ay ang mga equations na nag-uugnay sa 5 kinematic variables: displacement <Latex>{"$(\\Delta y)$"}</Latex>, time interval <Latex>{"$(\\Delta t)$"}</Latex>, initial velocity <Latex>{"$(v_0)$"}</Latex>, final velocity <Latex>{"$(v_f)$"}</Latex>, at constant acceleration <Latex>{"$(a)$"}</Latex>.
@@ -848,13 +876,18 @@ function App() {
 								current={0}
 								problem={
 									<div>
-										Si Rocky ay nagtapon ng ping pong ball pataas at noong pabagsak na an ping pong ball, pumasok ito sa isang plastic cup na nakapatong sa lamesa. Ang kamay ni Rocky noong hinagis niya ang ping pong ball ay <Latex>{"$50 \\, m$"}</Latex> above sa plastic cup.  Kung ang velocity ng ping pong ball ay <Latex>{"$60 \\, m/s$"}</Latex> noong ito’y lumapag sa plastic cup, ano ang initial velocity ng ping pong ball nung tinapon ito ni Rocky?
+										Si Rocky ay nagtapon ng ping pong ball pataas at noong pabagsak na an ping pong ball, pumasok ito sa isang plastic cup na nakapatong sa lamesa. Ang kamay ni Rocky noong hinagis niya ang ping pong ball ay <Latex>{"$50.0 \\ \\textrm{m}$"}</Latex> above sa plastic cup.  Kung ang velocity ng ping pong ball ay <Latex>{"$60.0 \\ \\textrm{m/s}$"}</Latex> nang ito’y lumapag sa plastic cup, ano ang initial velocity ng ping pong ball nung tinapon ito ni Rocky?
 									</div>
 								}
 								cardTitle={"Pagsasanay 1"}
-								answer={null}
+								answer={<Latex>{"$51.2 \\ \\textrm{m/s}$"}</Latex>}
 								solution={
-									null
+									<div>
+										<p>Ang height ng ping pong ball ay ibinibigay ng equation na <Latex>{"$y - 50 = v_0t - \\dfrac{1}{2}gt^2$"}</Latex>, habang ang velocity nito ay ibinibigay naman ng equation na <Latex>{"${v = v_0 - gt}$"}</Latex>. Tatama ang ping pong ball sa plastic cup kapag naging <Latex>{"$0$"}</Latex> ang <Latex>{"$y$"}</Latex>. Gamit ang quadratic formula:</p>
+										<Latex>{"\\[t = \\dfrac{-v_0 + \\sqrt{v_0^2 - 4\\left(-\\dfrac{1}{2}g\\right)(50)}}{2\\left(-\\dfrac{1}{2}g\\right)} = \\dfrac{v_0 + \\sqrt{v_0^2 + 100 g}}{g}\\]"}</Latex>
+										<p>Samakatuwid, magiging <Latex>{"$-60 \\ \\textrm{m/s}$"}</Latex> ang <Latex>{"$v$"}</Latex> sa <Latex>{"$t = \\dfrac{v_0 + \\sqrt{v_0^2 + 100g}}{g}$"}</Latex>. Gamit ang ating equation para sa velocity:</p>
+										<Latex>{"$$\\begin{align*} -60 \&= v_0 - g \\cdot \\dfrac{v_0 + \\sqrt{v_0^2 + 100g}}{g} = - \\sqrt{v_0^2 + 100g} \\\\ 3600 \&= v_0^2 + 100g \\\\ v_0 \&= \\sqrt{3600 - 100g} \\approx 51.2 \\ \\textrm{m/s} \\end{align*}$$"}</Latex>
+									</div>
 								}
 							/>
 						</div>
@@ -890,6 +923,14 @@ function App() {
 						<p>
 							Perez, R. M. M. (2020). <i>1D FREE FALL - POSITION, VELOCITY, AND ACCELERATION OF A FREE FALLING OBJECT</i> [Module]. Moodle. https://khub.mc.pshs.edu.ph/
 						</p>
+						<div className="end-of-lesson-btn-container">
+							<button className={"end-of-lesson-btn"} type="button" onClick={() => {
+								setCurScreen('lesson1');
+							}}>Previous lesson!</button>
+							<button className={"end-of-lesson-btn"} type="button" onClick={() => {
+								setCurScreen('home');
+							}}>Back to homepage!</button>
+						</div>
 					</LessonSection>
 				</LessonPage>
 			);

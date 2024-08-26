@@ -5,4 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: "/r2-z1-03-bilingual-learning-tool/",
+  server: {
+    watch: {
+      usePolling: true
+    }
+  }
 })
